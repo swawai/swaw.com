@@ -11,3 +11,5 @@
 xvenv.cmd
 .xvenv/
 
+
+/node_modules/
