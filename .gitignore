@@ -1,0 +1,10 @@
+/public*/
+/resources/
+/hugo_stats.json
+.hugo_build.lock
+/.hugo_cache/
+.env
+.xvenv/
+xvenv.cmd
+.vscode/
+ignore_note

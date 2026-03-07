@@ -1,0 +1,3 @@
+[submodule "themes/banyan"]
+	path = themes/banyan
+	url = git@github.com:swawai/hugo-theme-banyan.git
