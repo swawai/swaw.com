@@ -1,7 +1,7 @@
 # hugo.toml
 baseURL = 'http://localhost:1313/'
 languageCode = 'en-us'
-title = 'ipzu'
+title = 'swaw'
 theme = "banyan"
 preserveTaxonomyNames = true
 defaultContentLanguage = "en"
@@ -145,7 +145,7 @@ languageName = "中文"
 weight = 2
 
 [languages.zh.params]
-description = "ipzu——AI时代创作者的俱乐部: AIGC实践, IP沉淀, 商业变现"
+description = "swaw——AI时代创作者的俱乐部: AIGC实践, IP沉淀, 商业变现"
 locale = "zh_CN"
 
 [languages.zh-tw]
@@ -153,7 +153,7 @@ languageName = "繁體"
 weight = 3
 
 [languages.zh-tw.params]
-description = "ipzu——AI時代創作者的俱樂部: AIGC實踐, IP沉澱, 商業變現"
+description = "swaw——AI時代創作者的俱樂部: AIGC實踐, IP沉澱, 商業變現"
 locale = "zh_TW"
 
 [permalinks]
