@@ -5,7 +5,7 @@ title = 'swaw'
 theme = "banyan"
 preserveTaxonomyNames = true
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 timeZone = "Asia/Shanghai"
 
@@ -121,21 +121,25 @@ isPlainText = true
 notAlternative = true
 root = true
 
+# 输出顺序会影响 Hugo 为 list/node 页面选择的主 URL。
+# 这里把 bydate 放在最前面，使 /、/tags/、/udc/ 等无 by-* 路径成为默认公开路径；
+# 若把 byname 等排到前面，.Permalink / .RelPermalink / .Site.Home.RelPermalink 可能改为指向 /by-name/...。
 [outputs]
-section  = ["byname","bynameasc","bydate","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["byname","bynameasc","bydate","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","i18njson"]
-taxonomy = ["byname","bynameasc","bydate","bydateasc","bycount","bycountasc","rss"]
-term     = ["byname","bynameasc","bydate","bydateasc","bycount","bycountasc","rss"]
+section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","i18njson"]
+taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
+term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 
 [languages]
 [languages.en]
 languageName = "English"
 weight = 1
 [languages.en.outputs]
-section  = ["byname","bynameasc","bydate","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["byname","bynameasc","bydate","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","i18njson","langlist"]
-taxonomy = ["byname","bynameasc","bydate","bydateasc","bycount","bycountasc","rss"]
-term     = ["byname","bynameasc","bydate","bydateasc","bycount","bycountasc","rss"]
+# 英文默认语言也保持相同顺序，避免根路径主 URL 被 /by-name/... 抢占。
+section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","i18njson","langlist"]
+taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
+term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 [languages.en.params]
 description = "Systems Work, And We..."
 locale = "en_US"
@@ -159,4 +163,5 @@ locale = "zh_TW"
 [permalinks]
 mypost = "/p/:slug/"
 blog = "/p/:slug/"
+
 
