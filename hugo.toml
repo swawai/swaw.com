@@ -137,7 +137,7 @@ home     = ["byname","bynameasc","bydate","bydateasc","bycount","bycountasc","al
 taxonomy = ["byname","bynameasc","bydate","bydateasc","bycount","bycountasc","rss"]
 term     = ["byname","bynameasc","bydate","bydateasc","bycount","bycountasc","rss"]
 [languages.en.params]
-description = "The AI creators' club: AIGC practice, IP development, and monetization."
+description = "Systems Work, And We..."
 locale = "en_US"
 
 [languages.zh]
@@ -145,7 +145,7 @@ languageName = "中文"
 weight = 2
 
 [languages.zh.params]
-description = "swaw——AI时代创作者的俱乐部: AIGC实践, IP沉淀, 商业变现"
+description = "swaw——人不工，人生不必由工作定义"
 locale = "zh_CN"
 
 [languages.zh-tw]
@@ -153,7 +153,7 @@ languageName = "繁體"
 weight = 3
 
 [languages.zh-tw.params]
-description = "swaw——AI時代創作者的俱樂部: AIGC實踐, IP沉澱, 商業變現"
+description = "swaw——人不工，人生不必由工作定义"
 locale = "zh_TW"
 
 [permalinks]
