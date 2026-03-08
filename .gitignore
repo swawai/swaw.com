@@ -3,13 +3,12 @@
 /hugo_stats.json
 /.hugo_cache/
 .hugo_build.lock
-
+/node_modules/
 .vscode/
 /ignore_note/
 
-.env
+
+
 xvenv.cmd
 .xvenv/
-
-
-/node_modules/
+.env
