@@ -1,5 +1,5 @@
 # hugo.toml
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://swaw.com/'
 languageCode = 'en-us'
 title = 'swaw'
 theme = "banyan"
@@ -163,5 +163,6 @@ locale = "zh_TW"
 [permalinks]
 mypost = "/p/:slug/"
 blog = "/p/:slug/"
+
 
 
