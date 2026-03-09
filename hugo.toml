@@ -33,10 +33,10 @@ icp = "粤ICP备2024338434号"
 #   这里只控制带 data-prefetch-kind 标记的链接；
 #   当前 sort_siblings / descendants / post / nav 分别对应
 #   排序兄弟项 / descendants / post / 菜单与面包屑导航。
-sort_siblings = "viewport"
-descendants = "viewport"
+nav = "viewport-all"
+sort_siblings = "viewport-all"
+descendants = "viewport-all"
 post = "hover"
-nav = "hover"
 
 [params.service_worker]
 # enabled = true  : 注册站点根路径 /sw.js，并启用 HTML 导航页 stale-while-revalidate
@@ -145,18 +145,6 @@ mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
 path      = "all-by-size-asc"
-[outputFormats.i18njson]
-mediaType = "application/json"
-baseName  = "i18n"
-isPlainText = true
-notAlternative = true
-# 站点支持语言列表（JSON），供前端语言跳转 / 404 等逻辑统一使用
-[outputFormats.langlist]
-mediaType = "application/json"
-baseName  = "lang-list"
-isPlainText = true
-notAlternative = true
-root = true
 [outputFormats.webmanifest]
 mediaType = "application/manifest+json"
 baseName = "site"
@@ -175,7 +163,7 @@ root = true
 # 若把 byname 等排到前面，.Permalink / .RelPermalink / .Site.Home.RelPermalink 可能改为指向 /by-name/...。
 [outputs]
 section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","i18njson","webmanifest","swjs"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","webmanifest","swjs"]
 taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 
@@ -186,7 +174,7 @@ weight = 1
 [languages.en.outputs]
 # 英文默认语言也保持相同顺序，避免根路径主 URL 被 /by-name/... 抢占。
 section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","i18njson","langlist","webmanifest","swjs"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","webmanifest","swjs"]
 taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 [languages.en.params]
