@@ -1,4 +1,4 @@
-# hugo.toml
+# baseURL 莫擅改！会影响SEO
 baseURL = 'https://swaw.com/'
 languageCode = 'en-us'
 title = 'swaw'
@@ -18,6 +18,38 @@ panicOnWarning = true
 account_url = "https://github.com/swawai"
 copyright = "人不工智能 &middot; Swaw LLC"
 icp = "粤ICP备2024338434号"
+[params.link_prefetch]
+# 四类链接预取模式：
+#   "" / "off"      = 关闭该类链接预取
+#   "hover"         = 仅在 hover / touchstart 时预取
+#   "viewport"      = 仅在较小视口中，链接进入视区后预取
+#   "viewport-all"  = 不区分视口大小，链接进入视区后预取
+# 建议：
+#   sort_siblings 适合 "viewport" 或 "viewport-all"
+#   descendants 适合 "" / "hover" / "viewport"
+#   post 适合 "" / "hover"
+#   nav 适合 "" / "hover"
+# 说明：
+#   这里只控制带 data-prefetch-kind 标记的链接；
+#   当前 sort_siblings / descendants / post / nav 分别对应
+#   排序兄弟项 / descendants / post / 菜单与面包屑导航。
+sort_siblings = "viewport"
+descendants = "viewport"
+post = "hover"
+nav = "hover"
+
+[params.service_worker]
+# enabled = true  : 注册站点根路径 /sw.js，并启用 HTML 导航页 stale-while-revalidate
+# enabled = false : 不注册 service worker；前端会尝试注销旧注册并清理本项目缓存
+# cache_first_extensions:
+#   - 留空：仅启用 HTML 导航页缓存
+#   - 非空：在此基础上，对这些同源静态资源后缀额外启用 cache-first
+#   - 建议只填强缓存、文件名已 hash 的静态资源类型
+enabled = true
+#cache_first_extensions = ["css", "js", "svg", "png", "ico", "woff2", "webmanifest"]
+
+
+
 [params.social]
 github = "https://github.com/swawai"
 
@@ -36,6 +68,11 @@ tag = "tags"
 unsafe = true
 [markup.minify]
 disableXML = true
+
+[mediaTypes."application/manifest+json"]
+suffixes = ["webmanifest"]
+[mediaTypes."application/javascript"]
+suffixes = ["js"]
 
 [outputFormats]
 [outputFormats.byname]
@@ -120,13 +157,25 @@ baseName  = "lang-list"
 isPlainText = true
 notAlternative = true
 root = true
+[outputFormats.webmanifest]
+mediaType = "application/manifest+json"
+baseName = "site"
+isPlainText = true
+notAlternative = true
+root = true
+[outputFormats.swjs]
+mediaType = "application/javascript"
+baseName = "sw"
+isPlainText = true
+notAlternative = true
+root = true
 
 # 输出顺序会影响 Hugo 为 list/node 页面选择的主 URL。
 # 这里把 bydate 放在最前面，使 /、/tags/、/udc/ 等无 by-* 路径成为默认公开路径；
 # 若把 byname 等排到前面，.Permalink / .RelPermalink / .Site.Home.RelPermalink 可能改为指向 /by-name/...。
 [outputs]
 section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","i18njson"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","i18njson","webmanifest","swjs"]
 taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 
@@ -137,7 +186,7 @@ weight = 1
 [languages.en.outputs]
 # 英文默认语言也保持相同顺序，避免根路径主 URL 被 /by-name/... 抢占。
 section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","i18njson","langlist"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","i18njson","langlist","webmanifest","swjs"]
 taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 [languages.en.params]
@@ -163,6 +212,3 @@ locale = "zh_TW"
 [permalinks]
 mypost = "/p/:slug/"
 blog = "/p/:slug/"
-
-
-
