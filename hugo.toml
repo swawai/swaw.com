@@ -22,13 +22,14 @@ icp = "粤ICP备2024338434号"
 # 四类链接预取模式：
 #   "" / "off"      = 关闭该类链接预取
 #   "hover"         = 仅在 hover / touchstart 时预取
+#   "idle"          = 在浏览器空闲时批量预取
 #   "viewport"      = 仅在较小视口中，链接进入视区后预取
 #   "viewport-all"  = 不区分视口大小，链接进入视区后预取
 # 建议：
-#   sort_siblings 适合 "viewport" 或 "viewport-all"
-#   descendants 适合 "" / "hover" / "viewport"
-#   post 适合 "" / "hover"
-#   nav 适合 "" / "hover"
+#   sort_siblings 适合 "idle" / "viewport" / "viewport-all"
+#   descendants 适合 "" / "hover" / "idle" / "viewport"
+#   post 适合 "" / "hover" / "idle"
+#   nav 适合 "" / "hover" / "idle"
 # 说明：
 #   这里只控制带 data-prefetch-kind 标记的链接；
 #   当前 sort_siblings / descendants / post / nav 分别对应
@@ -37,18 +38,6 @@ nav = "viewport-all"
 sort_siblings = "viewport-all"
 descendants = "viewport-all"
 post = "hover"
-
-[params.service_worker]
-# enabled = true  : 注册站点根路径 /sw.js，并启用 HTML 导航页 stale-while-revalidate
-# enabled = false : 不注册 service worker；前端会尝试注销旧注册并清理本项目缓存
-# cache_first_extensions:
-#   - 留空：仅启用 HTML 导航页缓存
-#   - 非空：在此基础上，对这些同源静态资源后缀额外启用 cache-first
-#   - 建议只填强缓存、文件名已 hash 的静态资源类型
-enabled = true
-#cache_first_extensions = ["css", "js", "svg", "png", "ico", "woff2", "webmanifest"]
-
-
 
 [params.social]
 github = "https://github.com/swawai"
