@@ -20,24 +20,40 @@ copyright = "人不工智能 &middot; Swaw LLC"
 icp = "粤ICP备2024338434号"
 [params.link_prefetch]
 # 四类链接预取模式：
-#   "" / "off"      = 关闭该类链接预取
-#   "hover"         = 仅在 hover / touchstart 时预取
-#   "idle"          = 在浏览器空闲时批量预取
-#   "viewport"      = 仅在较小视口中，链接进入视区后预取
-#   "viewport-all"  = 不区分视口大小，链接进入视区后预取
+#   "" / "off"                 = 关闭该类预取
+#   "rel-prefetch"             = 输出 <link rel="prefetch" as="document">，由浏览器自行低优先级调度
+#   "conservative-prefetch"    = 通过 Speculation Rules API 做保守 prefetch
+#   "moderate-prefetch"        = 通过 Speculation Rules API 做中等激进 prefetch
+#   "eager-prefetch"           = 通过 Speculation Rules API 做激进 prefetch
+#   "conservative-prerender"   = 通过 Speculation Rules API 做保守 prerender
+#   "moderate-prerender"       = 通过 Speculation Rules API 做中等激进 prerender
+#   "eager-prerender"          = 通过 Speculation Rules API 做激进 prerender
 # 建议：
-#   sort_siblings 适合 "idle" / "viewport" / "viewport-all"
-#   descendants 适合 "" / "hover" / "idle" / "viewport"
-#   post 适合 "" / "hover" / "idle"
-#   nav 适合 "" / "hover" / "idle"
+#   sort_siblings 适合 "rel-prefetch" / "*-prefetch"
+#   descendants 适合 "" / "rel-prefetch" / "*-prefetch"
+#   post 适合 "" / "*-prefetch" / "*-prerender"
+#   nav 适合 "" / "rel-prefetch" / "*-prefetch"
 # 说明：
-#   这里只控制带 data-prefetch-kind 标记的链接；
+#   这些规则在 Hugo 渲染阶段直接输出到 head，不依赖前端预取脚本。
 #   当前 sort_siblings / descendants / post / nav 分别对应
 #   排序兄弟项 / descendants / post / 菜单与面包屑导航。
-nav = "viewport-all"
-sort_siblings = "viewport-all"
-descendants = "viewport-all"
-post = "hover"
+nav = "rel-prefetch"
+sort_siblings = "rel-prefetch"
+descendants = "rel-prefetch"
+post = "moderate-prefetch"
+
+[params.service_worker]
+# mode:
+#   "enable"  = 注册 /sw.js，启用 HTML 导航 stale-while-revalidate，并在检测到新版本时做弱提醒
+#   "disable" = 不再启用 SW；页面会尝试注销旧注册并清理本项目缓存，同时继续输出一个惰性 /sw.js 便于旧注册尽快退场
+#   "off"     = 不注入 SW 管理脚本；适合在 disable 跑够一段时间后彻底停用
+mode = "enable"
+# 建议发布时手动维护；若留空则回退到本次构建时间戳。
+# version = "202603110001"
+# 留空：仅启用 HTML 导航页缓存
+# 非空：在此基础上，对这些同源静态资源后缀额外启用 cache-first
+# 建议只填强缓存、文件名已 hash 的静态资源类型
+# cache_first_extensions = ["css", "js", "svg", "png", "ico", "woff2", "webmanifest"]
 
 [params.social]
 github = "https://github.com/swawai"
@@ -152,7 +168,7 @@ root = true
 # 若把 byname 等排到前面，.Permalink / .RelPermalink / .Site.Home.RelPermalink 可能改为指向 /by-name/...。
 [outputs]
 section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","webmanifest","swjs"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
 taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 
