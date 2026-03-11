@@ -21,7 +21,6 @@ icp = "粤ICP备2024338434号"
 [params.link_prefetch]
 # 四类链接预取模式：
 #   "" / "off"                 = 关闭该类预取
-#   "rel-prefetch"             = 输出 <link rel="prefetch" as="document">，由浏览器自行低优先级调度
 #   "conservative-prefetch"    = 通过 Speculation Rules API 做保守 prefetch
 #   "moderate-prefetch"        = 通过 Speculation Rules API 做中等激进 prefetch
 #   "eager-prefetch"           = 通过 Speculation Rules API 做激进 prefetch
@@ -29,24 +28,26 @@ icp = "粤ICP备2024338434号"
 #   "moderate-prerender"       = 通过 Speculation Rules API 做中等激进 prerender
 #   "eager-prerender"          = 通过 Speculation Rules API 做激进 prerender
 # 建议：
-#   sort_siblings 适合 "rel-prefetch" / "*-prefetch"
-#   descendants 适合 "" / "rel-prefetch" / "*-prefetch"
+#   sort_siblings 适合 "*-prefetch"
+#   descendants 适合 "" / "*-prefetch"
 #   post 适合 "" / "*-prefetch" / "*-prerender"
-#   nav 适合 "" / "rel-prefetch" / "*-prefetch"
+#   nav 适合 "" / "*-prefetch"
+# 说明补充：
+#   文档预取统一走 Speculation Rules API；若浏览器不支持它，fallback 会直接读取同一份 <script type="speculationrules"> 做 SW warmup。
 # 说明：
 #   这些规则在 Hugo 渲染阶段直接输出到 head，不依赖前端预取脚本。
 #   当前 sort_siblings / descendants / post / nav 分别对应
 #   排序兄弟项 / descendants / post / 菜单与面包屑导航。
-nav = "rel-prefetch"
-sort_siblings = "rel-prefetch"
-descendants = "rel-prefetch"
-post = "moderate-prefetch"
+nav = "eager-prefetch"
+sort_siblings = "eager-prefetch"
+descendants = "eager-prefetch"
+post = "eager-prefetch"
 
 [params.service_worker]
 # mode:
 #   "enable"  = 注册 /sw.js，启用 HTML 导航 stale-while-revalidate，并在检测到新版本时做弱提醒
 #   "disable" = 不再启用 SW；页面会尝试注销旧注册并清理本项目缓存，同时继续输出一个惰性 /sw.js 便于旧注册尽快退场
-#   "off"     = 不注入 SW 管理脚本；适合在 disable 跑够一段时间后彻底停用
+#   "off"     = 不注入 SW 管理脚本，也不输出 /sw.js；适合在 disable 跑够一段时间后彻底停用
 mode = "enable"
 # 建议发布时手动维护；若留空则回退到本次构建时间戳。
 # version = "202603110001"
@@ -156,12 +157,6 @@ baseName = "site"
 isPlainText = true
 notAlternative = true
 root = true
-[outputFormats.swjs]
-mediaType = "application/javascript"
-baseName = "sw"
-isPlainText = true
-notAlternative = true
-root = true
 
 # 输出顺序会影响 Hugo 为 list/node 页面选择的主 URL。
 # 这里把 bydate 放在最前面，使 /、/tags/、/udc/ 等无 by-* 路径成为默认公开路径；
@@ -179,7 +174,7 @@ weight = 1
 [languages.en.outputs]
 # 英文默认语言也保持相同顺序，避免根路径主 URL 被 /by-name/... 抢占。
 section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","webmanifest","swjs"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","webmanifest"]
 taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 [languages.en.params]
