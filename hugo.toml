@@ -50,22 +50,29 @@ icp = "粤ICP备2024338434号"
 #      第 1 位 = SpeculationRules transport 可用
 #      第 2 位 = rel=prefetch transport 可用
 #      第 3 位 = SW transport 可用/允许（不是 active worker 已就绪）
-#   Hugo 会把这些显式环境配置直接编译为 env 专属动作 bundle；若某环境下引用了
-#   不可用 transport，编译期直接报错，而不是留给运行时回退。
-#   运行时可用 ?prefetch_env=TTT 这类参数强制选择环境，便于测试回退路径；
-#   ?prefetch_env=auto 可清除该强制值并恢复自动探测。
-# 说明：
-#   Hugo 会为每个非空环境动作集单独打出一个 prefetch bundle，
-#   并在编译期直接展开成最终动作 payload；head 内联 bootstrap
-#   只做一次环境判断，然后只加载命中的那个 bundle。
+#   Hugo 会把这些显式环境配置直接编译为页面级动作数据；运行时统一由共享
+#   prefetch runtime 脚本按浏览器能力自动选择当前环境。
+#   若某环境下引用了不可用 transport，编译期直接报错，而不是留给运行时回退。
+#   调试可直接访问 /prefetch-debug.html 查看当前浏览器环境检测结果、
+#   页面 payload 以及实际注入的预热资源。
+#   页面级动作数据里的短码约定：
+#      sp = speculation rules payload
+#      ls / lm / lx = link transport 的保守 / 中等 / 激进策略
+#      ws / wm / wx = SW transport 的保守 / 中等 / 激进策略
+#   其中当前实现里：
+#      s = hover delayed
+#      m = hover immediate
+#      x = static eager warmup
+#   当前会按 nav > sort_siblings > descendants > post 的顺序做全局去重；
+#   同一 URL 首次命中的 slot 保留，后续 slot 不再重复分配到别的预热策略。
 #   当前 sort_siblings / descendants / post / nav 分别对应排序兄弟项 /
 #   descendants / post / 菜单与面包屑导航。
 
 [params.link_prefetch.env.TTT]
 nav = "spec_xr"
-sort_siblings = "link_xf"
-descendants = "sw_xf"
-post = "sw_xf"
+sort_siblings = "link_sf"
+descendants = "sw_sf"
+post = "sw_sf"
 
 [params.link_prefetch.env.TTF]
 nav = "spec_xr"
@@ -194,13 +201,17 @@ mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
 path      = "all-by-size-asc"
+[outputFormats.prefetchdebug]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "prefetch-debug"
 
 # 输出顺序会影响 Hugo 为 list/node 页面选择的主 URL。
 # 这里把 bydate 放在最前面，使 /、/tags/、/udc/ 等无 by-* 路径成为默认公开路径；
 # 若把 byname 等排到前面，.Permalink / .RelPermalink / .Site.Home.RelPermalink 可能改为指向 /by-name/...。
 [outputs]
 section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","prefetchdebug","rss"]
 taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 
@@ -211,7 +222,7 @@ weight = 1
 [languages.en.outputs]
 # 英文默认语言也保持相同顺序，避免根路径主 URL 被 /by-name/... 抢占。
 section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","prefetchdebug","rss"]
 taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 [languages.en.params]
