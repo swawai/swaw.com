@@ -1,9 +1,9 @@
 1. 此为基于hugo编译的MPA静态web项目并接入nodejs, 你应该可以直接使用 hugo 命令或 bun run build
 2. hugo默认生成 public/，测试可编译到 public-*，如 public-test-v202601020000, （.gitignore 已添加 /public\*/）  
 3. temp_workspace 可以用作临时工作空间, 避免使用系统%temp%目录，（.gitignore 已添加 /temp_workspace\*/）  
-4. 内部模块推崇扁平化,谨慎使用包装  
-    如[a:call:x; b:call:x, 然后X内部：if a then…… else if b then……, 压平则为：xa;xb，a:call:xa; b:call:xb，少一层if/else]  
-    如[a(b);b(c) 压平为：a(c), 少一层中间套娃]  
+4. 内部模块推崇扁平化、声明式，勿随意使用包装  
+    如 a:call:x; b:call:x, 然后X内部：if a…… if b……, 调用者完全知道自己想要什么，压平则为：xa;xb，a:call:xa; b:call:xb，少一层中间判断，而且更具“声明式”  
+    如 a(b);b(c) 压平为：a(c), 少一层中间套娃  
 
 5. hugo.toml 本质上是基于themes\banyan\exampleSite\hugo.toml 的定制版，直接修改hugo.toml 有利于快速开发，但稳定后应该同步修订themes\banyan\exampleSite\hugo.toml  
 6. 站点实例相关的修订不应该写入到themes/banyan/中, 而框架/主题相关则应该  
