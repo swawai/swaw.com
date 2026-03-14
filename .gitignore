@@ -12,3 +12,4 @@
 xvenv.cmd
 .xvenv/
 .env
+/static/workbox*

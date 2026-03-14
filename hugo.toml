@@ -20,28 +20,71 @@ copyright = "人不工智能 &middot; Swaw LLC"
 icp = "粤ICP备2024338434号"
 [params.link_prefetch]
 # 四类链接预取模式：
-#   "" / "off"                 = 关闭该类预取
-#   "conservative-prefetch"    = 通过 Speculation Rules API 做保守 prefetch
-#   "moderate-prefetch"        = 通过 Speculation Rules API 做中等激进 prefetch
-#   "eager-prefetch"           = 通过 Speculation Rules API 做激进 prefetch
-#   "conservative-prerender"   = 通过 Speculation Rules API 做保守 prerender
-#   "moderate-prerender"       = 通过 Speculation Rules API 做中等激进 prerender
-#   "eager-prerender"          = 通过 Speculation Rules API 做激进 prerender
+#   "" / "off" = 关闭该类预取
+#   transport:
+#     spec = Speculation Rules
+#     link = rel=prefetch
+#     sw   = SW warmup
+#   eagerness:
+#     s = conservative
+#     m = moderate
+#     x = eager
+#   kind:
+#     f = prefetch
+#     r = prerender
+#   示例：
+#     spec_sf / spec_mf / spec_xf
+#     spec_sr / spec_mr / spec_xr
+#     link_sf / link_mf / link_xf
+#     sw_sf   / sw_mf   / sw_xf
 # 建议：
 #   sort_siblings 适合 "*-prefetch"
 #   descendants 适合 "" / "*-prefetch"
 #   post 适合 "" / "*-prefetch" / "*-prerender"
 #   nav 适合 "" / "*-prefetch"
 # 说明补充：
-#   文档预取统一走 Speculation Rules API；若浏览器不支持它，fallback 会直接读取同一份 <script type="speculationrules"> 做 SW warmup。
+#   当前只支持显式环境表：
+#   [params.link_prefetch.env.TTT] / [params.link_prefetch.env.FTT] ...
+#   每个环境都直接写完整策略，不再做全局默认值合并
+#   T/F 三位依次表示：
+#      第 1 位 = SpeculationRules transport 可用
+#      第 2 位 = rel=prefetch transport 可用
+#      第 3 位 = SW transport 可用/允许（不是 active worker 已就绪）
+#   Hugo 会把这些显式环境配置直接编译为 env 专属动作 bundle；若某环境下引用了
+#   不可用 transport，编译期直接报错，而不是留给运行时回退。
+#   运行时可用 ?prefetch_env=TTT 这类参数强制选择环境，便于测试回退路径；
+#   ?prefetch_env=auto 可清除该强制值并恢复自动探测。
 # 说明：
-#   这些规则在 Hugo 渲染阶段直接输出到 head，不依赖前端预取脚本。
-#   当前 sort_siblings / descendants / post / nav 分别对应
-#   排序兄弟项 / descendants / post / 菜单与面包屑导航。
-nav = "eager-prefetch"
-sort_siblings = "eager-prefetch"
-descendants = "eager-prefetch"
-post = "eager-prefetch"
+#   Hugo 会为每个非空环境动作集单独打出一个 prefetch bundle，
+#   并在编译期直接展开成最终动作 payload；head 内联 bootstrap
+#   只做一次环境判断，然后只加载命中的那个 bundle。
+#   当前 sort_siblings / descendants / post / nav 分别对应排序兄弟项 /
+#   descendants / post / 菜单与面包屑导航。
+
+[params.link_prefetch.env.TTT]
+nav = "spec_xr"
+sort_siblings = "link_xf"
+descendants = "sw_xf"
+post = "sw_xf"
+
+[params.link_prefetch.env.TTF]
+nav = "spec_xr"
+sort_siblings = "spec_xr"
+descendants = "spec_xf"
+post = "spec_xf"
+
+
+[params.link_prefetch.env.FTT]
+nav = "link_xf"
+sort_siblings = "link_xf"
+descendants = "link_xf"
+post = "link_xf"
+
+[params.link_prefetch.env.FTF]
+nav = "link_xf"
+sort_siblings = "link_xf"
+descendants = "link_xf"
+post = "link_xf"
 
 [params.service_worker]
 # mode:
@@ -151,12 +194,6 @@ mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
 path      = "all-by-size-asc"
-[outputFormats.webmanifest]
-mediaType = "application/manifest+json"
-baseName = "site"
-isPlainText = true
-notAlternative = true
-root = true
 
 # 输出顺序会影响 Hugo 为 list/node 页面选择的主 URL。
 # 这里把 bydate 放在最前面，使 /、/tags/、/udc/ 等无 by-* 路径成为默认公开路径；
@@ -174,7 +211,7 @@ weight = 1
 [languages.en.outputs]
 # 英文默认语言也保持相同顺序，避免根路径主 URL 被 /by-name/... 抢占。
 section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss","webmanifest"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
 taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 [languages.en.params]
