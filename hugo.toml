@@ -34,15 +34,15 @@ icp = "粤ICP备2024338434号"
 #     r = prerender
 #   示例：
 #     spec_sf / spec_mf / spec_xf
-#     spec_xf_gf
+#     spec_xf_g
 #     spec_sr / spec_mr / spec_xr
 #     link_sf / link_mf / link_xf
 #     sw_sf   / sw_mf   / sw_xf
 #   global gate:
-#     追加 _gf = 基于 sessionStorage 的全局一次性 gate；
+#     追加 _g = 基于 sessionStorage 的全局一次性 gate；
 #     同一浏览会话里，完全相同的一组预热动作只首次执行一次
 # 建议：
-#   menu 适合 "*-prefetch" / "*-prerender" / "*_gf"
+#   menu 适合 "*-prefetch" / "*-prerender" / "*_g"
 #   sort_siblings 适合 "*-prefetch"
 #   descendants 适合 "" / "*-prefetch"
 #   post 适合 "" / "*-prefetch" / "*-prerender"
@@ -50,11 +50,15 @@ icp = "粤ICP备2024338434号"
 # 说明补充：
 #   当前只支持显式环境表：
 #   [params.link_prefetch.env.TTT] / [params.link_prefetch.env.FTT] ...
-#   每个环境都直接写完整策略，不再做全局默认值合并
+#   如需复用，可在某环境表里写：
+#      ref = "FTT"
+#   引用只在 Hugo 编译期展开，运行时仍只消费最终动作数据。
 #   T/F 三位依次表示：
 #      第 1 位 = SpeculationRules transport 可用
 #      第 2 位 = rel=prefetch transport 可用
-#      第 3 位 = SW transport 可用/允许（不是 active worker 已就绪）
+#      第 3 位 = 当前上下文里 Service Worker API 可用
+#              这里只看最终 SW API 是否可用，不看 active worker 是否已就绪，
+#              也不再叠加站点侧额外“允许 SW transport 参与环境判定”的开关。
 #   Hugo 会把这些显式环境配置直接编译为页面级动作数据；运行时统一由共享
 #   prefetch runtime 脚本按浏览器能力自动选择当前环境。
 #   若某环境下引用了不可用 transport，编译期直接报错，而不是留给运行时回退。
@@ -62,48 +66,52 @@ icp = "粤ICP备2024338434号"
 #   页面 payload 以及实际注入的预热资源。
 #   页面级动作数据里的短码约定：
 #      sp = speculation rules payload
-#      sg = speculation rules payload（带 gf gate）
+#      sg = speculation rules payload（带 global gate）
 #      ls / lm / lx = link transport 的保守 / 中等 / 激进策略
-#      lsg / lmg / lxg = link transport（带 gf gate）
+#      lsg / lmg / lxg = link transport（带 global gate）
 #      ws / wm / wx = SW transport 的保守 / 中等 / 激进策略
-#      wsg / wmg / wxg = SW transport（带 gf gate）
+#      wsg / wmg / wxg = SW transport（带 global gate）
+#   注入 HTML 的 site-prefetch-data 会按最终 actions 去重；
+#   若两个环境的 actions 完全相同，后者会直接写成前者 env 键的别名字符串，
+#   不会产生链式别名。
 #   其中当前实现里：
 #      s = hover delayed
 #      m = hover immediate
 #      x = static eager warmup
 #   当前会按 menu > nav > sort_siblings > descendants > post 的顺序做全局去重；
-#   同一 URL 首次命中的 slot 保留，后续 slot 不再重复分配到别的预热策略。
-#   当前 menu / nav / sort_siblings / descendants / post 分别对应主菜单 /
-#   面包屑与页面导航 / 排序兄弟项 / descendants / post。
+#   当前 menu / nav / sort_siblings / descendants / post 分别对应主菜单 / 面包屑与页面导航 / 排序兄弟项 / 后代 / post。
 
 [params.link_prefetch.env.TTT]
-menu = "spec_xr"
-nav = "spec_xr"
-sort_siblings = "link_xf_gf"
-descendants = "sw_xf_gf"
-post = "sw_xf"
+menu = "sw_xf_g"
+nav = "sw_xf_g"
+sort_siblings = "sw_xf_g"
+descendants = "sw_xf_g"
+post = "sw_mf_g"
+[params.link_prefetch.env.TFT]
+ref="TTT"
+[params.link_prefetch.env.FTT]
+ref="TTT"
+[params.link_prefetch.env.FFT]
+ref="TTT"
 
 [params.link_prefetch.env.TTF]
-menu = "spec_xr"
-nav = "spec_xr"
-sort_siblings = "spec_xr"
-descendants = "spec_xf"
-post = "spec_xf"
-
-
-[params.link_prefetch.env.FTT]
-menu = "link_xf"
-nav = "link_xf"
-sort_siblings = "link_xf"
-descendants = "link_xf"
-post = "link_xf"
+menu = "spec_mf"
+nav = "spec_xf"
+sort_siblings = "spec_xf"
+descendants = "spec_mf"
+post = "spec_mf"
+[params.link_prefetch.env.TFF]
+ref = "TTF"
 
 [params.link_prefetch.env.FTF]
-menu = "link_xf"
+menu = "link_mf"
 nav = "link_xf"
 sort_siblings = "link_xf"
-descendants = "link_xf"
-post = "link_xf"
+descendants = "link_mf"
+post = "link_mf"
+
+
+
 
 [params.service_worker]
 # mode:
@@ -260,3 +268,19 @@ locale = "zh_TW"
 [permalinks]
 mypost = "/p/:slug/"
 blog = "/p/:slug/"
+
+[build]
+[build.buildStats]
+enable = true
+
+[[build.cachebusters]]
+source = "postcss.config.js"
+target = "css"
+
+[[build.cachebusters]]
+source = "(package-lock\\.json|bun\\.lock)"
+target = "css"
+
+[[build.cachebusters]]
+source = "hugo_stats\\.json"
+target = "css"

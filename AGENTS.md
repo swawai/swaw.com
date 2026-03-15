@@ -1,4 +1,4 @@
-1. 此为基于hugo编译的MPA静态web项目并接入nodejs, 你应该可以直接使用 hugo 命令或 bun run build
+1. 此为基于hugo编译的MPA静态web项目并接入nodejs, 你应该可以直接使用 hugo 命令或 bun/npm run build, 对nodejs 依赖只需维护package.json,然后提示依赖或配置有更新即可
 2. hugo默认生成 public/，测试可编译到 public-*，如 public-test-v202601020000, （.gitignore 已添加 /public\*/）  
 3. temp_workspace 可以用作临时工作空间, 避免使用系统%temp%目录，（.gitignore 已添加 /temp_workspace\*/）  
 4. 内部模块推崇扁平化、声明式，勿随意使用包装  

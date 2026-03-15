@@ -13,3 +13,4 @@ xvenv.cmd
 .xvenv/
 .env
 /static/workbox*
+/temp_workspace/
