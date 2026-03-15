@@ -268,19 +268,3 @@ locale = "zh_TW"
 [permalinks]
 mypost = "/p/:slug/"
 blog = "/p/:slug/"
-
-[build]
-[build.buildStats]
-enable = true
-
-[[build.cachebusters]]
-source = "postcss.config.js"
-target = "css"
-
-[[build.cachebusters]]
-source = "(package-lock\\.json|bun\\.lock)"
-target = "css"
-
-[[build.cachebusters]]
-source = "hugo_stats\\.json"
-target = "css"
