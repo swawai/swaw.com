@@ -115,16 +115,22 @@ post = "link_mf"
 
 [params.service_worker]
 # mode:
-#   "enable"  = 注册 /sw.js，启用 HTML 导航 stale-while-revalidate，并在检测到新版本时做弱提醒
+#   "enable"  = 注册 /sw.js，启用 HTML 导航 cache-first（按版本切桶失效），并在检测到新版本时做弱提醒
 #   "disable" = 不再启用 SW；页面会尝试注销旧注册并清理本项目缓存，同时继续输出一个惰性 /sw.js 便于旧注册尽快退场
 #   "off"     = 不注入 SW 管理脚本，也不输出 /sw.js；适合在 disable 跑够一段时间后彻底停用
 mode = "enable"
 # 建议发布时手动维护；若留空则回退到本次构建时间戳。
 # version = "202603110001"
-# 留空：仅启用 HTML 导航页缓存
-# 非空：在此基础上，对这些同源静态资源后缀额外启用 cache-first
-# 建议只填强缓存、文件名已 hash 的静态资源类型
+# 指纹/hash 资源会自动走独立 cache-first 缓存，无需在此重复声明
+# 留空：仅启用 HTML 导航缓存 + 自动指纹资源缓存
+# 非空：在此基础上，对这些同源无 hash 静态资源后缀额外启用 cache-first
+# 仅建议用于你确认可按版本切桶失效的资源类型
 # cache_first_extensions = ["css", "js", "svg", "png", "ico", "woff2", "webmanifest"]
+
+[params.runtime_i18n]
+# 共享运行时文案（如 SW 更新提示）的语言回退链。
+# key/value 均使用小写语言标签；运行时不再硬编码 zh-hk / zh-mo 等别名。
+fallbacks = { "zh-hk" = "zh-tw", "zh-mo" = "zh-tw" }
 
 [params.social]
 github = "https://github.com/swawai"
