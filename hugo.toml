@@ -62,7 +62,9 @@ icp = "粤ICP备2024338434号"
 #   Hugo 会把这些显式环境配置直接编译为页面级动作数据；运行时统一由共享
 #   prefetch runtime 脚本按浏览器能力自动选择当前环境。
 #   若某环境下引用了不可用 transport，编译期直接报错，而不是留给运行时回退。
-#   调试可直接访问 /prefetch-debug.html 查看当前浏览器环境检测结果、
+#   不保证 link / spec transport 会写入或命中 SW 缓存；
+#   在 SW 可用时，推荐优先使用 SW 预热来确保写入 SW 缓存并支持离线。
+#   调试可直接访问 content 锚点页 /prefetchdebug/ 查看当前浏览器环境检测结果、
 #   页面 payload 以及实际注入的预热资源。
 #   页面级动作数据里的短码约定：
 #      sp = speculation rules payload
@@ -119,13 +121,16 @@ post = "link_mf"
 #   "disable" = 不再启用 SW；页面会尝试注销旧注册并清理本项目缓存，同时继续输出一个惰性 /sw.js 便于旧注册尽快退场
 #   "off"     = 不注入 SW 管理脚本，也不输出 /sw.js；适合在 disable 跑够一段时间后彻底停用
 mode = "enable"
+# 静态轮询自动检查更新间隔，单位：分钟，默认 15
+update_check_interval = 15
+# 页面由隐藏切回可见时的主动检查防抖间隔，单位：分钟，默认 3
+update_visibility_throttle = 3
 # 建议发布时手动维护；若留空则回退到本次构建时间戳。
 # version = "202603110001"
-# 指纹/hash 资源会自动走独立 cache-first 缓存，无需在此重复声明
-# 留空：仅启用 HTML 导航缓存 + 自动指纹资源缓存
-# 非空：在此基础上，对这些同源无 hash 静态资源后缀额外启用 cache-first
-# 仅建议用于你确认可按版本切桶失效的资源类型
-# cache_first_extensions = ["css", "js", "svg", "png", "ico", "woff2", "webmanifest"]
+# SW 资源分类、缓存行为、CDN 缓存头以及平台部署头配置由主题默认 data/cache-policy-default.toml 驱动。
+# 如站点需要覆盖，可在仓库根目录创建 data/cache-policy.toml；Hugo 仍会直接渲染 public/_headers 与 public/edgeone.json。
+# 仓库根目录 edgeone.json 建议通过 npm/bun 脚本同步。
+# 本节仅保留 SW 生命周期相关配置（如 mode / version / check_interval）。
 
 [params.runtime_i18n]
 # 共享运行时文案（如 SW 更新提示）的语言回退链。
@@ -227,17 +232,12 @@ mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
 path      = "all-by-size-asc"
-[outputFormats.prefetchdebug]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "prefetch-debug"
-
 # 输出顺序会影响 Hugo 为 list/node 页面选择的主 URL。
 # 这里把 bydate 放在最前面，使 /、/tags/、/udc/ 等无 by-* 路径成为默认公开路径；
 # 若把 byname 等排到前面，.Permalink / .RelPermalink / .Site.Home.RelPermalink 可能改为指向 /by-name/...。
 [outputs]
 section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","prefetchdebug","rss"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
 taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 
@@ -248,7 +248,7 @@ weight = 1
 [languages.en.outputs]
 # 英文默认语言也保持相同顺序，避免根路径主 URL 被 /by-name/... 抢占。
 section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","prefetchdebug","rss"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
 taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 [languages.en.params]

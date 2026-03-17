@@ -9,7 +9,7 @@
 6. 站点实例相关的修订不应该写入到themes/banyan/中, 而框架/主题相关则应该  
 7. themes\banyan\assets\js\ 下若源文件自身含 Hugo 模板语法（如 {{ ... }}），文件名应以 .tmpl 结尾；若是纯 JS，即使最终仍会被 Hugo pipeline 发布、拼接或指纹化，也应保持 .js 后缀，减少维护时的心智负担  
 8. js注意检查, 默认须使用hugo内置ESbuild 打包  
-9. 若没修改edgeone.json 与 themes\banyan\assets\js\下的 sw.* / sw-manager.* 相关文件，可忽略此条，否则需确认：  
-    9.1. sw.js只处理html等无hash资源的缓存，使用SWR策略永远立即返回缓存资源-然后检查新版  
-    9.2. 若浏览器更新sw.js，会被sw-manager.js监控到,然后通知ui刷新(这主要是为了用户更快看到新内容，因为SWR策略可能返回非常老的资源)  
-    9.3. edgeone.json中对sw.js的缓存策略确保为"no-cache, max-age=0, must-revalidate"
+9. 若没修改themes\banyan\data\cache-policy-default.toml 与 themes\banyan\assets\js\下的 sw.enable.js.tmpl sw-manager.enable.update.js，可忽略此条，否则需确认：  
+    9.1. sw.js的缓存策略：navigation = cache-first + versioned; assets（hash资源） = cache-first + fingerprinted; sw.js = ignore 
+    9.2. 若浏览器更新sw.js，会被监控到,然后通知ui刷新/重载sw.js 并清空navigation旧缓存
+    9.3. 对sw.js的缓存策略确保为"no-cache, max-age=0, must-revalidate"
