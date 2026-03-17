@@ -77,9 +77,16 @@ icp = "粤ICP备2024338434号"
 #   若两个环境的 actions 完全相同，后者会直接写成前者 env 键的别名字符串，
 #   不会产生链式别名。
 #   其中当前实现里：
-#      s = hover delayed
-#      m = hover immediate
-#      x = static eager warmup
+#      spec_* = conservative / moderate / eager 直接交给浏览器原生 eagerness 语义处理，
+#               runtime 不再对触摸设备额外 remap
+#      link_* / sw_* 在非触摸主指针设备上：
+#         s = hover delayed
+#         m = hover immediate
+#         x = static eager warmup
+#      link_* / sw_* 在触摸主指针设备上：
+#         s = touchstart immediate
+#         m = viewport warmup（需 IntersectionObserver，且会尊重 saveData / 2g 限制）
+#         x = static eager warmup
 #   当前会按 menu > nav > sort_siblings > descendants > post 的顺序做全局去重；
 #   当前 menu / nav / sort_siblings / descendants / post 分别对应主菜单 / 面包屑与页面导航 / 排序兄弟项 / 后代 / post。
 
