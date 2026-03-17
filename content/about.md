@@ -3,9 +3,6 @@ date: "2025-10-11T20:10:44+08:00"
 draft: false
 title: "About"
 slug: "about"
-aliases:
-  - /ABOUT
-  - /ABOUT/
 type: "page"
 build:
   list: "never"
