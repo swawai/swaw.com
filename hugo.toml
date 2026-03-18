@@ -281,3 +281,4 @@ locale = "zh_TW"
 [permalinks]
 mypost = "/p/:slug/"
 blog = "/p/:slug/"
+product = "/p/:slug/"
