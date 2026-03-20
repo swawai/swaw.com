@@ -159,7 +159,7 @@ tag = "tags"
 [markup]
 [markup.highlight]
 noClasses = false
-style = "xcode"
+style = "vs"
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
