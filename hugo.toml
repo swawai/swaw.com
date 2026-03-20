@@ -157,6 +157,9 @@ udc = "udc"
 tag = "tags"
 
 [markup]
+[markup.highlight]
+noClasses = false
+style = "xcode"
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
