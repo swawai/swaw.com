@@ -8,10 +8,57 @@ type: "page"
 ---
 
 # 彻底告别环境污染！Xvenv：一个 BAT 脚本极速拉起免安装全栈开发环境
+
 在日常开发中，我们几乎都经历过以下“噩梦”
 
->dfe
->>sadfe
+<section class="md-spacer"></section>
+
+
+
+>中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以
+
+<section class="md-spacer"></section>
+
+
+
+
+
+>中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以
+
+<section class="md-spacer"></section>
+
+![本极速拉起免安装全栈开发环境](https://fastly.jsdelivr.net/gh/bucketio/img19@main/2026/02/26/1772115901539-ec3e94f9-68db-4cf2-ba2d-746e7ca21cd6.png)
+
+<section class="md-spacer"></section>
+
+ 
+
+![本极速拉起免安装全栈开发环境](https://fastly.jsdelivr.net/gh/bucketio/img19@main/2026/02/26/1772115901539-ec3e94f9-68db-4cf2-ba2d-746e7ca21cd6.png)
+
+<section class="md-spacer"></section>
+
+
+``` {linenos=inline,hl_lines=[12,"14-17"]}
+#噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩
+import re  # Launch IDEs
+from typing import Dict, List, Optional, Pattern, Tuple  # Launch
+# Launch IDEs
+# Launch IDEse dfsgdfg saergsdfgs gsdfg serg sdfg 
+Classification = Dict[str, Optional[object]]  # Launch IDEs
+#噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩
+```
+
+<section class="md-spacer"></section>
+
+ 
+
+sadfe [yanglbme](https://github.com/yanglbme)  在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”
+
+<section class="md-spacer"></section>
+
+
+在日常开发中，我们几乎历过以下“噩梦”时刻：
+
 
 - 无序列表项 1
   - 嵌套有序列表项 1
@@ -21,42 +68,26 @@ type: "page"
   1. 有序列表项 1
   2. 有序列表项 2
 
->dfe
->>sadfe
+在日常开发中，我们几乎历过以下“噩梦”时刻：
 
 
-```powershell {linenos=inline}
-# Launch IDEs
-# Launch IDEs
-$LaunchCount = 100000
-$LaunchCount = asdfasdfasdf  # Launch IDEs
-foreach ($ide in @(  # Launch IDEs
-    @{ m='run_vscode'; cmd='code'; args='cmd /c code "%XVENV_PROJECT_HOME%"' },  
-    @{ m='run_cursor'; cmd='cursor'; args='cmd /c cursor "%XVENV_PROJECT_HOME%"' },
-    @{ m='run_windsurf'; cmd='windsurf'; args='cmd /c windsurf "%XVENV_PROJECT_HOME%"' },
-    @{ m='run_antigravity'; cmd='antigravity'; args='cmd /c antigravity "%XVENV_PROJECT_HOME%"' },
-    @{ m='run_zed'; cmd='zed'; args='start "" /b zed "%XVENV_PROJECT_HOME%"' }
-)) {
-    if ($_xvenv_modules -contains $ide.m) {
-        bat_add "call :CheckCmd `"$($ide.m)`" `"$($ide.cmd)`" `"`" `"start`""
-        bat_add "if not errorlevel 1 $($ide.args)"
-        $LaunchCount++
-    }
-}
-```
-```python {hl_lines=[2,"5-7"]}
+>在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”
+
+在日常开发中，我们几乎历过以下“噩梦”时刻：
+
+```python {linenos=inline,hl_lines=[12,"14-17"]}
 import re  # Launch IDEs
 from typing import Dict, List, Optional, Pattern, Tuple  # Launch IDEs
 # Launch IDEs
 # Launch IDEse dfsgdfg saergsdfgs gsdfg serg sdfg 
 Classification = Dict[str, Optional[object]]  # Launch IDEs
 
-# Launch IDEse dfsgdfg saergsdfgs gsdfg serg sdfg 
+
 # Launch IDEse dfsgdfg saergsdfgs gsdfg serg sdfg 
 
 def _default_rules() -> List[Tuple[Pattern[str], Classification]]:
     return [
-        (re.compile(r"401\s+Unauthorized", re.IGNORECASE), {"ban_info": "401 Unauthorized", "is_active": False}),
+        (re.compile(r"401\s+Unauthorized", re.IGNORECASE), {"ban_info": "401 Unauthorized", "is_active": False}), 
         (re.compile(r"403\s+Forbidden", re.IGNORECASE), {"ban_info": "403 Forbidden", "is_active": False}),
     ]
 
@@ -72,57 +103,44 @@ def classify_message(message: str, custom_rules: Optional[List[Tuple[Pattern[str
 
     return {"ban_info": None, "is_active": None}
 ```
-```javascript
+在日常开发中，我们几乎历过以下“噩梦”时刻：
 
-function Extract-Zip ($ZipPath, $Dest, $SubDir=$null) {
-    Write-Host "[EXT] $([IO.Path]::GetFileName($ZipPath))" -Fore DarkGray
-    
-    # Check zip integrity
-    try { $null=[IO.Compression.ZipFile]::OpenRead($ZipPath).Dispose() } 
-    catch { 
-        Write-Host "[WARN] Corrupted ZIP, re-downloading..." -Fore Yellow
-        Remove-Item $ZipPath -Force; return $false 
-    }
+![本极速拉起免安装全栈开发环境](https://fastly.jsdelivr.net/gh/bucketio/img19@main/2026/02/26/1772115901539-ec3e94f9-68db-4cf2-ba2d-746e7ca21cd6.png)
+<section class="md-caption">注：说明文字</section>
 
-    $tmp = Join-Path $_xvenv_download_dir "tmp_$([Guid]::NewGuid())"
-    try { 
-        # Fast native .NET extraction (avoids Expand-Archive PS pipeline overhead)
-        [System.IO.Compression.ZipFile]::ExtractToDirectory($ZipPath, $tmp) 
-    }
-    catch { 
-        Write-Host "[ERR] Extraction failed: $_" -Fore Red
-        Remove-Item $ZipPath -Force; Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
-        exit 1 
-    }
-
-    $src = if ($SubDir -and (Test-Path "$tmp\$SubDir")) { "$tmp\$SubDir" } else { $tmp }
-    
-    # Extremely fast O(1) move instead of copying 10,000+ files
-    if ((Test-Path $Dest) -and @(Get-ChildItem -Path $Dest -Force).Count -eq 0) { Remove-Item $Dest -Force }
-    if (-not (Test-Path $Dest)) {
-        Move-Item $src $Dest -Force
-    } else {
-        Get-ChildItem $src -Force | Copy-Item -Destination $Dest -Recurse -Force
-    }
-    
-    if (Test-Path $tmp) { Remove-Item $tmp -Recurse -Force }
-    return $true
-}
+```python {linenos=inline,hl_lines=[12,"14-17"]}
+#噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩
+import re  # Launch IDEs
+from typing import Dict, List, Optional, Pattern, Tuple  # Launch IDEs
+# Launch IDEs
+# Launch IDEse dfsgdfg saergsdfgs gsdfg serg sdfg 
+Classification = Dict[str, Optional[object]]  # Launch IDEs
 ```
+<section class="md-caption">注：说明文字</section>
+
+| 项目人员                                    | 邮箱                   | 微信号       |
+| ------------------------------------------- | ---------------------- | ------------ |
+| [yanglbme](https://github.com/yanglbme)     | contact@yanglibin.info | YLB0109      |
+
+在日常开发中，我们几乎历过以下“噩梦”时刻：
+
+![本极速拉起免安装全栈开发环境](https://fastly.jsdelivr.net/gh/bucketio/img19@main/2026/02/26/1772115901539-ec3e94f9-68db-4cf2-ba2d-746e7ca21cd6.png)
 
 
-![sadfasdfadfadsfasdfasdfasd](https://fastly.jsdelivr.net/gh/bucketio/img19@main/2026/02/26/1772115901539-ec3e94f9-68db-4cf2-ba2d-746e7ca21cd6.png)
-
-
-```
-asdfef
+```python {linenos=inline,hl_lines=[12,"14-17"]}
+#噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩
+import re  # Launch IDEs
+from typing import Dict, List, Optional, Pattern, Tuple  # Launch IDEs
+# Launch IDEs
+# Launch IDEse dfsgdfg saergsdfgs gsdfg serg sdfg 
+Classification = Dict[str, Optional[object]]  # Launch IDEs
 ```
 
 在日常开发中，我们几乎历过以下“噩梦”时刻：
 
 
 
-在日常开发中，我们几乎历过以下“噩梦”时刻：
+>在日常开发中，我们几乎历过以下“噩梦”时刻：
 
 >asdf
 >sdf 
@@ -143,11 +161,6 @@ asdfef
 asdfef
 ```
 
-| 项目人员                                    | 邮箱                   | 微信号       | 邮箱             | 微信号       |
-| ------------------------------------------- | ---------------------- | ------------ | ------------ | ------------ |
-| [yanglbme](https://github.com/yanglbme)     | contact@yanglibin.info | YLB0109      | YLB0109      | YLB0109      |
-| [YangFong](https://github.com/YangFong)     | yangfong2022@gmail.com | yq2419731931 | YLB0109      | YLB0109      |
-| [thinkasany](https://github.com/thinkasany) | thinkasany@gmail.com   | thinkasany   | YLB0109      | YLB0109      |
 
 ```
 asdfef
