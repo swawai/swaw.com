@@ -1,10 +1,16 @@
 ---
-date: "2025-10-11T20:10:44+08:00"
+date: "2025-10-12T20:11:44+08:00"
 draft: false
 title: "Xvenv"
 slug: "xvenv"
 type: "page"
+tags: 
+ - udc
+ - udc/source3
 
+udc:
+- "100"
+- "100/2"
 ---
 # 彻底告别环境污染！Xvenv：一个 BAT 脚本极速拉起免安装全栈开发环境
 

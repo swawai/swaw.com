@@ -4,7 +4,13 @@ draft: false
 title: "test"
 slug: "test"
 type: "page"
+tags: 
+ - udc
+ - udc/source2
 
+udc:
+- "100"
+- "100/1"
 ---
 
 # 彻底告别环境污染！Xvenv：一个 BAT 脚本极速拉起免安装全栈开发环境
