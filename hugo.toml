@@ -282,6 +282,5 @@ description = "swaw——人不工，人生不必由工作定义"
 locale = "zh_TW"
 
 [permalinks]
-mypost = "/p/:slug/"
-blog = "/p/:slug/"
-product = "/p/:slug/"
+
+d = "/p/:slug/"
