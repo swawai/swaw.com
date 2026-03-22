@@ -242,6 +242,35 @@ mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
 path      = "all-by-size-asc"
+[outputFormats.resourcesbynameasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+[outputFormats.resourcesbyname]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-name"
+[outputFormats.resourcesbyprice]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-price"
+[outputFormats.resourcesbypriceasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-price-asc"
+[outputFormats.resourcesbyvalue]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-value"
+[outputFormats.resourcesbyvalueasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-value-asc"
 # 输出顺序会影响 Hugo 为 list/node 页面选择的主 URL。
 # 这里把 bydate 放在最前面，使 /、/tags/、/udc/ 等无 by-* 路径成为默认公开路径；
 # 若把 byname 等排到前面，.Permalink / .RelPermalink / .Site.Home.RelPermalink 可能改为指向 /by-name/...。

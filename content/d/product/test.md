@@ -7,7 +7,9 @@ type: "page"
 tags: 
  - udc
  - udc/source2
-
+resource: true
+resource_price: 48
+resource_value: "免安装拉起全栈开发环境"
 udc:
 - "100"
 - "100/1"
