@@ -7,9 +7,10 @@ type: "page"
 tags: 
  - udc
  - udc/source3
-resource: true
-resource_price: 49
-resource_value: "免安装拉起全栈开发环境"
+nav_menu_id: "products"
+product: true
+product_price: 49
+product_value: "免安装拉起全栈开发环境"
 
 udc:
 - "100"
