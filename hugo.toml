@@ -172,37 +172,124 @@ suffixes = ["webmanifest"]
 suffixes = ["js"]
 
 [outputFormats]
-[outputFormats.all]
+[outputFormats.byname]
 mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
-path      = "all"
-[outputFormats.desktop]
+path      = "by-name"
+[outputFormats.bynameasc]
 mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
-path      = "_desktop"
+path      = "by-name-asc"
+[outputFormats.bydate]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+#path      = "by-date"
+[outputFormats.bydateasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-date-asc"
+[outputFormats.bycount]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-count"
+[outputFormats.bycountasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-count-asc"
+[outputFormats.allbydate]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "all-by-date"
+[outputFormats.allbydateasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "all-by-date-asc"
+[outputFormats.allbypath]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "all-by-path"
+[outputFormats.allbypathasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "all-by-path-asc"
+[outputFormats.allbyname]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "all-by-name"
+[outputFormats.allbynameasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "all-by-name-asc"
+[outputFormats.allbysize]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "all-by-size"
+[outputFormats.allbysizeasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "all-by-size-asc"
+[outputFormats.resourcesbynameasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+[outputFormats.resourcesbyname]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-name"
+[outputFormats.resourcesbyprice]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-price"
+[outputFormats.resourcesbypriceasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-price-asc"
+[outputFormats.resourcesbyvalue]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-value"
+[outputFormats.resourcesbyvalueasc]
+mediaType = "text/html"
+isHTML    = true
+baseName  = "index"
+path      = "by-value-asc"
 # 输出顺序会影响 Hugo 为 list/node 页面选择的主 URL。
-# 这里把 html 放在最前面，使 /、/tags/、/udc/ 等 canonical 路径成为默认公开路径；
-# 排序状态改由 ?sort=... 承载，不再生成 by-* 独立静态页。
+# 这里把 bydate 放在最前面，使 /、/tags/、/udc/ 等无 by-* 路径成为默认公开路径；
+# 若把 byname 等排到前面，.Permalink / .RelPermalink / .Site.Home.RelPermalink 可能改为指向 /by-name/...。
 [outputs]
-page     = ["html","desktop"]
-section  = ["html","all","rss","desktop"]
-home     = ["html","all","rss","desktop"]
-taxonomy = ["html","rss","desktop"]
-term     = ["html","rss","desktop"]
+section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
+taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
+term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 
 [languages]
 [languages.en]
 languageName = "English"
 weight = 1
 [languages.en.outputs]
-# 英文默认语言也保持相同顺序，避免根路径主 URL 被排序 query 或其它 output 抢占。
-page     = ["html","desktop"]
-section  = ["html","all","rss","desktop"]
-home     = ["html","all","rss","desktop"]
-taxonomy = ["html","rss","desktop"]
-term     = ["html","rss","desktop"]
+# 英文默认语言也保持相同顺序，避免根路径主 URL 被 /by-name/... 抢占。
+section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
+home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
+taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
+term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
 [languages.en.params]
 description = "Systems Work, And We..."
 locale = "en_US"
