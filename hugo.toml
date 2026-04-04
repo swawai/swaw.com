@@ -242,31 +242,31 @@ mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
 path      = "all-by-size-asc"
-[outputFormats.resourcesbynameasc]
+[outputFormats.productsbynameasc]
 mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
-[outputFormats.resourcesbyname]
+[outputFormats.productsbyname]
 mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
 path      = "by-name"
-[outputFormats.resourcesbyprice]
+[outputFormats.productsbyprice]
 mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
 path      = "by-price"
-[outputFormats.resourcesbypriceasc]
+[outputFormats.productsbypriceasc]
 mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
 path      = "by-price-asc"
-[outputFormats.resourcesbyvalue]
+[outputFormats.productsbyvalue]
 mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
 path      = "by-value"
-[outputFormats.resourcesbyvalueasc]
+[outputFormats.productsbyvalueasc]
 mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
