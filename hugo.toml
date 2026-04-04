@@ -172,124 +172,26 @@ suffixes = ["webmanifest"]
 suffixes = ["js"]
 
 [outputFormats]
-[outputFormats.byname]
+[outputFormats.all]
 mediaType = "text/html"
 isHTML    = true
 baseName  = "index"
-path      = "by-name"
-[outputFormats.bynameasc]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "by-name-asc"
-[outputFormats.bydate]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-#path      = "by-date"
-[outputFormats.bydateasc]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "by-date-asc"
-[outputFormats.bycount]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "by-count"
-[outputFormats.bycountasc]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "by-count-asc"
-[outputFormats.allbydate]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "all-by-date"
-[outputFormats.allbydateasc]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "all-by-date-asc"
-[outputFormats.allbypath]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "all-by-path"
-[outputFormats.allbypathasc]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "all-by-path-asc"
-[outputFormats.allbyname]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "all-by-name"
-[outputFormats.allbynameasc]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "all-by-name-asc"
-[outputFormats.allbysize]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "all-by-size"
-[outputFormats.allbysizeasc]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "all-by-size-asc"
-[outputFormats.productsbynameasc]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-[outputFormats.productsbyname]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "by-name"
-[outputFormats.productsbyprice]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "by-price"
-[outputFormats.productsbypriceasc]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "by-price-asc"
-[outputFormats.productsbyvalue]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "by-value"
-[outputFormats.productsbyvalueasc]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "by-value-asc"
-# 输出顺序会影响 Hugo 为 list/node 页面选择的主 URL。
-# 这里把 bydate 放在最前面，使 /、/tags/、/udc/ 等无 by-* 路径成为默认公开路径；
-# 若把 byname 等排到前面，.Permalink / .RelPermalink / .Site.Home.RelPermalink 可能改为指向 /by-name/...。
+path      = "all"
 [outputs]
-section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
-term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
+section  = ["HTML","all","RSS"]
+home     = ["HTML","all","RSS"]
+taxonomy = ["HTML","RSS"]
+term     = ["HTML","RSS"]
 
 [languages]
 [languages.en]
 languageName = "English"
 weight = 1
 [languages.en.outputs]
-# 英文默认语言也保持相同顺序，避免根路径主 URL 被 /by-name/... 抢占。
-section  = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-home     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","allbyname","allbynameasc","allbydate","allbydateasc","allbypath","allbypathasc","allbysize","allbysizeasc","rss"]
-taxonomy = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
-term     = ["bydate","byname","bynameasc","bydateasc","bycount","bycountasc","rss"]
+section  = ["HTML","all","RSS"]
+home     = ["HTML","all","RSS"]
+taxonomy = ["HTML","RSS"]
+term     = ["HTML","RSS"]
 [languages.en.params]
 description = "Systems Work, And We..."
 locale = "en_US"
