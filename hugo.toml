@@ -64,7 +64,7 @@ icp = "粤ICP备2024338434号"
 #   若某环境下引用了不可用 transport，编译期直接报错，而不是留给运行时回退。
 #   不保证 link / spec transport 会写入或命中 SW 缓存；
 #   在 SW 可用时，推荐优先使用 SW 预热来确保写入 SW 缓存并支持离线。
-#   调试可直接访问 content 锚点页 /prefetch-debug/ 查看当前浏览器环境检测结果、
+#   调试可直接访问 content 锚点页 /prefetchdebug/ 查看当前浏览器环境检测结果、
 #   页面 payload 以及实际注入的预热资源。
 #   页面级动作数据里的短码约定：
 #      sp = speculation rules payload
