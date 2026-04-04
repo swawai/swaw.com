@@ -132,6 +132,9 @@ mode = "enable"
 update_check_interval = 15
 # 页面由隐藏切回可见时的主动检查防抖间隔，单位：分钟，默认 3
 update_visibility_throttle = 3
+# 离线提示页路径后缀；会相对每个语言 Home 生成最终离线提示页 URL，
+# 例如 "offline/" 会得到 /offline/、/zh/offline/、/zh-tw/offline/。
+offline_notice_path = "offline/"
 # 建议发布时手动维护；若留空则回退到本次构建时间戳。
 # version = "202603110001"
 # SW 资源分类、缓存行为、CDN 缓存头以及平台部署头配置由主题默认 data/cache-policy-default.toml 驱动。
