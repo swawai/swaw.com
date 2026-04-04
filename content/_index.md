@@ -8,7 +8,12 @@ nav_include_self_child: true
 nav_child_title: "Overview"
 nav_child_description: "Brand overview, orientation, and the opening statement for swaw."
 nav_child_weight: 1
-layout: "home-brand"
+render_main: "home-brand"
+render_styles_variant: "home"
+render_workspace: "dir"
+render_mode: "bydate"
+page_primary_inline_css:
+  - page.css
 ---
 
 ## swaw
