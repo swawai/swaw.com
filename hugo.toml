@@ -181,8 +181,8 @@ isHTML    = true
 baseName  = "index"
 path      = "all"
 [outputs]
-section  = ["HTML","all","RSS"]
-home     = ["HTML","all","RSS"]
+section  = ["HTML","RSS"]
+home     = ["HTML","RSS"]
 taxonomy = ["HTML","RSS"]
 term     = ["HTML","RSS"]
 
@@ -191,8 +191,8 @@ term     = ["HTML","RSS"]
 languageName = "English"
 weight = 1
 [languages.en.outputs]
-section  = ["HTML","all","RSS"]
-home     = ["HTML","all","RSS"]
+section  = ["HTML","RSS"]
+home     = ["HTML","RSS"]
 taxonomy = ["HTML","RSS"]
 term     = ["HTML","RSS"]
 [languages.en.params]
