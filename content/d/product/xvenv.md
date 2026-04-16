@@ -4,17 +4,15 @@ draft: false
 title: "Xvenv"
 slug: "xvenv"
 type: "page"
-tags: 
- - udc
- - udc/source3
- - udc/source4
+intent:
+ - decide
+tags:
+ - product
+ - product/xvenv
+ - product/xvenv/windows
 product: true
 product_price: 49
 product_value: "免安装拉起全栈开发环境"
-
-udc:
-- "100"
-- "100/2"
 ---
 # 彻底告别环境污染！Xvenv：一个 BAT 脚本极速拉起免安装全栈开发环境
 

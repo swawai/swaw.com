@@ -156,8 +156,18 @@ lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
 [pagination]
 pagerSize = 30
 [taxonomies]
-udc = "udc"
+intent = "intent"
 tag = "tags"
+# udc = "udc"
+# category = "categories"
+# author = "authors"
+#
+# ExampleSite ships sample taxonomy bundles under:
+#   - content/intent/_index.<lang>.md => intent sample
+#   - content/tags/_index.<lang>.md   => tags sample
+# Each taxonomy must define its own [banyan_taxonomy] in the root bundle.
+# Theme i18n and params.banyan.taxonomies.* are no longer taxonomy metadata sources.
+
 
 [markup]
 [markup.highlight]
@@ -174,12 +184,6 @@ suffixes = ["webmanifest"]
 [mediaTypes."application/javascript"]
 suffixes = ["js"]
 
-[outputFormats]
-[outputFormats.all]
-mediaType = "text/html"
-isHTML    = true
-baseName  = "index"
-path      = "all"
 [outputs]
 section  = ["HTML","RSS"]
 home     = ["HTML","RSS"]

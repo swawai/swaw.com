@@ -2,14 +2,13 @@
 date: "2025-04-26T20:10:42+08:00"
 Lastmod: "2025-09-26T20:10:42+08:00"
 draft: false
-tags: 
- - udc
- - udc/source
+intent:
+ - reference
+tags:
+ - taxonomy
+ - taxonomy/udc
 title: "UDC 来源"
 slug: "udc-source"
-udc:
-- "100"
-- "100/0"
 ---
 
 ### UDC 2600 个基本类下载：
