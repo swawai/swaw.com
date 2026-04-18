@@ -1,10 +1,12 @@
 ---
 title: 意图
 layout: article
+breadcrumb_fragment: /fragments/breadcrumb-signals
 cascade:
   - _target:
       kind: term
     layout: article
+    breadcrumb_fragment: /fragments/breadcrumb-signals
 banyan_taxonomy:
   mode: flat
   show_in_home: true
