@@ -1,10 +1,12 @@
 ---
 title: 意图
+nav_primary: signals
 layout: article
 breadcrumb_fragment: /fragments/breadcrumb-signals
 cascade:
   - _target:
       kind: term
+    nav_primary: signals
     layout: article
     breadcrumb_fragment: /fragments/breadcrumb-signals
 banyan_taxonomy:
