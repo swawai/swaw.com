@@ -8,8 +8,6 @@ slots:
   primary_nav: /fragments/nav-primary-links
   utilities: /fragments/nav-utilities
   footer: /fragments/home-footer-shortcuts
-show_breadcrumb: false
-show_meta: false
 build:
   list: never
 ---

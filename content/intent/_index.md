@@ -5,7 +5,8 @@ layout: article
 slots:
   primary_nav: /fragments/nav-primary-links
   utilities: /fragments/nav-utilities
-  breadcrumb: /fragments/breadcrumb-signals
+  breadcrumb_root: /fragments/breadcrumb-model-signals
+  breadcrumb: true
 cascade:
   - _target:
       kind: term
@@ -14,7 +15,8 @@ cascade:
     slots:
       primary_nav: /fragments/nav-primary-links
       utilities: /fragments/nav-utilities
-      breadcrumb: /fragments/breadcrumb-signals
+      breadcrumb_root: /fragments/breadcrumb-model-signals
+      breadcrumb: true
 banyan_taxonomy:
   mode: flat
   show_in_home: true

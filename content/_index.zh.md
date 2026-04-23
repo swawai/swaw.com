@@ -8,9 +8,6 @@ slots:
   primary_nav: /fragments/nav-primary-links
   utilities: /fragments/nav-utilities
   footer: /fragments/home-footer-shortcuts
-show_meta: false
-show_breadcrumb: false
-
 ---
 
 
@@ -32,5 +29,3 @@ show_breadcrumb: false
 
 Signals 记录的是持续变化的东西：AI 工程实践、行业动向、方法判断与阶段性结论。
 它更像供人和 LLM 共同检索的信号流，而不是一组结构饱满、修饰完整的专栏文章。[进入 Signals](/zh/d/)
-
-
