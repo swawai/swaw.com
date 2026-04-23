@@ -1,9 +1,13 @@
----
+﻿---
 title: About Swaw
 slug: about
 nav_primary: home
 type: page
 layout: article
+slots:
+  primary_nav: /fragments/nav-primary-links
+  utilities: /fragments/nav-utilities
+  footer: /fragments/home-footer-shortcuts
 show_breadcrumb: false
 show_meta: false
 build:
@@ -38,5 +42,3 @@ At the moment, this site uses the following naming frame:
 - Chinese entity name: 不工智能（深圳）有限公司
 
 This page is intentionally the longer identity page, so the homepage can stay focused on routing and trust-building.
-
-{{< fragment "/fragments/home-footer-shortcuts" >}}

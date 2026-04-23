@@ -1,9 +1,13 @@
----
+﻿---
 title: Swaw
 description: "Life should not be defined by work: hand repetitive, mechanical work to AI, and keep time for creation and life."
 nav_primary: home
 type: frameworks
 layout: article
+slots:
+  primary_nav: /fragments/nav-primary-links
+  utilities: /fragments/nav-utilities
+  footer: /fragments/home-footer-shortcuts
 show_meta: false
 show_breadcrumb: false
 ---
@@ -27,5 +31,3 @@ For more, see: [Products](/products/)
 Signals tracks what keeps changing: AI engineering practice, industry movement, practical judgment, and provisional conclusions.
 It is closer to a stream of signals for people and LLMs to retrieve together than to a polished column of finished essays. [Enter Signals](/d/)
 
-
-{{< fragment "/fragments/home-footer-shortcuts" >}}

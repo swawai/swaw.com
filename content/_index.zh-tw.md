@@ -1,9 +1,13 @@
----
+﻿---
 title: 人不工
 description: 人生不必由工作定義：把重複、機械的工作交給 AI，把時間留給創造與生活。
 nav_primary: home
 type: frameworks
 layout: article
+slots:
+  primary_nav: /fragments/nav-primary-links
+  utilities: /fragments/nav-utilities
+  footer: /fragments/home-footer-shortcuts
 show_meta: false
 show_breadcrumb: false
 ---
@@ -27,5 +31,3 @@ Signals 記錄的是持續變化的東西：AI 工程實踐、行業動向、方
 它更像供人和 LLM 共同檢索的信號流，而不是一組結構飽滿、修飾完整的專欄文章。[進入 Signals](/zh-tw/d/)
 
 
-
-{{< fragment "/fragments/home-footer-shortcuts" >}}

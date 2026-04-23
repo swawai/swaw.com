@@ -1,14 +1,20 @@
----
+﻿---
 title: 標籤
 nav_primary: signals
 layout: article
-breadcrumb_fragment: /fragments/breadcrumb-signals
+slots:
+  primary_nav: /fragments/nav-primary-links
+  utilities: /fragments/nav-utilities
+  breadcrumb: /fragments/breadcrumb-signals
 cascade:
   - _target:
       kind: term
     nav_primary: signals
     layout: article
-    breadcrumb_fragment: /fragments/breadcrumb-signals
+    slots:
+      primary_nav: /fragments/nav-primary-links
+      utilities: /fragments/nav-utilities
+      breadcrumb: /fragments/breadcrumb-signals
 banyan_taxonomy:
   mode: tree
   show_in_home: true

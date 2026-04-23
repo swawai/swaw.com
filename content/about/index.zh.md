@@ -1,9 +1,13 @@
----
+﻿---
 title: 关于人不工
 slug: about
 nav_primary: home
 type: page
 layout: article
+slots:
+  primary_nav: /fragments/nav-primary-links
+  utilities: /fragments/nav-utilities
+  footer: /fragments/home-footer-shortcuts
 show_breadcrumb: false
 show_meta: false
 build:
@@ -38,5 +42,3 @@ Swaw 来自 "simply watch ai work"。
 - 中文实体名：不工智能（深圳）有限公司
 
 这页故意保留为长一点的身份页，好让首页继续专注于品牌定义、分流和建立信任。
-
-{{< fragment "/fragments/home-footer-shortcuts" >}}
