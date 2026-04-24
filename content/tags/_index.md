@@ -29,8 +29,6 @@ banyan_taxonomy:
   unassigned_label: --untagged--
 ---
 
-Tags stay supplemental in Banyan.
 
-Use them to describe topic paths and related keywords, not to replace intent.
 
 {{< taxonomy-list >}}

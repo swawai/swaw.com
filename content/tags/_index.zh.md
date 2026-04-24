@@ -29,8 +29,6 @@ banyan_taxonomy:
   unassigned_label: --untagged--
 ---
 
-在 Banyan 里，`tags` 仍然是辅助维度。
 
-它更适合表达主题路径和补充关键词，而不是替代 `intent`。
 
 {{< taxonomy-list >}}

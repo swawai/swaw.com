@@ -26,9 +26,5 @@ banyan_taxonomy:
   article_mode: all
 ---
 
-Intent answers a different question than tags:
-
-- tags describe what a page is about
-- intent describes why the author wrote it and what cognitive action it tries to trigger
 
 {{< taxonomy-list >}}
