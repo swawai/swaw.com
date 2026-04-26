@@ -10,21 +10,26 @@ slots:
   footer: /fragments/home-footer-shortcuts
 ---
 
+從人工，到人不工。  
+人不必淪為工具。  
+**S**tay **W**hole **A**t **W**ork.
 
-人不工，希望把重複、機械的工作剝離出來，交給 AI。  
-人生不必由工作定義。  
-人的時間，應該留給創造與生活。  
-這裡是 swaw.com（Simply Watch AI Work），也是【人不工-工作室】的官方主站。  
-我們面向個人開發者與 AIGC 生產者，也服務技術團隊。作為一人公司，持續在網路、開發環境和 AI 工程實踐上沉澱工具與方法。
+這裡是 **人不工**，一人工作室。  
+我們把跨境網路部署與 Agent 軟體工程中的實踐，做成可重用的產品與方法：
 
-<h3 id="products">產品</h3>
+<h3 id="ipswan">ipswan</h3>
 
-**ipswan**：面向數位遊民、跨境電商與跨洋網路維護者的地域 IP 切換工具，可按應用綁定。  
-**xvenv**：一鍵拉起免安裝的開發環境，讓 AI coding 或 AI Agent 更快可用，也讓 `.env` 與 Git 身分的管理更省心。  
-更多，請查看：[產品](/products/)
+為隱私保護者、跨境務業者設計。支援依應用程式指定代理，讓網路切換更穩、更可控。  
+[了解 ipswan →](/p/ipswan/)
+
+<h3 id="xvenv">xvenv</h3>
+
+一鍵啟動免安裝的開發環境，讓 AI Agent 更快進入可用狀態，也讓 `.env` 與 Git 身分管理更省心。  
+[了解 xvenv →](/p/xvenv/)
+
+[全部產品](/products/)
 
 <h3 id="signals">信號</h3>
 
-Signals 記錄的是持續變化的東西：AI 工程實踐、行業動向、方法判斷與階段性結論。
-它更像供人和 LLM 共同檢索的信號流，而不是一組結構飽滿、修飾完整的專欄文章。[進入 Signals](/zh-tw/d/)
-
+記錄產業動向和我的工程實踐。供人回看，也可作為材料提供給 AI。  
+[進入 Signals →](/zh-tw/d/)

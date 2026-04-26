@@ -11,20 +11,30 @@ slots:
 ---
 
 
-Swaw hopes to peel repetitive, mechanical work away from people and hand it to AI.  
-Life should not be defined by work.  
-Time should be kept for creation and life.  
-This is swaw.com, the official home of the studio behind Swaw.  
-“Swaw” comes from “simply watch ai work.”  
-We serve individual developers and AIGC makers, and also work with technical teams. As a one-person company, we keep turning work in networking, development environments, and AI engineering practice into tools and methods.
 
-<h3 id="products">Products</h3>
 
-**ipswan**: A region-IP switching tool for digital nomads, cross-border sellers, and people maintaining networks across oceans, with per-app binding.  
-**xvenv**: A no-install development environment that gets AI coding or AI agents ready faster, while making `.env` files and Git identities easier to manage.  
-For more, see: [Products](/products/)
+**S**tay **W**hole **A**t **W**ork.  
+**S**oftware **W**orks **A**gainst **W**ork.
+
+This is **Swaw**—a one-person studio.  
+We turn real-world practice in cross-border network deployment and agentic software engineering into reusable products and methods.
+
+<h3 id="ipswan">ipswan</h3>
+
+Built for people who protect their privacy and work across borders. Per-app proxy routing makes network switching steadier and easier to control.
+
+[Learn about ipswan →](/p/ipswan/)
+
+<h3 id="xvenv">xvenv</h3>
+
+Spin up a zero-install development environment in one step, so AI agents can get to work faster, with `.env` files and Git identities kept in order.
+
+[Learn about xvenv →](/p/xvenv/)
+
+[All products](/products/)
 
 <h3 id="signals">Signals</h3>
 
-Signals tracks what keeps changing: AI engineering practice, industry movement, practical judgment, and provisional conclusions.
-It is closer to a stream of signals for people and LLMs to retrieve together than to a polished column of finished essays. [Enter Signals](/d/)
+Field notes on industry shifts and my engineering practice—for people to revisit, and for AI to use as source material.
+
+[Enter Signals →](/d/)
