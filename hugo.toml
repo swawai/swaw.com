@@ -118,9 +118,15 @@ nav = "link_xf"
 sort_siblings = "link_xf"
 descendants = "link_mf"
 post = "link_mf"
-
-
-
+[params.build]
+# 全站构建版本号：
+# - 默认直接按“前缀 + 构建时间”生成，适合作为 SW / fragment / 其他构建产物版本键
+# - 如需手工固定某次构建版本，可直接显式设置 version；设置后不再拼接 prefix / layout
+# version = "v202604270001"
+# 版本前缀；可留空
+version_prefix = "v"
+# Hugo / Go 时间 layout，供 now.Format 直接使用；默认产出紧凑、文件名安全的时间串
+timestamp_layout = "20060102150405"
 
 [params.service_worker]
 # mode:
@@ -135,12 +141,10 @@ update_visibility_throttle = 3
 # 离线提示页路径后缀；会相对每个语言 Home 生成最终离线提示页 URL，
 # 例如 "offline/" 会得到 /offline/、/zh/offline/、/zh-tw/offline/。
 offline_notice_path = "offline/"
-# 建议发布时手动维护；若留空则回退到本次构建时间戳。
-# version = "202603110001"
 # SW 资源分类、缓存行为、CDN 缓存头以及平台部署头配置由主题默认 data/cache-policy-default.toml 驱动。
 # 如站点需要覆盖，可在仓库根目录创建 data/cache-policy.toml；Hugo 仍会直接渲染 public/_headers 与 public/edgeone.json。
 # 仓库根目录 edgeone.json 建议通过 npm/bun 脚本同步。
-# 本节仅保留 SW 生命周期相关配置（如 mode / version / check_interval）。
+# 本节仅保留 SW 生命周期相关配置（如 mode / check_interval）。
 
 [params.runtime_i18n]
 # 共享运行时文案（如 SW 更新提示）的语言回退链。

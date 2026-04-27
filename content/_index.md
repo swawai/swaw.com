@@ -14,27 +14,24 @@ slots:
 
 
 **S**tay **W**hole **A**t **W**ork.  
-**S**oftware **W**orks **A**gainst **W**ork.
+**S**ee **W**ork **A**s **W**eather.
 
 This is **Swaw**—a one-person studio.  
-We turn real-world practice in cross-border network deployment and agentic software engineering into reusable products and methods.
+We turn real-world practices in cross-border network deployment and agentic software engineering into reusable products and methods:
 
 <h3 id="ipswan">ipswan</h3>
 
-Built for people who protect their privacy and work across borders. Per-app proxy routing makes network switching steadier and easier to control.
-
+Built for privacy defenders and cross-border professionals. Per-app proxy routing makes network switching steadier and easier to control.  
 [Learn about ipswan →](/p/ipswan/)
 
 <h3 id="xvenv">xvenv</h3>
 
-Spin up a zero-install development environment in one step, so AI agents can get to work faster, with `.env` files and Git identities kept in order.
-
+Spin up a zero-install dev environment with one click, so AI agents can start faster—with `.env` files and Git identities kept in order.  
 [Learn about xvenv →](/p/xvenv/)
 
 [All products](/products/)
 
 <h3 id="signals">Signals</h3>
 
-Field notes on industry shifts and my engineering practice—for people to revisit, and for AI to use as source material.
-
+Field notes on industry weather and my engineering practice—for people to revisit, and for AI to draw on.  
 [Enter Signals →](/d/)
