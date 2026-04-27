@@ -8,9 +8,7 @@ type: "page"
 intent:
  - decide
 tags:
- - product
- - product/xvenv
- - product/xvenv/windows
+ - tooling/devtools/windows
 product: true
 product_price: 49
 product_value: "免安装拉起全栈开发环境"

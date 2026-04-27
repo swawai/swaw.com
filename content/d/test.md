@@ -6,11 +6,9 @@ slug: "test"
 nav_primary: products
 type: "page"
 intent:
- - decide
+ - explore
 tags:
- - product
- - product/xvenv
- - product/xvenv/demo
+ - experimental/demo
 product: true
 product_price: 48
 product_value: "免安装拉起全栈开发环境"
