@@ -9,9 +9,12 @@ intent:
  - decide
 tags:
  - tooling/devtools/windows
-product: true
-product_price: 49
-product_value: "免安装拉起全栈开发环境"
+product:
+  origin: first-party
+  price:
+    amount: 49
+    currency: USD
+  value: "免安装拉起全栈开发环境"
 ---
 
 [目前只有英文版](/p/xvenv/)
