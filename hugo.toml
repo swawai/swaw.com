@@ -128,6 +128,13 @@ version_prefix = "v"
 # Hugo / Go 时间 layout，供 now.Format 直接使用；默认产出紧凑、文件名安全的时间串
 timestamp_layout = "20060102150405"
 
+[params.build.audit]
+# 构建期 URL 冲突审计：
+# - off   = 关闭
+# - warn  = 输出告警但不断构建
+# - error = 发现冲突直接失败
+permalink_collision = "warn"
+
 [params.service_worker]
 # mode:
 #   "enable"  = 注册 /sw.js，启用 HTML 导航 cache-first（按版本切桶失效），并在检测到新版本时做弱提醒

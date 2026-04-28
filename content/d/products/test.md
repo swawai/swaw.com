@@ -1,8 +1,8 @@
 ---
 date: "2025-10-11T20:10:44+08:00"
 draft: false
-title: "test"
-slug: "test"
+title: "test2"
+slug: "test2"
 nav_primary: products
 type: "page"
 intent:
