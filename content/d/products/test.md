@@ -10,7 +10,7 @@ intent:
 tags:
  - experimental/demo
 product:
-  origin: first-party
+  origin: third-party
   price:
     amount: 48
     currency: USD
