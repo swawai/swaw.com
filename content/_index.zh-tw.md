@@ -3,7 +3,7 @@ title: 人不工
 description: 人生不必由工作定義：把重複、機械的工作交給 AI，把時間留給創造與生活。
 nav_primary: home
 type: frameworks
-layout: article
+layout: article-page
 slots:
   primary_nav: /fragments/nav-primary-links
   utilities: /fragments/nav-utilities

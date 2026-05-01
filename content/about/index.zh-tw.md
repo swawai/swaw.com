@@ -3,7 +3,7 @@ title: 關於人不工
 slug: about
 nav_primary: home
 type: page
-layout: article
+layout: article-page
 slots:
   primary_nav: /fragments/nav-primary-links
   utilities: /fragments/nav-utilities

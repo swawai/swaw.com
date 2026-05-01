@@ -3,7 +3,7 @@ title: Swaw
 description: "Life should not be defined by work: hand repetitive, mechanical work to AI, and keep time for creation and life."
 nav_primary: home
 type: frameworks
-layout: article
+layout: article-page
 slots:
   primary_nav: /fragments/nav-primary-links
   utilities: /fragments/nav-utilities

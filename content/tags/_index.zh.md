@@ -1,7 +1,7 @@
 ﻿---
 title: 标签
 nav_primary: signals
-layout: article
+layout: article-list
 slots:
   primary_nav: /fragments/nav-primary-links
   utilities: /fragments/nav-utilities
@@ -11,7 +11,7 @@ cascade:
   - _target:
       kind: term
     nav_primary: signals
-    layout: article
+    layout: article-list
     slots:
       primary_nav: /fragments/nav-primary-links
       utilities: /fragments/nav-utilities

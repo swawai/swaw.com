@@ -3,7 +3,7 @@ title: 人不工
 description: 人生不必由工作定义：把重复、机械的工作交给 AI，把时间留给创造与生活。
 nav_primary: home
 type: frameworks
-layout: article
+layout: article-page
 slots:
   primary_nav: /fragments/nav-primary-links
   utilities: /fragments/nav-utilities
@@ -15,8 +15,8 @@ slots:
 人不必沦为工具。  
 **S**tay **W**hole **A**t **W**ork.
 
-**「人不工」**：一人工作室，也该有自己的轻量基础设施。  
-我们把跨境网络与 AI Agent 工作流中的实践，沉淀为可复用的产品与方法：
+**「人不工」**：一人工作室，也该有自己的 AI 驾驶舱。  
+我们从轻量基础设施做起，把跨境网络与 AI Agent 工作流中的实践，沉淀为可复用的产品与方法：
 
 <h3 id="ipswan">ipswan</h3>
 
