@@ -6,6 +6,8 @@
   "scripts": {
     "sync:edgeone": "node themes/banyan/scripts/sync-edgeone.mjs",
     "build": "hugo --gc --cleanDestinationDir --minify && npm run sync:edgeone",
+    "check:public": "node themes/banyan/scripts/check-public-html.mjs",
+    "check:public:prod": "node themes/banyan/scripts/check-public-html.mjs public --check",
     "report:assets": "node themes/banyan/scripts/report-assets.mjs",
     "server": "node themes/banyan/scripts/hugo-server-edgeone.mjs",
     "dev": "node themes/banyan/scripts/hugo-server-edgeone.mjs -D"
