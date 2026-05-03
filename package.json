@@ -8,6 +8,10 @@
     "build": "hugo --gc --cleanDestinationDir --minify && npm run sync:edgeone",
     "check:public": "node themes/banyan/scripts/check-public-html.mjs",
     "check:public:prod": "node themes/banyan/scripts/check-public-html.mjs public --check",
+    "check:browser": "node themes/banyan/scripts/browser-regression/browser.mjs",
+    "check:browser:headed": "node themes/banyan/scripts/browser-regression/browser-headed.mjs",
+    "check:browser:trace": "node themes/banyan/scripts/browser-regression/browser-trace.mjs",
+    "check:browser:install": "npx playwright install chromium",
     "report:assets": "node themes/banyan/scripts/report-assets.mjs",
     "server": "node themes/banyan/scripts/hugo-server-edgeone.mjs",
     "dev": "node themes/banyan/scripts/hugo-server-edgeone.mjs -D"
@@ -26,6 +30,7 @@
   "homepage": "https://github.com/swawai/swaw.com#readme",
   "devDependencies": {
     "hugo-extended": "^0.157.0",
+    "playwright": "^1.59.1",
     "workbox-core": "^7.4.0",
     "workbox-expiration": "^7.4.0",
     "workbox-routing": "^7.4.0",
