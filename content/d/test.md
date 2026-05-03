@@ -21,13 +21,13 @@ product:
 
 在日常开发中，我们几乎都经历过以下“噩梦”
 
-<section class="md-spacer"></section>
+{{< md-spacer >}}
 
 
 
 >中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以
 
-<section class="md-spacer"></section>
+{{< md-spacer >}}
 
 
 
@@ -35,17 +35,17 @@ product:
 
 >中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以
 
-<section class="md-spacer"></section>
+{{< md-spacer >}}
 
 ![本极速拉起免安装全栈开发环境](https://fastly.jsdelivr.net/gh/bucketio/img19@main/2026/02/26/1772115901539-ec3e94f9-68db-4cf2-ba2d-746e7ca21cd6.png)
 
-<section class="md-spacer"></section>
+{{< md-spacer >}}
 
  
 
 ![本极速拉起免安装全栈开发环境](https://fastly.jsdelivr.net/gh/bucketio/img19@main/2026/02/26/1772115901539-ec3e94f9-68db-4cf2-ba2d-746e7ca21cd6.png)
 
-<section class="md-spacer"></section>
+{{< md-spacer >}}
 
 
 ``` {linenos=inline,hl_lines=[12,"14-17"]}
@@ -58,13 +58,13 @@ Classification = Dict[str, Optional[object]]  # Launch IDEs
 #噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩
 ```
 
-<section class="md-spacer"></section>
+{{< md-spacer >}}
 
  
 
 sadfe [yanglbme](https://github.com/yanglbme)  在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”在日常开发中，我们几乎都经历过以下“噩梦”
 
-<section class="md-spacer"></section>
+{{< md-spacer >}}
 
 
 在日常开发中，我们几乎历过以下“噩梦”时刻：
@@ -116,7 +116,7 @@ def classify_message(message: str, custom_rules: Optional[List[Tuple[Pattern[str
 在日常开发中，我们几乎历过以下“噩梦”时刻：
 
 ![本极速拉起免安装全栈开发环境](https://fastly.jsdelivr.net/gh/bucketio/img19@main/2026/02/26/1772115901539-ec3e94f9-68db-4cf2-ba2d-746e7ca21cd6.png)
-<section class="md-caption">注：说明文字</section>
+{{< md-caption >}}注：说明文字{{< /md-caption >}}
 
 ```python {linenos=inline,hl_lines=[12,"14-17"]}
 #噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩噩
@@ -126,7 +126,7 @@ from typing import Dict, List, Optional, Pattern, Tuple  # Launch IDEs
 # Launch IDEse dfsgdfg saergsdfgs gsdfg serg sdfg 
 Classification = Dict[str, Optional[object]]  # Launch IDEs
 ```
-<section class="md-caption">注：说明文字</section>
+{{< md-caption >}}注：说明文字{{< /md-caption >}}
 
 | 项目人员                                    | 邮箱                   | 微信号       |
 | ------------------------------------------- | ---------------------- | ------------ |
@@ -188,10 +188,8 @@ asdfef
 * **团队协作卡在第一步**：新同事入职，花半天时间看文档“配置开发环境”，结果因为系统环境差异各种报错，“在我电脑上明明能跑”成了千古魔咒。
 
 想要一个**不改系统 PATH**、**不用安装臃肿 VS**、**不做任何系统修改**、一个项目一套环境，即插即用的随身开发工具箱？
-<section class="br-24">&#8203;</section>
 
 >asdf
-<section class="br-24">&#8203;</section>
 
 介绍一下我的开源工具 —— **Xvenv**，它用最复古的形式（一个单批处理文件），解决了最现代的开发环境隔离问题。
 
@@ -613,6 +611,4 @@ Markdown 是一种简单、强大且易于掌握的标记语言，通过学习�
 
 ---
 
-<center>
-    <img src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/1648303220922-7e14aefa-816e-44c1-8604-ade709ca1c69.png" style="width: 100px;">
-</center>
+{{< centered-image src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/1648303220922-7e14aefa-816e-44c1-8604-ade709ca1c69.png" width="100" alt="Doocs 示例图片" >}}

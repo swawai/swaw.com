@@ -12,12 +12,6 @@ timeZone = "Asia/Shanghai"
 enableGitInfo = false
 panicOnWarning = true
 
-[params]
-# If me_url is empty or commented out, the Me icon links to the Banyan theme GitHub repo.
-# It can point to either an internal page or an external URL.
-me_url = "/me/"
-copyright = "人不工&middot;Swaw LLC"
-icp = "粤ICP备2024338434号"
 [params.link_prefetch]
 # 四类链接预取模式：
 #   "" / "off" = 关闭该类预取
@@ -158,9 +152,6 @@ offline_notice_path = "offline/"
 # key/value 均使用小写语言标签；运行时不再硬编码 zh-hk / zh-mo 等别名。
 fallbacks = { "zh-hk" = "zh-tw", "zh-mo" = "zh-tw" }
 
-[params.social]
-github = "https://github.com/swawai"
-
 [frontmatter]
 lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
 
@@ -186,7 +177,7 @@ noClasses = false
 style = "vs"
 [markup.goldmark]
 [markup.goldmark.renderer]
-unsafe = true
+unsafe = false
 [markup.minify]
 disableXML = true
 
