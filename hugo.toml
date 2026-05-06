@@ -12,106 +12,70 @@ timeZone = "Asia/Shanghai"
 enableGitInfo = false
 panicOnWarning = true
 
-[params.link_prefetch]
-# 四类链接预取模式：
-#   "" / "off" = 关闭该类预取
-#   transport:
-#     spec = Speculation Rules
-#     link = rel=prefetch
-#     sw   = SW warmup
-#   eagerness:
-#     s = conservative
-#     m = moderate
-#     x = eager
-#   kind:
-#     f = prefetch
-#     r = prerender
-#   示例：
-#     spec_sf / spec_mf / spec_xf
-#     spec_xf_g
-#     spec_sr / spec_mr / spec_xr
+[params.prefetch_runtime]
+# 运行时预热栈：
+# - 只负责 link rel=prefetch 与 SW warm
+# - Hugo 会先按配置编译为 page-level runtime payload
+# - 浏览器运行时再按“link / SW”两位能力矩阵选择对应环境
+#   第 1 位 = rel=prefetch transport 可用
+#   第 2 位 = 当前上下文里 Service Worker API 可用
+# 说明：
+# - 当前已不再把 Speculation Rules transport 放进这套 env 矩阵里；
+#   Speculation Rules 走独立的 params.speculation_rules header 栈
+# - 运行时 mode 仍使用短码，便于延续现有调度语义：
 #     link_sf / link_mf / link_xf
 #     sw_sf   / sw_mf   / sw_xf
-#   global gate:
-#     追加 _g = 基于 sessionStorage 的全局一次性 gate；
-#     同一浏览会话里，完全相同的一组预热动作只首次执行一次
-# 建议：
-#   menu 适合 "*-prefetch" / "*-prerender" / "*_g"
-#   sort_siblings 适合 "*-prefetch"
-#   descendants 适合 "" / "*-prefetch"
-#   post 适合 "" / "*-prefetch" / "*-prerender"
-#   nav 适合 "" / "*-prefetch"
-# 说明补充：
-#   当前只支持显式环境表：
-#   [params.link_prefetch.env.TTT] / [params.link_prefetch.env.FTT] ...
-#   如需复用，可在某环境表里写：
-#      ref = "FTT"
-#   引用只在 Hugo 编译期展开，运行时仍只消费最终动作数据。
-#   T/F 三位依次表示：
-#      第 1 位 = SpeculationRules transport 可用
-#      第 2 位 = rel=prefetch transport 可用
-#      第 3 位 = 当前上下文里 Service Worker API 可用
-#              这里只看最终 SW API 是否可用，不看 active worker 是否已就绪，
-#              也不再叠加站点侧额外“允许 SW transport 参与环境判定”的开关。
-#   Hugo 会把这些显式环境配置直接编译为页面级动作数据；运行时统一由共享
-#   prefetch runtime 脚本按浏览器能力自动选择当前环境。
-#   若某环境下引用了不可用 transport，编译期直接报错，而不是留给运行时回退。
-#   不保证 link / spec transport 会写入或命中 SW 缓存；
-#   在 SW 可用时，推荐优先使用 SW 预热来确保写入 SW 缓存并支持离线。
-#   调试可直接访问 content 锚点页 /prefetchdebug/ 查看当前浏览器环境检测结果、
-#   页面 payload 以及实际注入的预热资源。
-#   页面级动作数据里的短码约定：
-#      sp = speculation rules payload
-#      sg = speculation rules payload（带 global gate）
-#      ls / lm / lx = link transport 的保守 / 中等 / 激进策略
-#      lsg / lmg / lxg = link transport（带 global gate）
-#      ws / wm / wx = SW transport 的保守 / 中等 / 激进策略
-#      wsg / wmg / wxg = SW transport（带 global gate）
-#   注入 HTML 的 site-prefetch-data 会按最终 actions 去重；
-#   若两个环境的 actions 完全相同，后者会直接写成前者 env 键的别名字符串，
-#   不会产生链式别名。
-#   其中当前实现里：
-#      spec_* = conservative / moderate / eager 直接交给浏览器原生 eagerness 语义处理，
-#               runtime 不再对触摸设备额外 remap
-#      link_* / sw_* 在非触摸主指针设备上：
-#         s = hover delayed
-#         m = hover immediate
-#         x = static eager warmup
-#      link_* / sw_* 在触摸主指针设备上：
-#         s = touchstart immediate
-#         m = viewport warmup（需 IntersectionObserver，且会尊重 saveData / 2g 限制）
-#         x = static eager warmup
-#   当前会按 menu > nav > sort_siblings > descendants > post 的顺序做全局去重；
-#   当前 menu / nav / sort_siblings / descendants / post 分别对应主菜单 / 面包屑与页面导航 / 排序兄弟项 / 后代 / post。
+# - 追加 _g = 基于 sessionStorage 的全局一次性 gate；
+#   同一浏览会话里，完全相同的一组预热动作只首次执行一次
+# - link_* / sw_* 在非触摸主指针设备上：
+#     s = hover delayed
+#     m = hover immediate
+#     x = static eager warmup
+# - link_* / sw_* 在触摸主指针设备上：
+#     s = touchstart immediate
+#     m = viewport warmup（需 IntersectionObserver，且会尊重 saveData / 2g 限制）
+#     x = static eager warmup
 
-[params.link_prefetch.env.TTT]
+[params.prefetch_runtime.env.TT]
 menu = "sw_xf_g"
 nav = "sw_xf_g"
 sort_siblings = "sw_xf_g"
 descendants = "sw_xf_g"
 post = "sw_mf_g"
-[params.link_prefetch.env.TFT]
-ref="TTT"
-[params.link_prefetch.env.FTT]
-ref="TTT"
-[params.link_prefetch.env.FFT]
-ref="TTT"
+[params.prefetch_runtime.env.FT]
+ref = "TT"
 
-[params.link_prefetch.env.TTF]
-menu = "spec_mf"
-nav = "spec_xf"
-sort_siblings = "spec_xf"
-descendants = "spec_mf"
-post = "spec_mf"
-[params.link_prefetch.env.TFF]
-ref = "TTF"
-
-[params.link_prefetch.env.FTF]
+[params.prefetch_runtime.env.TF]
 menu = "link_mf"
 nav = "link_xf"
 sort_siblings = "link_xf"
 descendants = "link_mf"
 post = "link_mf"
+
+[params.speculation_rules]
+# Header 栈：
+# - 只负责 Speculation-Rules response header + external rules JSON
+# - 不再把 spec payload 注入 HTML inline data
+# - 若浏览器不支持 Speculation Rules，会静默忽略该 header
+# - runtime_coordination:
+#     independent = 双栈独立；和 prefetch_runtime 命中相同目标时，构建期会给出 warning
+#     preempt_runtime_when_supported =
+#         若浏览器支持 Speculation Rules，则 spec 命中的 URL 由 spec 拥有；
+#         runtime 只处理剩余 URL。若浏览器不支持，则 runtime 全量接管
+# mode:
+#   off    = 关闭
+#   header = 生成页面级 Speculation-Rules 头与共享 rules JSON
+mode = "header"
+runtime_coordination = "preempt_runtime_when_supported"
+# direct modes:
+#   "" / "off"
+#   prefetch_conservative / prefetch_moderate / prefetch_eager
+#   prerender_conservative / prerender_moderate / prerender_eager
+menu = "prefetch_moderate"
+nav = "prefetch_eager"
+sort_siblings = "prefetch_eager"
+descendants = "prefetch_moderate"
+post = "prefetch_moderate"
 [params.build]
 # 全站构建版本号：
 # - 默认直接按“前缀 + 构建时间”生成，适合作为 SW / fragment / 其他构建产物版本键
