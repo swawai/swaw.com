@@ -133,7 +133,7 @@
       ]
     }
   ],
-  "installCommand": "npm ci",
+  "installCommand": "git submodule sync --recursive && git submodule update --init --recursive --force && npm ci",
   "nodeVersion": "22.11.0",
   "outputDirectory": "public"
 }
