@@ -57,6 +57,10 @@ post = "link_mf"
 # - 只负责 Speculation-Rules response header + external rules JSON
 # - 不再把 spec payload 注入 HTML inline data
 # - 若浏览器不支持 Speculation Rules，会静默忽略该 header
+# - 2026-05: EdgeOne Pages 的 edgeone.json 暂不支持 header value 中包含
+#   需要转义的双引号；而 Speculation-Rules header 的标准写法需要
+#   `"/speculation-rules/xxx.json"`。因此 swaw.com 默认关闭该栈，避免
+#   EdgeOne CDN 配置更新失败。若切换到支持该 header 的平台，可改回 header。
 # - runtime_coordination:
 #     independent = 双栈独立；和 prefetch_runtime 命中相同目标时，构建期会给出 warning
 #     preempt_runtime_when_supported =
@@ -65,9 +69,11 @@ post = "link_mf"
 # mode:
 #   off    = 关闭
 #   header = 生成页面级 Speculation-Rules 头与共享 rules JSON
-mode = "header"
+mode = "off"
 runtime_coordination = "preempt_runtime_when_supported"
 # direct modes:
+# - mode = "off" 时，下面这些 slot 策略不生效；保留它们只是为了将来
+#   切换到支持 Speculation-Rules header 的平台时能一眼恢复原策略。
 #   "" / "off"
 #   prefetch_conservative / prefetch_moderate / prefetch_eager
 #   prerender_conservative / prerender_moderate / prerender_eager
