@@ -31,10 +31,6 @@
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; script-src 'self' 'report-sample' 'sha256-43+5224tJl5rwZd63gygQxcHEpYlmebuqRyHQR0C6fU=' 'sha256-EPQRDJqoydwkdPxzFvNoOZUP0GKOd1E0nQ/CAph6qhI=' 'sha256-jCh5yHzzbQaOCzTl422iNDU/tOSBFJkUaxvnNiyBPzA='; style-src 'self' 'report-sample'; img-src 'self' data:; connect-src 'self'; font-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'"
-        },
-        {
-          "key": "Speculation-Rules",
-          "value": "\"/speculation-rules/document.b475b2ce4d6ef13e.json\""
         }
       ]
     },
