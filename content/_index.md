@@ -16,8 +16,8 @@ slots:
 **S**tay **W**hole **A**t **W**ork.  
 **S**ee **W**ork **A**s **W**eather.
 
-**Swaw**: One-person studios deserve their own lightweight infrastructure.  
-We turn real-world practices in cross-border networking and AI agent workflows into reusable products and methods:
+**Swaw**: One-person studios deserve their own AI cockpit.  
+We start with lightweight infrastructure, turning real-world practices in cross-border networking and AI-agent workflows into reusable products and methods:
 
 ### ipswan
 
