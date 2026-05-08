@@ -39,6 +39,7 @@ panicOnWarning = true
 [params.prefetch_runtime.env.TT]
 menu = "sw_xf_g"
 nav = "sw_xf_g"
+crumb = "sw_mf_g"
 sort_siblings = "sw_xf_g"
 descendants = "sw_xf_g"
 post = "sw_mf_g"
@@ -48,6 +49,7 @@ ref = "TT"
 [params.prefetch_runtime.env.TF]
 menu = "link_mf"
 nav = "link_xf"
+crumb = "link_mf"
 sort_siblings = "link_xf"
 descendants = "link_mf"
 post = "link_mf"
@@ -79,6 +81,7 @@ runtime_coordination = "preempt_runtime_when_supported"
 #   prerender_conservative / prerender_moderate / prerender_eager
 menu = "prefetch_moderate"
 nav = "prefetch_eager"
+crumb = "prefetch_moderate"
 sort_siblings = "prefetch_eager"
 descendants = "prefetch_moderate"
 post = "prefetch_moderate"
