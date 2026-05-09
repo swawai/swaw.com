@@ -1,6 +1,6 @@
 ﻿---
 title: 人不工
-description: 人生不必由工作定义：把重复、机械的工作交给 AI，把时间留给创造与生活。
+description: 一人工作室，也该有自己的 AI 驾驶舱。
 nav_primary: home
 type: frameworks
 layout: article-page

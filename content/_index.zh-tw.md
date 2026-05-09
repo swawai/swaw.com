@@ -1,6 +1,6 @@
 ﻿---
 title: 人不工
-description: 人生不必由工作定義：把重複、機械的工作交給 AI，把時間留給創造與生活。
+description: 一人工作室，也該有自己的 AI 駕駛艙。
 nav_primary: home
 type: frameworks
 layout: article-page
@@ -17,8 +17,8 @@ slots:
 人不必淪為工具。  
 **S**tay **W**hole **A**t **W**ork.
 
-**「人不工」**：一人工作室，也該有自己的輕量基礎設施。  
-我們把跨境網路與 AI Agent 工作流程中的實務，沉澱為可複用的產品與方法：
+**「人不工」**：一人工作室，也該有自己的 AI 駕駛艙。  
+我們從輕量基礎設施做起，把跨境網路與 AI Agent 工作流程中的實務經驗，整理成可重複使用的產品與方法：
 
 ### ipswan
 

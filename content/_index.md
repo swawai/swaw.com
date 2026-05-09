@@ -1,6 +1,6 @@
 ﻿---
 title: Swaw
-description: "Life should not be defined by work: hand repetitive, mechanical work to AI, and keep time for creation and life."
+description: One-person studios deserve their own AI cockpit.
 nav_primary: home
 type: frameworks
 layout: article-page
