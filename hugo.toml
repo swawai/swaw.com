@@ -175,7 +175,6 @@ home     = ["HTML","RSS"]
 taxonomy = ["HTML","RSS"]
 term     = ["HTML","RSS"]
 [languages.en.params]
-description = "Systems Work, And We..."
 locale = "en_US"
 
 [languages.zh]
@@ -183,7 +182,6 @@ languageName = "中文"
 weight = 2
 
 [languages.zh.params]
-description = "swaw——人不工，人生不必由工作定义"
 locale = "zh_CN"
 
 [languages.zh-tw]
@@ -191,7 +189,6 @@ languageName = "繁體"
 weight = 3
 
 [languages.zh-tw.params]
-description = "swaw——人不工，人生不必由工作定义"
 locale = "zh_TW"
 
 [permalinks]
