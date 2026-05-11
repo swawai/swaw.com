@@ -13,7 +13,7 @@ product:
   origin: first-party
   price:
     amount: 49
-    currency: USD
+    currency: $
   value: "免安装拉起全栈开发环境"
 ---
 # 彻底告别环境污染！Xvenv：一个 BAT 脚本极速拉起免安装全栈开发环境

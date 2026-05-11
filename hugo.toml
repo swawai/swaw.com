@@ -12,6 +12,7 @@ timeZone = "Asia/Shanghai"
 enableGitInfo = false
 panicOnWarning = true
 
+
 [params.prefetch_runtime]
 # 运行时预热栈：
 # - 只负责 link rel=prefetch 与 SW warm
@@ -153,11 +154,6 @@ style = "vs"
 unsafe = false
 [markup.minify]
 disableXML = true
-
-[mediaTypes."application/manifest+json"]
-suffixes = ["webmanifest"]
-[mediaTypes."application/javascript"]
-suffixes = ["js"]
 
 [outputs]
 section  = ["HTML","RSS"]
