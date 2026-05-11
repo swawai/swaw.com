@@ -16,8 +16,8 @@ slots:
 **S**tay **W**hole **A**t **W**ork.  
 **S**ee **W**ork **A**s **W**eather.
 
-**Swaw**: One-person studios deserve their own AI cockpit.  
-We start with lightweight infrastructure, turning real-world practices in cross-border networking and AI-agent workflows into reusable products and methods:
+Every one-person studio deserves its own AI cockpit.  
+We start with lightweight infrastructure:
 
 ### ipswan
 
@@ -36,3 +36,6 @@ Spin up a zero-install dev environment with one click, so AI agents can get to w
 
 Field notes on industry weather and engineering practice—for people to revisit, and for AI to draw on.  
 [Enter Signals →](/d/)
+
+
+
