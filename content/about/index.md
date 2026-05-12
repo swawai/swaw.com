@@ -1,5 +1,6 @@
 ﻿---
 title: About Swaw
+description: Stay Whole At Work. See Work As Weather.
 slug: about
 nav_primary: home
 type: page
@@ -14,29 +15,40 @@ build:
 
 # About Swaw
 
-Swaw is the public site for an owner-operated company.
-The English name comes from "simply watch ai work".
-This site exists to keep the brand layer, product layer, and writing layer distinct enough to stay maintainable.
+From `人工` to `人不工`: from treating people as labor inputs to building work where people are not reduced to tools.
 
-## Brand
+People should not become parts inside a process. AI, agents, automation, and software systems should help a person stay whole: able to see what is happening, keep judgment, set boundaries, and direct the work.
 
-The homepage defines what Swaw is and helps a first-time visitor choose a direction quickly.
-It should stay short, directional, and durable.
+Swaw is the public site and operating frame for building the AI cockpit for one-person studios.
 
-## Structure
+**Stay Whole At Work.**  
+**See Work As Weather.**
+
+These two readings of S-W-A-W name the same stance. Stay Whole At Work is the human boundary. See Work As Weather is the operating method: treat work as changing conditions to observe, route, and respond to, instead of as a pile of tasks that owns the person doing them.
+
+## What We Build
+
+One-person studios deserve the kind of operational cockpit usually reserved for larger teams: a way to see the situation, coordinate tools, and decide what should happen next.
+
+Swaw starts from lightweight infrastructure, then grows toward systems where AI agents can work inside clear context, permissions, and feedback loops.
+
+The goal is not to automate the person away. The goal is to let the system carry more of the repeatable surface area, while the person keeps judgment, taste, responsibility, and direction.
+
+## Site Structure
 
 `/products/` is where productized outputs live.
-`/d/` is where signals, notes, and ongoing judgment live.
-`/about/` is where the longer brand and operator context can evolve without crowding the homepage.
+
+`/d/` is where Signals, notes, industry weather, and engineering judgment live.
+
+`/about/` is the identity layer: brand meaning, operating names, and the longer context that should not crowd the homepage.
 
 ## Operating Names
 
-At the moment, this site uses the following naming frame:
-
-- English brand: Swaw
-- English expansion: simply watch ai work
-- Chinese brand: 人不工
-- Operating entity name in English contexts: WY Swaw LLC
+- Brand: Swaw
+- Domain: swaw.com
+- English readings: Stay Whole At Work / See Work As Weather
+- Chinese brand phrase: 人不工
+- English-context operating name: WY Swaw LLC
 - Chinese entity name: 不工智能（深圳）有限公司
 
-This page is intentionally the longer identity page, so the homepage can stay focused on routing and trust-building.
+The homepage should stay short, directional, and durable. This page keeps the longer identity context in one place.
