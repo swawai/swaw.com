@@ -10,11 +10,7 @@ slots:
   footer: /fragments/home-footer-shortcuts
 ---
 
-
-从人工，到 **「人不工」**。  
-人不必沦为工具，**S**tay **W**hole **A**t **W**ork.
-
-一人工作室，也该有自己的 AI 驾驶舱。  
+为一人工作室打造 AI 驾驶舱。  
 我们先从轻量基础设施做起：
 
 ### ipswan

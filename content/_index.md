@@ -10,13 +10,7 @@ slots:
   footer: /fragments/home-footer-shortcuts
 ---
 
-
-
-
-**S**tay **W**hole **A**t **W**ork.  
-**S**ee **W**ork **A**s **W**eather.
-
-Every one-person studio deserves its own AI cockpit.  
+Building the AI cockpit for one-person studios.  
 We start with lightweight infrastructure:
 
 ### ipswan
