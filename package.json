@@ -7,7 +7,7 @@
     "sync:edgeone": "node themes/banyan/scripts/build/sync-edgeone.mjs",
     "csp:headers": "node themes/banyan/scripts/build/patch-csp.mjs",
     "speculation-rules:headers": "node themes/banyan/scripts/build/emit-speculation-rules-headers.mjs",
-    "build": "hugo --gc --cleanDestinationDir --minify && npm run csp:headers && npm run speculation-rules:headers && npm run sync:edgeone",
+    "build": "node themes/banyan/scripts/build/run-hugo.mjs --gc --cleanDestinationDir --minify && npm run csp:headers && npm run speculation-rules:headers && npm run sync:edgeone",
     "build:browser:temp": "node themes/banyan/scripts/dev/build-browser-temp.mjs",
     "help:browser": "node themes/banyan/scripts/dev/print-browser-help.mjs",
     "check:security:headers": "node themes/banyan/scripts/checks/check-security-headers.mjs",
