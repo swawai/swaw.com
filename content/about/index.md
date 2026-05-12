@@ -1,8 +1,8 @@
-﻿---
+---
 title: About Swaw
-description: Stay Whole At Work. See Work As Weather.
+description: The AI cockpit for one-person studios.
 slug: about
-nav_primary: home
+nav_primary: about
 type: page
 layout: article-page
 slots:
@@ -15,40 +15,62 @@ build:
 
 # About Swaw
 
-From `人工` to `人不工`: from treating people as labor inputs to building work where people are not reduced to tools.
+Swaw builds the AI cockpit for one-person studios.
 
-People should not become parts inside a process. AI, agents, automation, and software systems should help a person stay whole: able to see what is happening, keep judgment, set boundaries, and direct the work.
+In Chinese, Swaw uses the name `人不工`. It reverses `人工`: a reminder that people should not be reduced to labor inputs or process parts. AI, agents, automation, and software systems should help a person see the situation, coordinate tools, set boundaries, and keep judgment.
 
-Swaw is the public site and operating frame for building the AI cockpit for one-person studios.
-
-**Stay Whole At Work.**  
-**See Work As Weather.**
-
-These two readings of S-W-A-W name the same stance. Stay Whole At Work is the human boundary. See Work As Weather is the operating method: treat work as changing conditions to observe, route, and respond to, instead of as a pile of tasks that owns the person doing them.
+Swaw also carries two English readings: Stay Whole At Work / See Work As Weather. The first names the human boundary. The second names the operating method: observe changing conditions, judge the route, and respond with less noise.
 
 ## What We Build
 
-One-person studios deserve the kind of operational cockpit usually reserved for larger teams: a way to see the situation, coordinate tools, and decide what should happen next.
+Swaw starts from lightweight infrastructure, then moves toward fuller AI work systems.
 
-Swaw starts from lightweight infrastructure, then grows toward systems where AI agents can work inside clear context, permissions, and feedback loops.
+- [ipswan](/p/ipswan/) is built for privacy-conscious and cross-border workers. It assigns proxy exits per app so network switching becomes steadier and more controllable.
+- [xvenv](/p/xvenv/) starts a portable development environment quickly, helping AI agents become useful sooner while making `.env` and Git identity management less painful.
 
-The goal is not to automate the person away. The goal is to let the system carry more of the repeatable surface area, while the person keeps judgment, taste, responsibility, and direction.
+These products are intentionally small. The common line is to reduce the environmental friction before AI agents can enter real work: network routes, development environments, identity, context, permissions, and feedback.
 
-## Site Structure
+## Why This Exists
 
-`/products/` is where productized outputs live.
+Swaw did not start as an abstract AI idea.
 
-`/d/` is where Signals, notes, industry weather, and engineering judgment live.
+I spent nearly eight years as a librarian. That work made one lesson hard to forget: humanity has already accumulated far more knowledge than any one person can read in a lifetime. The scarce capability is no longer access to information alone; it is the ability to filter, understand, connect, and reuse it.
 
-`/about/` is the identity layer: brand meaning, operating names, and the longer context that should not crowd the homepage.
+For nearly ten years after that, I worked in IT and infrastructure: desktop support, network administration, office LAN planning, server-room and private-cloud networking, game operations, cloud-platform and cross-border network deployment, and operations automation development. That work showed me that information does not become productive by itself. It needs environments, networks, permissions, tools, workflows, and feedback loops before it can turn into action.
 
-## Operating Names
+That is why the idea of an AI cockpit is not accidental for me. In the AI era, the work is to reorganize knowledge, data, tools, and infrastructure so an individual can process information, form judgment, and drive action with more scale and efficiency. It can serve business operations, and it can also serve learning and research.
+
+I also do not believe the best AI work style is to become an absent owner. Models will keep getting stronger, but that does not mean people can only step aside. One of the most human capabilities is to make and use tools: turn experience into methods, methods into usable tools, and use those tools to think and decide at a higher level.
+
+Swaw's AI cockpit is my product direction for that tool-making idea in the AI era: build a practical tool system around human-AI collaboration, make complex work visible first, then layered, routed, and automated, so one-person studios can still understand the situation, make judgments, and drive action.
+
+## Where To Start
+
+The main navigation has three entries:
+
+- Signals: industry changes, engineering practice, and working judgments.
+- Products: productized tools you can use or evaluate.
+- About: brand, operating entities, and contact information.
+
+If this is your first visit, start with Products. If you want to understand how we read AI, agents, and independent work, read Signals.
+
+## Brand and Operating Entities
 
 - Brand: Swaw
+- Chinese brand: 人不工
+- Chinese meaning: from `人工` to `人不工`; people should not be reduced to tools
 - Domain: swaw.com
 - English readings: Stay Whole At Work / See Work As Weather
-- Chinese brand phrase: 人不工
-- English-context operating name: WY Swaw LLC
-- Chinese entity name: 不工智能（深圳）有限公司
+- U.S. and global operating entity: WY Swaw LLC
+- Mainland China operating entity: 不工智能（深圳）有限公司
 
-The homepage should stay short, directional, and durable. This page keeps the longer identity context in one place.
+These entities support payments and business operations across mainland China and U.S./global contexts, and are run by the same founder.
+
+## Contact
+
+- X: [@iddibi](https://x.com/iddibi)
+- GitHub: [swawai](https://github.com/swawai)
+- Email: [he.haifeng@hotmail.com](mailto:he.haifeng@hotmail.com)
+- WeChat official account: scan the QR code below
+
+![Swaw WeChat official account QR code](/images/contact/wechat-qrcode.jpg)
