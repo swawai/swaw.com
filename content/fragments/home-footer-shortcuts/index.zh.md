@@ -5,7 +5,7 @@ build:
   render: never
 footer:
   aria_label: 首页底部快捷入口
-  brand_label: 2026 人不工&middot;Swaw
+  brand_label: 2026 Swaw
   icp_number: ICP备2024338434号
   about_show: false
   about_label: 关于

@@ -17,10 +17,6 @@ build:
 
 We are building an AI cockpit for one-person studios: starting with networking and development environments, then gradually turning content operations, tax and bookkeeping, and other tedious work into reusable, automatable systems, so people can stay focused on craft and taste.
 
-Renbugong — 人不工 — is Swaw’s name in Chinese.
-
-It comes from a counter-reading of 「人工」: a reminder that people do not have to be reduced to tools.
-
 Swaw has two readings: Stay Whole At Work / See Work As Weather. Stay whole as a person at work, and observe work the way we observe weather.
 
 ## Current Stage
@@ -52,19 +48,21 @@ If this is your first time here, you can start from two places:
 
 ## Brand and Entity Information
 
-- English brand name: Swaw
-- Chinese brand name: 人不工
-- Site domain: swaw.com
-- U.S. and international business entity: WY Swaw LLC
-- Mainland China business entity: 不工智能（深圳）有限公司
+| Item | Information |
+| --- | --- |
+| English brand name | [Swaw](/about/) |
+| Chinese brand name | [人不工](/zh/about/) |
+| Site domain | [swaw.com](/) |
+| U.S. and international business entity | WY Swaw LLC |
+| Mainland China business entity | 人不工智能（深圳）有限公司 |
 
 The two entities are mainly used for payments and business dealings in different regions. Both are operated by the same founder.
 
 ## Contact
 
-- X: [@iddibi](https://x.com/iddibi)
-- GitHub: [swawai](https://github.com/swawai)
-- Email: [hello@swaw.com](mailto:hello@swaw.com)
-- WeChat Official Account: scan the QR code below
+X: [@iddibi](https://x.com/iddibi)  
+GitHub: [swawai](https://github.com/swawai)  
+Email: [he.haifeng@hotmail.com](mailto:he.haifeng@hotmail.com)  
+WeChat Official Account: scan the QR code below  
 
 ![Swaw WeChat Official Account QR code](/images/contact/wechat-qrcode.jpg)

@@ -53,19 +53,21 @@ Swaw 有兩層含義：Stay Whole At Work / See Work As Weather。在工作中�
 
 ## 品牌與主體資訊
 
-- 英文品牌名：Swaw
-- 中文品牌名：人不工
-- 網站網域：swaw.com
-- 美國及國際業務主體：WY Swaw LLC
-- 中國大陸業務主體：不工智能（深圳）有限公司
+| 項目 | 資訊 |
+| --- | --- |
+| 英文品牌名 | [Swaw](https://swaw.com/about/) |
+| 中文品牌名 | [人不工](/zh-tw/about/) |
+| 網站網域 | [swaw.com](/) |
+| 美國及國際業務主體 | WY Swaw LLC |
+| 中國大陸業務主體 | 不工智能（深圳）有限公司 |
 
 兩個主體主要用於承接不同地區的收款和業務往來，均由同一位創辦人負責營運。
 
 ## 聯絡方式
 
-- X：[@iddibi](https://x.com/iddibi)
-- GitHub：[swawai](https://github.com/swawai)
-- Email：[hello@swaw.com](mailto:hello@swaw.com)
-- 微信公眾號：掃描下方二維碼
+X：[@iddibi](https://x.com/iddibi)  
+GitHub：[swawai](https://github.com/swawai)  
+Email：[he.haifeng@hotmail.com](mailto:he.haifeng@hotmail.com)  
+微信公眾號：掃描下方二維碼  
 
 ![人不工微信公眾號二維碼](/images/contact/wechat-qrcode.jpg)
