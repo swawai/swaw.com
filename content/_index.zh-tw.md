@@ -1,6 +1,6 @@
 ﻿---
 title: 人不工
-description: 一人工作室，也該有自己的 AI 駕駛艙。
+description:  一人工作室的 AI 駕駛艙。
 nav_primary: home
 type: frameworks
 layout: article-page

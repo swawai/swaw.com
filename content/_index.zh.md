@@ -1,6 +1,6 @@
 ﻿---
 title: 人不工
-description: 一人工作室，也该有自己的 AI 驾驶舱。
+description: 一人工作室的 AI 驾驶舱
 nav_primary: home
 type: frameworks
 layout: article-page
@@ -13,10 +13,10 @@ slots:
 为一人工作室打造 AI 驾驶舱。  
 我们先从轻量基础设施做起：
 
-### ipswan
+### ruletab
 
-为隐私保护者、跨境从业者设计。支持按应用指派代理出口，让网络切换更稳、更可控。  
-[了解 ipswan →](/p/ipswan/)
+为隐私保护者、多网络环境工作者设计。支持按应用指派代理出口，让网络切换更稳、更可控。  
+[了解 ruletab →](/p/ruletab/)
 
 ### xvenv
 

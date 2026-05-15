@@ -1,6 +1,6 @@
 ﻿---
 title: Swaw
-description: One-person studios deserve their own AI cockpit.
+description: The AI cockpit for one-person studios.
 nav_primary: home
 type: frameworks
 layout: article-page
