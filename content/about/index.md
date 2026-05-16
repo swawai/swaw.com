@@ -33,7 +33,7 @@ The first usable tools are:
 
 ## Why I’m Building This
 
-I spent nearly eight years as a librarian. Later, I moved into tech, working in network administration, DevOps, and web scraping; I also co-founded a game startup and worked as a freelancer.
+I spent nearly eight years as a librarian. Later, I moved into tech, working in network administration, DevOps, web scraping, co-founded a game startup and worked as a freelancer.
 
 These experiences kept me returning to two questions: how knowledge gets organized and reused, and how tools become reliable and low-friction.
 
