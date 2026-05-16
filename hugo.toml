@@ -16,119 +16,15 @@ panicOnWarning = true
 # 禁止 Hugo js.Build 自动写入 assets/jsconfig.json；该文件只服务编辑器跳转，不参与站点构建。
 noJSConfigInAssets = true
 
+# Theme runtime defaults live in themes/banyan/hugo.toml. This root config keeps
+# swaw.com identity, Hugo structural declarations, and deployment-specific
+# overrides only.
 
 [params.prefetch_runtime]
-# 运行时预热栈：
-# - 只负责 link rel=prefetch 与 SW warm
-# - Hugo 会先按配置编译为 page-level runtime payload
-# - 浏览器运行时再按“link / SW”两位能力矩阵选择对应环境
-#   第 1 位 = rel=prefetch transport 可用
-#   第 2 位 = 当前上下文里 Service Worker API 可用
-# 说明：
-# - 当前已不再把 Speculation Rules transport 放进这套 env 矩阵里；
-#   Speculation Rules 走独立的 params.speculation_rules header 栈
-# - 运行时 mode 仍使用短码，便于延续现有调度语义：
-#     link_sf / link_mf / link_xf
-#     sw_sf   / sw_mf   / sw_xf
-# - 追加 _g = 基于 sessionStorage 的全局一次性 gate；
-#   同一浏览会话里，完全相同的一组预热动作只首次执行一次
-# - link_* / sw_* 在非触摸主指针设备上：
-#     s = hover delayed
-#     m = hover immediate
-#     x = static eager warmup
-# - link_* / sw_* 在触摸主指针设备上：
-#     s = touchstart immediate
-#     m = viewport warmup（需 IntersectionObserver，且会尊重 saveData / 2g 限制）
-#     x = static eager warmup
-
-[params.prefetch_runtime.env.TT]
-menu = "sw_xf_g"
-nav = "sw_xf_g"
-crumb = "sw_mf_g"
-sort_siblings = "sw_xf_g"
-descendants = "sw_xf_g"
-post = "sw_mf_g"
-[params.prefetch_runtime.env.FT]
-ref = "TT"
-
-[params.prefetch_runtime.env.TF]
-menu = "link_mf"
-nav = "link_xf"
-crumb = "link_mf"
-sort_siblings = "link_xf"
-descendants = "link_mf"
-post = "link_mf"
-
-[params.speculation_rules]
-# Header 栈：
-# - 只负责 Speculation-Rules response header + external rules JSON
-# - 不再把 spec payload 注入 HTML inline data
-# - 若浏览器不支持 Speculation Rules，会静默忽略该 header
-# - 2026-05: EdgeOne Pages 的 edgeone.json 暂不支持 header value 中包含
-#   需要转义的双引号；而 Speculation-Rules header 的标准写法需要
-#   `"/speculation-rules/xxx.json"`。因此 swaw.com 默认关闭该栈，避免
-#   EdgeOne CDN 配置更新失败。若切换到支持该 header 的平台，可改回 header。
-# - runtime_coordination:
-#     independent = 双栈独立；和 prefetch_runtime 命中相同目标时，构建期会给出 warning
-#     preempt_runtime_when_supported =
-#         若浏览器支持 Speculation Rules，则 spec 命中的 URL 由 spec 拥有；
-#         runtime 只处理剩余 URL。若浏览器不支持，则 runtime 全量接管
-# mode:
-#   off    = 关闭
-#   header = 生成页面级 Speculation-Rules 头与共享 rules JSON
-mode = "off"
-runtime_coordination = "preempt_runtime_when_supported"
-# direct modes:
-# - mode = "off" 时，下面这些 slot 策略不生效；保留它们只是为了将来
-#   切换到支持 Speculation-Rules header 的平台时能一眼恢复原策略。
-#   "" / "off"
-#   prefetch_conservative / prefetch_moderate / prefetch_eager
-#   prerender_conservative / prerender_moderate / prerender_eager
-menu = "prefetch_moderate"
-nav = "prefetch_eager"
-crumb = "prefetch_moderate"
-sort_siblings = "prefetch_eager"
-descendants = "prefetch_moderate"
-post = "prefetch_moderate"
-[params.build]
-# 全站构建版本号：
-# - 默认直接按“前缀 + 构建时间”生成，适合作为 SW / fragment / 其他构建产物版本键
-# - 如需手工固定某次构建版本，可直接显式设置 version；设置后不再拼接 prefix / layout
-# version = "v202604270001"
-# 版本前缀；可留空
-version_prefix = "v"
-# Hugo / Go 时间 layout，供 now.Format 直接使用；默认产出紧凑、文件名安全的时间串
-timestamp_layout = "20060102150405"
-
-[params.build.audit]
-# 构建期 URL 冲突审计：
-# - off   = 关闭
-# - warn  = 输出告警但不断构建
-# - error = 发现冲突直接失败
-permalink_collision = "warn"
+mode = "enable"
 
 [params.service_worker]
-# mode:
-#   "enable"  = 注册 /sw.js，启用 HTML 导航 cache-first（按版本切桶失效），并在检测到新版本时做弱提醒
-#   "disable" = 不再启用 SW；页面会尝试注销旧注册并清理本项目缓存，同时继续输出一个惰性 /sw.js 便于旧注册尽快退场
-#   "off"     = 不注入 SW 管理脚本，也不输出 /sw.js；适合在 disable 跑够一段时间后彻底停用
 mode = "enable"
-# 静态轮询自动检查更新间隔，单位：分钟，默认 15
-update_check_interval = 15
-# 页面由隐藏切回可见时的主动检查防抖间隔，单位：分钟，默认 3
-update_visibility_throttle = 3
-# 离线提示页路径后缀；会相对每个语言 Home 生成最终离线提示页 URL，
-# 例如 "offline/" 会得到 /offline/、/zh/offline/、/zh-tw/offline/。
-offline_notice_path = "offline/"
-# SW 资源分类、缓存行为、CDN 缓存头以及平台部署头配置由主题默认 data/cache-policy-default.toml 驱动。
-# 如站点需要覆盖，可在仓库根目录创建 data/cache-policy.toml；Hugo 仍会直接渲染 public/_headers 与 public/edgeone.json。
-# 仓库根目录 edgeone.json 建议通过 npm/bun 脚本同步。
-# 本节仅保留 SW 生命周期相关配置（如 mode / check_interval）。
-
-[params.runtime_i18n]
-# 共享运行时文案（如 SW 更新提示）的语言回退链。
-# key/value 均使用小写语言标签；运行时不再硬编码 zh-hk / zh-mo 等别名。
-fallbacks = { "zh-hk" = "zh-tw", "zh-mo" = "zh-tw" }
 
 [frontmatter]
 lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
