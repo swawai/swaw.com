@@ -10,18 +10,20 @@ slots:
   footer: /fragments/home-footer-shortcuts
 ---
 
+### Swaw
+
 Building the AI cockpit for one-person studios.  
 We start with lightweight infrastructure:
 
-### ipswan
+### Ruletab
 
-Built for privacy-minded users and cross-border professionals. Assign proxy exits per app, making network switching steadier and easier to control.  
-[Learn about ipswan →](/p/ipswan/)
+Built for privacy-minded users and people working across multiple network environments. Assign proxy exits per app, making network switching steadier and easier to control.  
+[Learn about Ruletab →](/p/ruletab/)
 
-### xvenv
+### Xvenv
 
 Spin up a zero-install dev environment with one click, so AI agents can get to work faster—with `.env` files and Git identities kept in order.  
-[Learn about xvenv →](/p/xvenv/)
+[Learn about Xvenv →](/p/xvenv/)
 
 [All products](/products/first-party/)
 
@@ -29,7 +31,7 @@ Spin up a zero-install dev environment with one click, so AI agents can get to w
 
 
 Field notes on industry weather and engineering practice—for people to revisit, and for AI to draw on.  
-[Enter Signals →](/d/)
+[Enter Signals →](/all/)
 
 
 

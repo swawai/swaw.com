@@ -12,51 +12,56 @@ slots:
 build:
   list: never
 ---
-
 # About Swaw
 
-We are building an AI cockpit for one-person studios: starting with networking and development environments, then gradually turning content operations, tax and bookkeeping, and other tedious work into reusable, automatable systems, so people can stay focused on craft and taste.
+Swaw stands for **S**tay **W**hole **A**t **W**ork.
 
-Swaw has two readings: Stay Whole At Work / See Work As Weather. Stay whole as a person at work, and observe work the way we observe weather.
+We are building an AI cockpit for one-person studios.
 
-## Current Stage
+We start with networking and development environments, then gradually turn content operations, bookkeeping and taxes, and other tedious work into reusable, automation-ready systems—so people can stay focused on judgment and taste.
 
-At this stage, Swaw is still early. It is best approached as something to follow, try, and give feedback on. If you care about how one-person studios work after AI enters the workflow, feel free to send me your use cases and problems. That feedback helps me sharpen the products.
+## Current Status
 
-Products that have already come out of this work include:
+The project is still early.
 
-- [ruletab](/p/ruletab/): Designed for privacy-conscious users and people working across multiple network environments. It supports per-app proxy exits, making network switching more stable and controllable.
-- [xvenv](/p/xvenv/): Spins up an installation-free development environment with one command, helping AI agents reach a usable state faster while making `.env` and Git identity management easier.
+If you are also thinking about how independent workers organize their work as AI becomes part of everyday workflows, send me your concrete scenarios and questions. That feedback helps me sharpen the products.
 
-## Why Me
+The first usable tools are:
 
-I spent nearly eight years as a librarian. Later, I changed fields and worked in network administration, DevOps engineering, data crawling, as a co-founder in a game startup, and as a freelancer.
+- [Ruletab](/p/ruletab/): built for privacy-conscious users and people working across multiple network environments. It supports per-app proxy routing, so network switching is steadier and easier to control.
+- [Xvenv](/p/xvenv/): spins up a zero-install development environment with one command, helping AI agents get to work faster while keeping `.env` files and Git identities in order.
 
-These experiences have kept me focused on two things: how information is organized and reused, and how tools can become reliable and low-friction.
+## Why I’m Building This
 
-Along the way, I also wrote fiction and made game mods.
+I spent nearly eight years as a librarian. Later, I moved into tech, working in network administration, DevOps, and web scraping; I also co-founded a game startup and worked as a freelancer.
 
-Swaw is not a product concept I invented from nowhere. It began as work systems I built for myself, and I am now productizing the stable, reusable parts.
+These experiences kept me returning to two questions: how knowledge gets organized and reused, and how tools become reliable and low-friction.
+
+I also write fiction and make game mods.
+
+Swaw did not start as an abstract product concept. It grew out of work systems I first built for myself, and I am now productizing the parts that have proven stable and reusable.
 
 ## Where to Start
 
 If this is your first time here, you can start from two places:
 
-- [Signals](/all/): stage notes on industry shifts and engineering practice, written for people to revisit and for AI to use as context.
+- [Signals](/all/): field notes on industry shifts and engineering practice—for people to revisit, and for AI to draw on.
 
-- [Products](/products/first-party/): productized tools that are available to use or learn about.
+- [Products](/products/first-party/): tools that have already been productized and are available to try or learn more about.
 
-## Brand and Entity Information
+## Brand and Business Information
 
 | Item | Information |
 | --- | --- |
-| English brand name | [Swaw](/about/) |
-| Chinese brand name | [人不工](/zh/about/) |
-| Site domain | [swaw.com](/) |
+| English brand name | [Swaw](https://swaw.com/about/) |
+| English name meaning | Stay Whole At Work / See Work As Weather |
+| Chinese brand name | [Renbugong (人不工)](/zh/about/) |
+| Chinese name meaning | 人不必沦为工具 — people should not be reduced to tools |
+| Website domain | [swaw.com](/) |
 | U.S. and international business entity | WY Swaw LLC |
 | Mainland China business entity | 人不工智能（深圳）有限公司 |
 
-The two entities are mainly used for payments and business dealings in different regions. Both are operated by the same founder.
+The two entities are mainly used for payments and business operations in different regions. Both are operated by the same founder.
 
 ## Contact
 
@@ -65,4 +70,4 @@ GitHub: [swawai](https://github.com/swawai)
 Email: [he.haifeng@hotmail.com](mailto:he.haifeng@hotmail.com)  
 WeChat Official Account: scan the QR code below  
 
-![Swaw WeChat Official Account QR code](/images/contact/wechat-qrcode.jpg)
+![Renbugong WeChat Official Account QR code](/site/wechat-official-account.jpg)
