@@ -12,6 +12,10 @@ timeZone = "Asia/Shanghai"
 enableGitInfo = false
 panicOnWarning = true
 
+[build]
+# 禁止 Hugo js.Build 自动写入 assets/jsconfig.json；该文件只服务编辑器跳转，不参与站点构建。
+noJSConfigInAssets = true
+
 
 [params.prefetch_runtime]
 # 运行时预热栈：
