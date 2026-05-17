@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 324" role="img" aria-label="Sailboat mast and rigging study">
+  
+  <path
+    d="M 0 252
+       L 249 91
+       C 214 133 227 188 286 235
+       C 350 285 462 313 576 324
+       L 0 324
+       Z"
+    fill="#E7E7E7"/>
+  <path
+    d="M 249 91
+       C 229 118 230 151 249 178
+       C 292 234 424 278 576 300
+       L 576 324
+       L 498 324
+       C 396 301 309 266 258 218
+       C 224 185 216 126 250 91
+       Z"
+    fill="#B8B8B8"/>
+  <!-- 帆边 -->
+  <path
+    d="M 0 250
+       L 0 252
+	   L 250 91
+	   L 249 91
+       
+       
+       Z"
+    fill="#B8B8B8"/>
+  <!-- 桅杆 -->
+  <path
+    d="M 245 90
+	   L 245 92
+       L 576 48
+       L 576 10
+       
+       Z"
+    fill="#3F3F3F"/>
+  <!-- spreader -->
+  <path
+    d="M 262 88
+	   L 266 88
+	   L 254 46
+	   L 253 46
+
+       Z"
+    fill="#3F3F3F"/>
+  <path
+    d="M 263 89
+       L 267 89
+       L 281 114
+       L 280 114
+       Z"
+    fill="#3F3F3F"/>
+  
+  <!-- 绳索骨架 -->
+
+
+
+  <path
+    d="M 251 90 L 280 114 L 580 190"
+    fill="none"
+    stroke="#5F759E"
+    stroke-opacity="0.82"
+    stroke-width="0.4"
+    stroke-linecap="butt"/>
+  <path
+    d="M 251 91 L 405 330"
+    fill="none"
+    stroke="#555555"
+    stroke-width="0.4"
+    stroke-linecap="butt"/>
+  <path
+    d="M 217 0 L 251 91"
+    fill="none"
+    
+    stroke="#555555"
+    stroke-width="0.4"
+    />
+  <path
+    d="M 280 0 L 253 46 L 251 92"
+    fill="none"
+    stroke="#555555"
+    stroke-width="0.4"
+/>
+
+  <path
+    d="M 250 90 L 302 56"
+    fill="none"
+    stroke="#555555"
+    stroke-width="0.4"
+    stroke-linecap="butt"/>
+	
+  <path
+    d="M 302 56  L 384 0"
+    fill="none"
+    stroke="#555555"
+    stroke-width="0.4"
+    stroke-linecap="butt"/>
+	
+  <!-- 分线器与顶部分叉 -->
+  <path
+    d="M 259 90 L 302 56"
+    fill="none"
+    stroke="#9E685F"
+    stroke-width="0.4"
+    stroke-linecap="butt"/>
+  <path
+    d="M 300 54 L 304 58"
+    fill="none"
+    stroke="#9E685F"
+    stroke-width="1"
+    stroke-linecap="butt"/>
+	
+</svg>

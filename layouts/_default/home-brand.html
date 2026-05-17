@@ -1,0 +1,25 @@
+{{ define "styles" }}
+{{ partial "head-styles.html" (dict "ctx" .) }}
+{{ end }}
+
+{{ define "head-extra" }}
+{{- $homeBrand := resources.Get "css/home-brand.css" -}}
+{{- if not $homeBrand -}}{{- errorf "Build failed: missing resource %q." "assets/css/home-brand.css" -}}{{- end -}}
+{{- $homeBrand = partial "css-process.html" (dict "resource" $homeBrand "fingerprint" true) -}}
+<link rel="stylesheet" href="{{ $homeBrand.RelPermalink }}">
+{{ end }}
+
+{{ define "main" }}
+{{- $mast := .Resources.GetMatch "mast.svg" -}}
+{{- if not $mast -}}{{- errorf "Build failed: home-brand layout requires %q beside the homepage content file." "content/mast.svg" -}}{{- end -}}
+<section class="home-brand" aria-labelledby="home-brand-title">
+  <img class="home-brand__mast" src="{{ $mast.RelPermalink }}" alt="" aria-hidden="true" decoding="async" fetchpriority="high">
+  <div class="home-brand__copy">
+    <p class="home-brand__kicker">{{ .Description }}</p>
+    <h1 id="home-brand-title" class="home-brand__title">{{ .Title }}</h1>
+    {{- with .Params.brand_line }}
+    <p class="home-brand__line">{{ . }}</p>
+    {{- end }}
+  </div>
+</section>
+{{ end }}
