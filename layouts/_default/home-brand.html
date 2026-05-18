@@ -10,16 +10,17 @@
 {{ end }}
 
 {{ define "main" }}
-{{- $mast := .Resources.GetMatch "mast.svg" -}}
-{{- if not $mast -}}{{- errorf "Build failed: home-brand layout requires %q beside the homepage content file." "content/mast.svg" -}}{{- end -}}
-<section class="home-brand" aria-labelledby="home-brand-title">
-  <img class="home-brand__mast" src="{{ $mast.RelPermalink }}" alt="" aria-hidden="true" decoding="async" fetchpriority="high">
-  <div class="home-brand__copy">
-    <p class="home-brand__kicker">{{ .Description }}</p>
-    <h1 id="home-brand-title" class="home-brand__title">{{ .Title }}</h1>
-    {{- with .Params.brand_line }}
-    <p class="home-brand__line">{{ . }}</p>
-    {{- end }}
+{{- $wind := .Resources.GetMatch "wind.svg" -}}
+{{- if not $wind -}}{{- errorf "Build failed: home-brand layout requires %q beside the homepage content file." "content/wind.svg" -}}{{- end -}}
+{{- $windsock := .Resources.GetMatch "windsock.svg" -}}
+{{- if not $windsock -}}{{- errorf "Build failed: home-brand layout requires %q beside the homepage content file." "content/windsock.svg" -}}{{- end -}}
+{{- $sceneStyle := printf "--home-brand-wind-url: url('%s'); --home-brand-windsock-url: url('%s');" $wind.RelPermalink $windsock.RelPermalink -}}
+<section class="home-brand" aria-labelledby="home-brand-title" style="{{ $sceneStyle | safeCSS }}">
+  <h1 id="home-brand-title" class="sr-only">{{ .Title }}</h1>
+  <div class="home-brand__scene" aria-hidden="true">
+    <span class="home-brand__horizon"></span>
+    <span class="home-brand__wind"></span>
+    <span class="home-brand__windsock"></span>
   </div>
 </section>
 {{ end }}

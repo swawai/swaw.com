@@ -1,97 +1,117 @@
+.page {
+    --page-edge-block-end: 1.5rem;
+}
+
+.page-shell {
+    --page-footer-tail-space: clamp(1.5rem, 5svh, 3rem);
+}
+
 .home-brand {
-    position: relative;
-    min-block-size: calc(100svh - var(--page-edge-block-start));
-    overflow: hidden;
-    isolation: isolate;
-}
-
-.home-brand__mast {
-    position: fixed;
-    z-index: -1;
-    max-inline-size: none;
-    pointer-events: none;
-    user-select: none;
-}
-
-@media (min-aspect-ratio: 3 / 4) {
-    .home-brand__mast {
-        top: 50svh;
-        left: 0;
-        inline-size: 100vw;
-        block-size: auto;
-        transform: translateY(-50%);
-    }
-}
-
-@media (max-aspect-ratio: 3 / 4) {
-    .home-brand__mast {
-        top: 0;
-        left: 50vw;
-        inline-size: auto;
-        block-size: 100svh;
-        transform: translateX(-50%);
-    }
-}
-
-.home-brand__copy {
     box-sizing: border-box;
-    display: grid;
-    align-content: end;
-    min-block-size: calc(100svh - var(--page-edge-block-start));
-    inline-size: min(100%, 34rem);
-    padding-block-end: clamp(5rem, 15vh, 9rem);
-}
-
-.home-brand__kicker,
-.home-brand__title,
-.home-brand__line {
-    margin: 0;
-    letter-spacing: 0;
-}
-
-.home-brand__kicker {
-    max-inline-size: 22rem;
-    color: color-mix(in srgb, var(--fg), transparent 36%);
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.home-brand__title {
-    margin-block-start: 0.75rem;
+    inline-size: min(88ch, 100%);
+    min-block-size: clamp(34rem, calc(100svh - var(--page-edge-block-start, 0px)), 48rem);
+    padding-block-start: clamp(10rem, 28svh, 18rem);
     color: var(--fg);
-    font-size: clamp(3.4rem, 13vw, 8.75rem);
-    font-weight: 700;
-    line-height: 0.92;
 }
 
-.home-brand__line {
-    margin-block-start: 1.1rem;
-    color: var(--focus);
-    font-size: clamp(1.05rem, 2vw, 1.35rem);
-    line-height: 1.45;
+.home-brand__scene {
+    --home-brand-scene-inline: min(36rem, calc(100% - clamp(2rem, 12vw, 4rem)));
+    --home-brand-scene-block: 6rem;
+    --home-brand-horizon-block: 3.2rem;
+    --home-brand-wind-size: 1.12rem;
+    --home-brand-windsock-size: 1.72rem;
+
+    position: relative;
+    inline-size: var(--home-brand-scene-inline);
+    block-size: var(--home-brand-scene-block);
+    margin-inline: clamp(1rem, 6vw, 2rem) auto;
 }
 
-@supports not (height: 100svh) {
-    .home-brand,
-    .home-brand__copy {
-        min-block-size: calc(100vh - var(--page-edge-block-start));
+.home-brand__horizon {
+    position: absolute;
+    inset-block-start: var(--home-brand-horizon-block);
+    inset-inline: 0;
+    border-block-start: 1px solid currentColor;
+}
+
+.home-brand__wind,
+.home-brand__windsock {
+    position: absolute;
+    display: block;
+    background: currentColor;
+    transform-box: border-box;
+    will-change: transform;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.home-brand__wind {
+    inline-size: var(--home-brand-wind-size);
+    block-size: var(--home-brand-wind-size);
+    inset-block-start: calc(var(--home-brand-horizon-block) - 2.95rem);
+    inset-inline-start: 43%;
+    -webkit-mask-image: var(--home-brand-wind-url);
+    mask-image: var(--home-brand-wind-url);
+}
+
+.home-brand__windsock {
+    inline-size: var(--home-brand-windsock-size);
+    block-size: var(--home-brand-windsock-size);
+    inset-block-start: calc(var(--home-brand-horizon-block) - (var(--home-brand-windsock-size) * 0.92));
+    inset-inline-start: 78%;
+    transform-origin: 8% 88%;
+    -webkit-mask-image: var(--home-brand-windsock-url);
+    mask-image: var(--home-brand-windsock-url);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .home-brand__wind {
+        animation: home-brand-wind-drift 8s ease-in-out infinite;
     }
 
-    @media (min-aspect-ratio: 3 / 4) {
-        .home-brand__mast {
-            top: 50vh;
-        }
-    }
-
-    @media (max-aspect-ratio: 3 / 4) {
-        .home-brand__mast {
-            block-size: 100vh;
-        }
+    .home-brand__windsock {
+        animation: home-brand-windsock-breathe 4.5s ease-in-out infinite;
     }
 }
 
-@media (max-width: 42rem) {
-    .home-brand__copy {
-        padding-block-end: clamp(4rem, 12vh, 7rem);
+@keyframes home-brand-wind-drift {
+    0%,
+    100% {
+        opacity: 0.82;
+        transform: translateX(-0.45rem);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(0.55rem);
+    }
+}
+
+@keyframes home-brand-windsock-breathe {
+    0%,
+    100% {
+        transform: rotate(-1deg);
+    }
+
+    50% {
+        transform: rotate(1.4deg);
+    }
+}
+
+@media (min-width: 58rem) {
+    .home-brand__scene {
+        --home-brand-scene-inline: min(36rem, 100%);
+
+        margin-inline: 0 auto;
+    }
+
+    .page-shell.page-shell--has-rail .page-rail,
+    .page-shell.page-shell--has-rail > .slot-footer {
+        position: relative;
+        top: auto;
     }
 }
