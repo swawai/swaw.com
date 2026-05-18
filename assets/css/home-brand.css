@@ -13,7 +13,7 @@
     user-select: none;
 }
 
-@media (min-aspect-ratio: 16 / 9) {
+@media (min-aspect-ratio: 3 / 4) {
     .home-brand__mast {
         top: 50svh;
         left: 0;
@@ -23,7 +23,7 @@
     }
 }
 
-@media (max-aspect-ratio: 16 / 9) {
+@media (max-aspect-ratio: 3 / 4) {
     .home-brand__mast {
         top: 0;
         left: 50vw;
@@ -77,13 +77,13 @@
         min-block-size: calc(100vh - var(--page-edge-block-start));
     }
 
-    @media (min-aspect-ratio: 16 / 9) {
+    @media (min-aspect-ratio: 3 / 4) {
         .home-brand__mast {
             top: 50vh;
         }
     }
 
-    @media (max-aspect-ratio: 16 / 9) {
+    @media (max-aspect-ratio: 3 / 4) {
         .home-brand__mast {
             block-size: 100vh;
         }

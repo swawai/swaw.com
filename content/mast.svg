@@ -1,131 +1,123 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 324" role="img" aria-label="Sailboat mast and rigging study">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 768" role="img" aria-label="Sailboat mast and rigging study">
 
   <!-- 桅杆 -->
   <path
-    d="M 245 90
-	   L 245 92
-       L 576 48
-       L 576 10
+    d="M 245 312
+	   L 245 314
+       L 576 270
+       L 576 232
        Z"
     fill="#3F3F3F"/>
 
-  
-  <!-- 左帆边 -->
+  <!-- 帆左包边 -->
   <path
-    d="M 0 252
-       L 249 91
-       C 214 133 227 188 286 235
-       C 350 285 462 313 576 324
-       L 0 324
+    d="M 0 472
+       L 0 474
+	   L 250 313
+	   L 249 313
+       Z"
+    fill="#B8B8B8"/>
+
+  <!-- 帆 -->
+  <path
+    d="M 0 474
+       L 249 313
+       C 214 355 227 410 286 457
+       C 350 507 462 535 576 546
+       L 576 768
+	   L 0 768
        Z"
     fill="#E7E7E7"/>
+
+  <!-- 帆右包边 -->
   <path
-    d="M 249 91
-       C 229 118 230 151 249 178
-       C 292 234 424 278 576 300
-       L 576 324
-       L 498 324
-       C 396 301 309 266 258 218
-       C 224 185 216 126 250 91
+    d="M 249 313
+       C 229 340 230 373 249 400
+       C 292 456 424 500 576 522
+       L 576 580
+       C 396 523 309 488 258 440
+       C 224 407 216 348 250 313
        Z"
     fill="#B8B8B8"/>
-  <!-- 帆边 -->
-  <path
-    d="M 0 250
-       L 0 252
-	   L 250 91
-	   L 249 91
-       Z"
-    fill="#B8B8B8"/>
-	
-	
+
   <!-- 风向标 -->
   <path
-    d="M 250 90 L 232 90"
+    d="M 250 312 L 232 312"
     fill="none"
-    stroke="#B8B8B8"
-    stroke-width="0.1"
-    stroke-linecap="butt"/>
-	
+    stroke="#9E685F"
+    stroke-width="0.1"/>
   <path
-    d="M 234 89
-       L 234 91
-       L 198 90
-       L 198 90
+    d="M 234 311
+       L 234 313
+       L 198 312
+       L 198 312
        Z"
-    fill="#B8B8B8"/>
+    fill="#9E685F"/>
 
   <!-- 绳子 -->
   <path
-    d="M 251 91 L 217 0"
-    fill="none"
-    stroke="#555555"
-    stroke-width="0.4"/>  
-  <path
-    d="M 251 91 L 405 330"
-    fill="none"
-    stroke="#555555"
-    stroke-width="0.4"
-    stroke-linecap="butt"/>
-
-  <!-- 横杆支开的绳 -->
-  <path
-    d="M 251 90L 253 46 L 280 0"
+    d="M 250 311 L 140 0"
     fill="none"
     stroke="#555555"
     stroke-width="0.4"/>
-	
   <path
-    d="M 251 90 L 280 114 L 580 190"
+    d="M 250.5 313 L 576 768"
     fill="none"
     stroke="#555555"
-    stroke-width="0.4"
-    stroke-linecap="butt"/>
+    stroke-width="0.4"/>
+
+  <!-- 横杆支开的绳 -->
+  <path
+    d="M 251 311 L 253 269 L 400 0"
+    fill="none"
+    stroke="#555555"
+    stroke-width="0.4"/>
+  <path
+    d="M 252 313 L 280 336 L 580 412"
+    fill="none"
+    stroke="#555555"
+    stroke-width="0.4"/>
+
+  <!-- 顶部分叉的绳子 -->
+  <path
+    d="M 254 310 L 302 278"
+    fill="none"
+    stroke="#555555"
+    stroke-width="0.4"/>
+
+  <path
+    d="M 265 307 L 302 278"
+    fill="none"
+    stroke="#555555"
+    stroke-width="0.4"/>
+
+  <path
+    d="M 302 278 L 576 82"
+    fill="none"
+    stroke="#555555"
+    stroke-width="0.4"/>
 
   <!-- 分线器-->
   <path
-    d="M 300 54 L 304 58"
+    d="M 300 276 L 304 280"
     fill="none"
-    stroke="#555555"
-    stroke-width="1"
-    stroke-linecap="butt"/>
-	
-  <!-- 顶部分叉的绳子 -->
-  <path
-    d="M 250 90 L 302 56"
-    fill="none"
-    stroke="#555555"
-    stroke-width="0.4"
-    stroke-linecap="butt"/>
-
-  <path
-    d="M 265 85 L 302 56"
-    fill="none"
-    stroke="#555555"
-    stroke-width="0.4"
-    stroke-linecap="butt"/>
-
-  <path
-    d="M 302 56  L 384 0"
-    fill="none"
-    stroke="#555555"
-    stroke-width="0.4"
-    stroke-linecap="butt"/>
+    stroke="#3F3F3F"
+    stroke-width="1"/>
 
   <!-- spreader -->
   <path
-    d="M 262 88
-	   L 266 88
-	   L 254 46
-	   L 253 46
+    d="M 262 310
+	   L 266 310
+	   L 254 268
+	   L 253 268
        Z"
     fill="#3F3F3F"/>
   <path
-    d="M 263 89
-       L 267 89
-       L 281 114
-       L 280 114
+    d="M 263 311
+       L 267 311
+       L 281 336
+       L 280 336
        Z"
     fill="#3F3F3F"/>
-</svg>
 
+</svg>
