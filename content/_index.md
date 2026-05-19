@@ -31,7 +31,7 @@ home_signals:
 home_signal_guide_chance: 0
 home_wind_field_start_offset_rem: 0
 home_signal_drift_seconds: 90
-home_signal_launch_gap_seconds: 5
+home_signal_launch_gap_seconds: 3
 slots:
   primary_nav: /fragments/nav-primary-links
   utilities: /fragments/nav-utilities
