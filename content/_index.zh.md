@@ -6,12 +6,16 @@ type: frameworks
 layout: home-brand
 brand_line: See work as weather.
 home_signals:
-  - codex
-  - cowork
+  - name: codex
+    primary: true
+  - name: cowork
+    primary: true
   - name: github
     url: https://github.com/
+    primary: true
   - X
-  - deepmind
+  - name: deepmind
+    primary: true
   - manus
   - nvidia
   - gemini
@@ -21,7 +25,8 @@ home_signals:
   - openclaw
   - qwen
   - chatgpt
-  - claude-code
+  - name: claude-code
+    primary: true
   - deepseek
   - minmax
   - kimi
@@ -36,8 +41,8 @@ home_signals:
   - 人不工
 home_signal_guide_chance: 30
 home_wind_field_start_offset_rem: 0
-home_signal_drift_seconds: 40
-home_signal_launch_gap_seconds: 1
+home_signal_drift_seconds: 90
+home_signal_launch_gap_seconds: 3
 slots:
   primary_nav: /fragments/nav-primary-links
   utilities: /fragments/nav-utilities
