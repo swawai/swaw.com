@@ -4,29 +4,20 @@ description: The AI cockpit for one-person studios.
 nav_primary: home
 type: frameworks
 layout: home-brand
-brand_line: See what's at work.
+brand_line: See Work As Weather
 home_signals:
-  - name: codex
-    primary: true
-  - name: cowork
-    primary: true
+  - codex
   - name: github
-    url: https://github.com/
+    url: https://github.com/swawai
     primary: true
   - X
-  - name: deepmind
-    primary: true
-  - manus
-  - nvidia
   - gemini
   - tiktok
-  - doubao
   - seedance
   - openclaw
   - qwen
   - chatgpt
-  - name: claude-code
-    primary: true
+  - claude-code
   - deepseek
   - minmax
   - kimi
@@ -35,14 +26,12 @@ home_signals:
     url: https://arxiv.org/
   - comfyui
   - opencode
-  - rust
   - ipfs
   - swaw
-  - 人不工
-home_signal_guide_chance: 30
-home_wind_field_start_offset_rem: 25
+home_signal_guide_chance: 0
+home_wind_field_start_offset_rem: 0
 home_signal_drift_seconds: 90
-home_signal_launch_gap_seconds: 3
+home_signal_launch_gap_seconds: 5
 slots:
   primary_nav: /fragments/nav-primary-links
   utilities: /fragments/nav-utilities

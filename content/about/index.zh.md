@@ -15,7 +15,7 @@ build:
 
 # 关于Swaw
 
-Swaw 取意于 **S**ee **W**hat’s **A**t **W**ork（看见作用）。
+Swaw 取意于 **S**ee **W**ork **A**s **W**eather：观工作如观天气。
 
 我们在做一人工作室的 AI 驾驶舱：  
 
@@ -64,7 +64,7 @@ Swaw 不是凭空想出来的产品概念，而是我先为自己搭建工作系
 | 站点域名 | [swaw.com](/) |
 | 美国及国际业务主体 | WY Swaw LLC |
 | 中国大陆业务主体 | 人不工智能（深圳）有限公司 |
-| *Swaw 取意* | *See What's At Work （看见作用）*|
+| *Swaw 取意* | *See Work As Weather（观工作如观天气）*|
 | *人不工 取意* | *人不必沦为工具（stay whole at work）*|
 
 两个主体主要用于承接不同地区的收款和业务往来，均由同一创始人负责运营。

@@ -14,7 +14,7 @@ build:
 ---
 # About Swaw
 
-Swaw stands for **S**ee **W**hat’s **A**t **W**ork.
+Swaw stands for **S**ee **W**ork **A**s **W**eather.
 
 We are building an AI cockpit for one-person studios.
 
@@ -57,7 +57,7 @@ If this is your first time here, you can start from two places:
 | Website domain | [swaw.com](/) |
 | U.S. and international business entity | WY Swaw LLC |
 | Mainland China business entity | 人不工智能（深圳）有限公司 |
-| *Swaw meaning* | See What's At Work |
+| *Swaw meaning* | See Work As Weather |
 | *人不工 meaning* | 人不必沦为工具 (stay whole at work) |
 
 The two entities are mainly used for payments and business operations in different regions. Both are operated by the same founder.
