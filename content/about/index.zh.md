@@ -1,5 +1,5 @@
 ---
-title: 关于人不工
+title: 关于Swaw
 description: 一人工作室的 AI 驾驶舱
 slug: about
 nav_primary: about
@@ -13,11 +13,13 @@ build:
   list: never
 ---
 
-# 关于人不工
+# 关于Swaw
 
-人不工，是 Swaw 在中文语境里的名字（人不必沦为工具）。
+Swaw 取意于 **S**ee **W**hat’s **A**t **W**ork（看见作用）。
 
-我们在做一人工作室的 AI 驾驶舱：从网络与开发环境起步，逐步把内容运营、税务记账等繁琐事务整理成可复用、可自动化的工作系统，让人专注于判断和品味。
+我们在做一人工作室的 AI 驾驶舱：  
+
+从网络与开发环境起步，逐步把行业信号观测、内容运营及税务记账等繁琐事务整理成可复用、可自动化的工作系统（让人专注于判断和品味）。
 
 
 ## 目前进展
@@ -41,7 +43,7 @@ build:
 
 期间我也写小说、做游戏 Mod。
 
-人不工不是凭空想出来的产品概念，而是我先为自己搭建工作系统，再把其中稳定、有复用价值的部分产品化。
+Swaw 不是凭空想出来的产品概念，而是我先为自己搭建工作系统，再把其中稳定、有复用价值的部分产品化。
 
 
 
@@ -57,14 +59,13 @@ build:
 ## 品牌与主体信息
 
 | 项目 | 信息 |
-| --- | --- |
-| 英文品牌名 | [Swaw](https://swaw.com/about/) |
-| 英文名含义   | Stay Whole At Work / See Work As Weather （在工作中保持完整，像看天气一样观察工作）|
-| 中文品牌名 | [人不工](/zh/about/) |
-| 中文名含义   | 从「人工」到「人不工」：人不必沦为工具。 |
+| --- | ---  |
+| 品牌名 | [Swaw](https://swaw.com/about/) |
 | 站点域名 | [swaw.com](/) |
 | 美国及国际业务主体 | WY Swaw LLC |
-| 中国大陆业务主体 | 不工智能（深圳）有限公司 |
+| 中国大陆业务主体 | 人不工智能（深圳）有限公司 |
+| *Swaw 取意* | *See What's At Work （看见作用）*|
+| *人不工 取意* | *人不必沦为工具（stay whole at work）*|
 
 两个主体主要用于承接不同地区的收款和业务往来，均由同一创始人负责运营。
 
@@ -75,4 +76,4 @@ GitHub：[swawai](https://github.com/swawai)
 Email：[he.haifeng@hotmail.com](mailto:he.haifeng@hotmail.com)  
 微信公众号：扫描下方二维码  
 
-![人不工微信公众号二维码](/site/wechat-official-account.jpg)
+![微信公众号二维码](/site/wechat-official-account.jpg)

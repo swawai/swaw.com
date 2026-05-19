@@ -4,7 +4,7 @@ description: The AI cockpit for one-person studios.
 nav_primary: home
 type: frameworks
 layout: home-brand
-brand_line: See work as weather.
+brand_line: See what's at work.
 home_signals:
   - name: codex
     primary: true
@@ -40,7 +40,7 @@ home_signals:
   - swaw
   - 人不工
 home_signal_guide_chance: 30
-home_wind_field_start_offset_rem: 0
+home_wind_field_start_offset_rem: 25
 home_signal_drift_seconds: 90
 home_signal_launch_gap_seconds: 3
 slots:
