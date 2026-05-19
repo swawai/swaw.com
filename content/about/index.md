@@ -69,4 +69,4 @@ GitHub: [swawai](https://github.com/swawai)
 Email: [he.haifeng@hotmail.com](mailto:he.haifeng@hotmail.com)  
 WeChat Official Account: scan the QR code below  
 
-![Renbugong WeChat Official Account QR code](/site/wechat-official-account.jpg)
+{{< asset-image src="brand/wechat-official-account.jpg" alt="Renbugong WeChat Official Account QR code" >}}

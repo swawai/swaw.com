@@ -76,4 +76,4 @@ GitHub：[swawai](https://github.com/swawai)
 Email：[he.haifeng@hotmail.com](mailto:he.haifeng@hotmail.com)  
 微信公众号：扫描下方二维码  
 
-![微信公众号二维码](/site/wechat-official-account.jpg)
+{{< asset-image src="brand/wechat-official-account.jpg" alt="微信公众号二维码" >}}
