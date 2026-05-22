@@ -10,12 +10,12 @@ nav:
   my:
     show: false
   items:
-    - page: /all
-      key: signals
-      text: Signals
     - page: /products/first-party
       key: products
       text: Products
+    - page: /all
+      key: signals
+      text: Signals
     - page: /about
       key: about
       text: About
