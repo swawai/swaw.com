@@ -59,7 +59,7 @@ If this is your first time here, you can start from two places:
 | U.S. and international business entity | WY Swaw LLC |
 | Mainland China business entity | 人不工智能（深圳）有限公司 |
 | *Swaw meaning* | *See What Actually Works* |
-| *Renbugong meaning* | *人不必沦为工具 (stay whole at work)* |
+| *人不工 meaning* | *人不必沦为工具 (stay whole at work)* |
 
 The two entities are mainly used for payments and business operations in different regions. Both are operated by the same founder.
 

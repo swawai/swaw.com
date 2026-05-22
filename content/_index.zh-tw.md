@@ -4,7 +4,7 @@ description:  一人工作室的 AI 駕駛艙。
 nav_primary: home
 type: frameworks
 layout: home-brand
-brand_line: 观工作如观天气
+brand_line: 看清什麼真正有效
 home_signals:
   - codex
   - name: github

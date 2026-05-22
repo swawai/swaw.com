@@ -4,7 +4,7 @@ description: The AI cockpit for one-person studios.
 nav_primary: home
 type: frameworks
 layout: home-brand
-brand_line: See Work As Weather
+brand_line: See What Actually Works
 home_signals:
   - codex
   - name: github
