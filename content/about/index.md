@@ -54,7 +54,7 @@ If this is your first time here, you can start from two places:
 
 | Item | Information |
 | --- | --- |
-| Brand name | [Swaw](/about/) |
+| Brand name | Swaw |
 | Website domain | [swaw.com](/) |
 | U.S. and international business entity | WY Swaw LLC |
 | Mainland China business entity | 人不工智能（深圳）有限公司 |
