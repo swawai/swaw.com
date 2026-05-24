@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sync:edgeone": "node themes/banyan/scripts/build/sync-edgeone.mjs",
+    "sync:edgeone": "node themes/banyan/scripts/adapters/edgeone/sync-config.mjs",
     "csp:headers": "node themes/banyan/scripts/build/patch-csp.mjs",
     "speculation-rules:headers": "node themes/banyan/scripts/build/emit-speculation-rules-headers.mjs",
     "build": "node themes/banyan/scripts/build/run-hugo.mjs --gc --cleanDestinationDir --minify && npm run csp:headers && npm run speculation-rules:headers && npm run sync:edgeone",
     "build:browser:temp": "node themes/banyan/scripts/dev/build-browser-temp.mjs",
     "help:browser": "node themes/banyan/scripts/dev/print-browser-help.mjs",
-    "check:security:headers": "node themes/banyan/scripts/checks/check-security-headers.mjs",
+    "check:security:headers": "node themes/banyan/scripts/checks/check-security-headers.mjs https://swaw.com/",
     "check:public": "node themes/banyan/scripts/checks/check-public-html.mjs",
     "check:public:prod": "node themes/banyan/scripts/checks/check-public-html.mjs public --check",
     "check:browser": "node themes/banyan/scripts/browser-regression/browser.mjs",
@@ -26,8 +26,8 @@
     "check:browser:trace": "node themes/banyan/scripts/browser-regression/browser-trace.mjs",
     "check:browser:install": "npx playwright install chromium",
     "report:assets": "node themes/banyan/scripts/checks/report-assets.mjs",
-    "server": "node themes/banyan/scripts/dev/hugo-server-edgeone.mjs",
-    "dev": "node themes/banyan/scripts/dev/hugo-server-edgeone.mjs -D"
+    "server": "node themes/banyan/scripts/adapters/edgeone/dev-server.mjs",
+    "dev": "node themes/banyan/scripts/adapters/edgeone/dev-server.mjs -D"
   },
   "repository": {
     "type": "git",

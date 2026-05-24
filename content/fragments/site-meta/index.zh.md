@@ -4,5 +4,5 @@ build:
   list: never
   render: never
 site_meta:
-  description: "swaw——人不工，人生不必由工作定义"
+  description: "一人工作室的 AI 驾驶舱"
 ---
