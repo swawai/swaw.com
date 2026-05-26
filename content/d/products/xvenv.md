@@ -12,7 +12,7 @@ tags:
 product:
   origin: first-party
   price:
-    amount: 49
+    amount: 0
     currency: $
   value: "免安装拉起全栈开发环境"
 ---
