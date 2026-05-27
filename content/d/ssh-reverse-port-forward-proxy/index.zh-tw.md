@@ -7,6 +7,7 @@ description: "本文目前提供簡體中文正文，內容說明如何透過 SS
 nav_primary: signals
 build:
   list: never
+  publishResources: false
 ---
 
 # ssh -R 一劍開天門：讓國內伺服器臨時借用本機代理拉海外依賴

@@ -16,6 +16,9 @@ product:
     amount: 0
     currency: $
   value: "免安裝拉起專案級開發環境"
+build:
+  list: never
+  publishResources: false
 ---
 
 # Xvenv

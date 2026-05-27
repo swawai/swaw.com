@@ -16,6 +16,10 @@ panicOnWarning = true
 # 禁止 Hugo js.Build 自动写入 assets/jsconfig.json；该文件只服务编辑器跳转，不参与站点构建。
 noJSConfigInAssets = true
 
+[cascade.build]
+# Page bundle resources should be published only through explicit theme pipelines.
+publishResources = false
+
 # Theme runtime defaults live in themes/banyan/hugo.toml. This root config keeps
 # swaw.com identity, Hugo structural declarations, and deployment-specific
 # overrides only.

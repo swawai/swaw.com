@@ -7,6 +7,7 @@ description: "This article is currently available in Simplified Chinese. It expl
 nav_primary: signals
 build:
   list: never
+  publishResources: false
 ---
 
 # ssh -R: let a server temporarily borrow your local proxy for dependency downloads

@@ -16,6 +16,9 @@ product:
     amount: 0
     currency: $
   value: "Portable development environment bootstrapper"
+build:
+  list: never
+  publishResources: false
 ---
 
 # Xvenv
