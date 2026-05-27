@@ -3,6 +3,7 @@ date: "2025-10-12T20:11:44+08:00"
 draft: false
 title: "Xvenv"
 slug: "xvenv"
+description: "Xvenv 是一个 BAT 单文件脚本，用免安装方式拉起项目级 Python、Node、Rust、Go、Git、MSVC 等开发环境。"
 nav_primary: products
 type: "page"
 intent:

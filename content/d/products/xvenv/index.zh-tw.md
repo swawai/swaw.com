@@ -3,6 +3,7 @@ date: "2025-10-12T20:11:44+08:00"
 draft: false
 title: "Xvenv"
 slug: "xvenv"
+description: "Xvenv 目前只有簡體中文文件。"
 nav_primary: products
 type: "page"
 intent:
@@ -14,7 +15,11 @@ product:
   price:
     amount: 0
     currency: $
-  value: "免安装拉起全栈开发环境"
+  value: "免安裝拉起專案級開發環境"
 ---
 
-[目前只有英文版](/p/xvenv/)
+# Xvenv
+
+Xvenv 目前只有簡體中文文件。
+
+[閱讀簡體中文版](/zh/p/xvenv/)
