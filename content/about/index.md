@@ -29,7 +29,7 @@ If you are also thinking about how independent people can organize their work as
 
 The products that have already come out of this work are:
 
-- [Ruletab](/p/ruletab/): built for privacy-conscious users and people who work across multiple network environments. It supports per-app proxy routing, making network switching steadier and more controllable.
+- Ruletab (In preparation): built for privacy-conscious users and people who work across multiple network environments. It supports per-app proxy routing, making network switching steadier and more controllable.
 - [Xvenv](/p/xvenv/): spins up a zero-install development environment with one command, helping AI agents get to work faster while keeping `.env` files and Git identities in order.
 
 ## Why Me
