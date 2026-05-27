@@ -343,3 +343,6 @@ ssh -N -R 127.0.0.1:17890:127.0.0.1:7890 user@server
 
 
 一剑开天门。
+
+
+> 本文github地址：https://github.com/swawai/swaw.com/blob/6241f5ba613cb749c8554704f0614f5b1247b8db/content/d/ssh-reverse-port-forward-proxy/index.zh.md
