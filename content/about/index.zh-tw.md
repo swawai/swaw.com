@@ -70,4 +70,4 @@ GitHub：[swawai](https://github.com/swawai)
 Email：[he.haifeng@hotmail.com](mailto:he.haifeng@hotmail.com)  
 微信公眾號：掃描下方 QR Code
 
-{{< asset-image src="brand/wechat-official-account.jpg" alt="人不工微信公眾號 QR Code" >}}
+{{< asset-image src="brand/wechat-official-account.gif" alt="人不工微信公眾號 QR Code" >}}

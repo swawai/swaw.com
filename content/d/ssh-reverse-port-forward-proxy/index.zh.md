@@ -291,11 +291,12 @@ git -c http.proxy=http://127.0.0.1:17890 -c https.proxy=http://127.0.0.1:17890 c
 正确方法(示例克隆):
 
 ```bash
-# bash / Linux （github.com/user/repo 非真实存在，注意替换）
-GIT_SSH_COMMAND='ssh -o ProxyCommand="nc -X connect -x 127.0.0.1:7890 %h %p"'  git clone https://github.com/user/repo.git
-# windows
-cmd /d /c "set GIT_SSH_COMMAND=ssh -o ProxyCommand='C:/PROGRA~1/Git/mingw64/bin/connect.exe -H 127.0.0.1:7890 github.com 22'&& git clone https://github.com/user/repo.git"
+# bash / Linux
+GIT_SSH_COMMAND='ssh -o ProxyCommand="nc -X connect -x 127.0.0.1:17890 %h %p"'  git clone https://github.com/user/repo.git
+# windows（服务器大概率不是windows）
+cmd /d /c "set GIT_SSH_COMMAND=ssh -o ProxyCommand='C:/PROGRA~1/Git/mingw64/bin/connect.exe -H 127.0.0.1:17890 github.com 22'&& git clone https://github.com/user/repo.git"
 ```
+**注意按实际情况替换 17890、github.com/user/repo 和所需的git命令**
 
 ### 7.3 ping、traceroute、nslookup 不会走这个 HTTP 代理
 
@@ -345,4 +346,7 @@ ssh -N -R 127.0.0.1:17890:127.0.0.1:7890 user@server
 一剑开天门。
 
 
-> 本文github地址：https://github.com/swawai/swaw.com/blob/6241f5ba613cb749c8554704f0614f5b1247b8db/content/d/ssh-reverse-port-forward-proxy/index.zh.md
+> 本文github地址：https://github.com/swawai/swaw.com/blob/ab2c4292630cb337dafd9198e9193a8048c8a953/content/d/ssh-reverse-port-forward-proxy/index.zh.md
+
+> 微信交流群：
+> {{< asset-image src="brand/wecom-ex-group-ai-cockpit.gif" alt="WeCom External Group: AI-Cockpit QR code" >}}
