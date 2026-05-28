@@ -31,7 +31,7 @@ tags:
 你可能辛辛苦苦，试过把 npm、PyPI、Go、apt/dnf 等更换国内镜像源，但仍然未能 100% 解决。因为：
 
 ```text
-- npm install 脚本可能拉 GitHub Release
+- npm 可能拉 GitHub Release
 - pip 包可能下载外部二进制
 - Docker 镜像可能来自 Docker Hub/GHCR/Quay
 - Go/Rust/Node/Python 生态经常跨多个源
@@ -75,7 +75,7 @@ curl -s -x http://127.0.0.1:7890 http://ip-api.com/json
 curl.exe -s -x http://127.0.0.1:7890 http://ip-api.com/json
 ```
 
-看看返回的 IP 归属地区，是否对上了你的代理网络。如果不是，检查你的代理软件是否已经运行，是否是规则或全局模式，是否打开了 HTTP/Mixed 代理服务，或是否开启了系统代理（非必须，但开启有助于排查）。若开启了系统代理，可以命令行查询：
+看看返回的 IP 归属地区，是否对上了你的代理网络。如果不是，检查你的代理软件是否已经打开并开启运行，是否是规则或全局模式，是否打开了 HTTP/Mixed 代理服务，或是否开启了系统代理（非必须，但开启有助于排查）。若开启了系统代理，可以命令行查询：
 ```bash
 # Windows
 reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings"|findstr ProxyServer
@@ -96,7 +96,7 @@ reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings"|fin
         ↓
 ssh -R 反向隧道
         ↓
-ssh 客户端/你工作电脑的 127.0.0.1:7890
+ssh 客户端/你工作电脑的 127.0.0.1:7890 (代理服务)
         ↓
 海外依赖源
 ```
@@ -168,7 +168,7 @@ curl -s ip-api.com
         ↓
 ssh -R 反向隧道
         ↓
-ssh 客户端/你工作电脑的 127.0.0.1:7890
+ssh 客户端/你工作电脑的 127.0.0.1:7890 (代理服务)
         ↓
 海外依赖源
 ```
@@ -277,29 +277,29 @@ ssh -R 命令断开：服务器 127.0.0.1:17890 消失
 你也可以为 npm、pip 等单独设置代理参数：
 
 ```bash
+# npm
 npm --proxy=http://127.0.0.1:17890 --https-proxy=http://127.0.0.1:17890 install
+# pip
 pip install -r requirements.txt --proxy http://127.0.0.1:17890
+# git
 git -c http.proxy=http://127.0.0.1:17890 -c https.proxy=http://127.0.0.1:17890 clone https://github.com/user/repo.git
 ```
+**github.com/user/repo 非真实存在，注意替换**
 
+### 7.2 Git 使用 SSH 协议时，不一定会走代理
 
-### 7.2 ping、traceroute、nslookup 不会走这个 HTTP 代理
+正确方法(示例克隆):
+
+```bash
+# bash / Linux （github.com/user/repo 非真实存在，注意替换）
+GIT_SSH_COMMAND='ssh -o ProxyCommand="nc -X connect -x 127.0.0.1:7890 %h %p"'  git clone https://github.com/user/repo.git
+# windows
+cmd /d /c "set GIT_SSH_COMMAND=ssh -o ProxyCommand='C:/PROGRA~1/Git/mingw64/bin/connect.exe -H 127.0.0.1:7890 github.com 22'&& git clone https://github.com/user/repo.git"
+```
+
+### 7.3 ping、traceroute、nslookup 不会走这个 HTTP 代理
 
 `ping`、`tracert` / `traceroute`、`nslookup` 走的是 ICMP、路由探测或 UDP/DNS 查询，不读取 `http_proxy` / `https_proxy` 这类环境变量。
-
-### 7.3 Git 使用 SSH 协议时，不一定会走代理
-
-如：
-
-```bash
-git clone git@github.com:user/repo.git
-```
-
-这是 SSH 协议，不一定读取 HTTP 代理环境变量。救急时建议直接换 HTTPS 地址：
-
-```bash
-git clone https://github.com/user/repo.git
-```
 
 ### 7.4 Docker 有坑
 
