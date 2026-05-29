@@ -62,16 +62,7 @@
       ]
     },
     {
-      "source": "/brand/*",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/pwa/*.webmanifest",
+      "source": "/site/pwa/*.webmanifest",
       "headers": [
         {
           "key": "Content-Type",
@@ -80,7 +71,7 @@
       ]
     },
     {
-      "source": "/pwa/*",
+      "source": "/site/*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -90,6 +81,15 @@
     },
     {
       "source": "/runtime/*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/media/content/*",
       "headers": [
         {
           "key": "Cache-Control",

@@ -1,0 +1,14 @@
+# External resources are refreshed only when explicitly running:
+#   npm run prepare:external
+#
+# Targets should live beside the content that references them. Hugo publishes
+# those page bundle resources through the theme's fingerprinted media pipeline.
+resources:
+  - id: wsl-distribution-info
+    source: https://raw.githubusercontent.com/microsoft/WSL/master/distributions/DistributionInfo.json
+    target: content/d/wsl/practical/DistributionInfo.json
+    validators:
+      - json:ModernDistributions
+      - min-size:2KiB
+      - max-size:1024KiB
+      

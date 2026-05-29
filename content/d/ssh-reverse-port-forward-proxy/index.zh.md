@@ -349,4 +349,4 @@ ssh -N -R 127.0.0.1:17890:127.0.0.1:7890 user@server
 > 本文github地址：https://github.com/swawai/swaw.com/blob/943065cd15f3d24a578373c8c51a8a8e5914325f/content/d/ssh-reverse-port-forward-proxy/index.zh.md
 
 > 微信交流群：
-> {{< asset-image src="brand/wecom-ex-group-ai-cockpit.gif" alt="WeCom External Group: AI-Cockpit QR code" >}}
+> {{< asset src="site/brand/wecom-ex-group-ai-cockpit.gif" alt="WeCom External Group: AI-Cockpit QR code" >}}
