@@ -11,4 +11,3 @@ resources:
       - json:ModernDistributions
       - min-size:2KiB
       - max-size:1024KiB
-      
