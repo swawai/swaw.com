@@ -6,7 +6,7 @@ slug: "ssh-reverse-port-forward-proxy"
 description: "通过 SSH 反向端口转发，把服务器上的 127.0.0.1:17890 临时映射到本机 HTTP 代理，救急处理 npm、pip、GitHub 等依赖下载卡住的问题。"
 nav_primary: signals
 intent:
- - decide
+ - explore
 tags:
  - tooling
 ---

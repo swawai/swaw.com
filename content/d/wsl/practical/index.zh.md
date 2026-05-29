@@ -1,7 +1,7 @@
 ---
 date: "2025-04-02T22:04:00+08:00"
 draft: false
-title: "WSL 实用笔记：安装、迁移、备份与常用配置"
+title: "WSL 实用笔记"
 slug: "wsl-practical"
 description: "整理 WSL 在 Windows 10/11 上的安装、版本切换、实例管理、备份还原、迁移、镜像网络、离线安装与常用配置。"
 nav_primary: signals
