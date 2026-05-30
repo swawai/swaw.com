@@ -67,7 +67,7 @@ The two entities are mainly used for payments and business operations in differe
 
 X: [@iddibi](https://x.com/iddibi)  
 GitHub: [swawai](https://github.com/swawai)  
-Email: [he.haifeng@hotmail.com](mailto:he.haifeng@hotmail.com)  
+Email: [hello@swaw.com](mailto:hello@swaw.com)  
 WeChat Official Account: scan the QR code below  
 
 {{< asset src="site/brand/wechat-official-account.gif" alt="Renbugong WeChat Official Account QR code" >}}

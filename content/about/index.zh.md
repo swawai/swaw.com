@@ -71,7 +71,7 @@ Swaw 不是凭空想出来的产品概念，而是我先为自己搭建工作系
 
 X：[@iddibi](https://x.com/iddibi)  
 GitHub：[swawai](https://github.com/swawai)  
-Email：[he.haifeng@hotmail.com](mailto:he.haifeng@hotmail.com)  
+Email：[hello@swaw.com](mailto:hello@swaw.com)  
 微信公众号：扫描下方二维码  
 
 {{< asset src="site/brand/wechat-official-account.gif" alt="微信公众号二维码" >}}

@@ -67,7 +67,7 @@ Swaw 不是憑空想出來的產品概念，而是我先為自己搭建工作系
 
 X：[@iddibi](https://x.com/iddibi)  
 GitHub：[swawai](https://github.com/swawai)  
-Email：[he.haifeng@hotmail.com](mailto:he.haifeng@hotmail.com)  
+Email：[hello@swaw.com](mailto:hello@swaw.com)  
 微信公眾號：掃描下方 QR Code
 
 {{< asset src="site/brand/wechat-official-account.gif" alt="人不工微信公眾號 QR Code" >}}
