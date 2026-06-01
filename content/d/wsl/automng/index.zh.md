@@ -30,7 +30,7 @@ WSL 是 Windows Subsystem for Linux 的简称。
 
 ---
 
-> 最佳场景是，你已手动安装了一个 WSL，然后使用本工具。如果你是初次使用 WSL，请先尝试手动安装一个 WSL。具体可查看我的 [WSL 实用笔记](/zh/p/wsl-practical/#1-准备工作与基本概念)。
+> 最佳场景是，你已手动安装了一个 WSL，然后使用本工具。如果你是初次使用 WSL，请先尝试手动安装一个 WSL。具体可查看我的 [WSL 实战指南](/zh/p/wsl-guide/#1-准备工作与基本概念)。
 
 
 
@@ -43,5 +43,4 @@ https://github.com/RenBuGong/hapitool
 {{< asset src="./wsl.automng.v2504.zip" text="wsl.automng.v2504.zip" download="true" >}}  
 下载后，解压，双击目录中的 **start.vbs**  
 ![开始使用](featured.png)
-
 
