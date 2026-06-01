@@ -18,15 +18,16 @@ tags:
 # WSL 实战指南：安装、迁移、备份与常用配置
 
 > 本文是 [WSL 自动化管理脚本](/zh/p/wsl-automng/) 的姐妹篇, 聚焦 WSL 手动安装、备份/还原、迁移及常用场景的使用技巧。
+
 > WSL(Windows Subsystem for Linux) 可以让我们在 Windows 10/11 上直接运行 Linux 环境。它带来的好处包括:  
-> 1 **文件互操作**: 使用 Linux 软件处理 Windows 文件, 或反之。例如, 用 awk 编辑 Windows 的日志文件, 或者在 VS Code/Cursor 上调试 Linux 环境下的项目。  
-> 2 **后台 systemd 服务**: 开启 systemd, 几乎可以像传统 Linux 一样运行后台服务。  
-> 3 **显示 GUI 程序**: 直接在 Windows 上运行 Linux GUI (WSLg)。  
-> 4 **运行 Linux 容器**: Windows 上的 Docker 也基于 WSL2；可轻松管理各种容器。  
-> 5 **多个 Linux 系统并存**: 同时拥有 Ubuntu、Debian、Arch 等发行版。  
-> 6 **支持 GPU**: 如 [NVIDIA CUDA](https://learn.microsoft.com/windows/ai/directml/gpu-cuda-in-wsl) 等硬件加速。  
-> 7 **代码已开源**: WSL 已在 [microsoft/WSL](https://github.com/microsoft/WSL) 开源。  
-> 以下整理了从安装到进阶使用的一系列技巧, 让你充分发挥 WSL 的威力。
+1 **文件互操作**: 使用 Linux 软件处理 Windows 文件, 或反之。例如, 用 awk 编辑 Windows 的日志文件, 或者在 VS Code/Cursor 上调试 Linux 环境下的项目。  
+2 **后台 systemd 服务**: 开启 systemd, 几乎可以像传统 Linux 一样运行后台服务。  
+3 **显示 GUI 程序**: 直接在 Windows 上运行 Linux GUI (WSLg)。  
+4 **运行 Linux 容器**: Windows 上的 Docker 也基于 WSL2；可轻松管理各种容器。  
+5 **多个 Linux 系统并存**: 同时拥有 Ubuntu、Debian、Arch 等发行版。  
+6 **支持 GPU**: 如 [NVIDIA CUDA](https://learn.microsoft.com/windows/ai/directml/gpu-cuda-in-wsl) 等硬件加速。  
+7 **代码已开源**: WSL 已在 [microsoft/WSL](https://github.com/microsoft/WSL) 开源。  
+以下整理了从安装到进阶使用的一系列技巧, 让你充分发挥 WSL 的威力。
 
 
 
@@ -488,6 +489,9 @@ wsl --import MyDistro E:\wslDistroStorage\MyDistro D:\mywsl\rootfs.tar --version
 > [也可以将容器镜像转化为 `.tar` 文件](https://learn.microsoft.com/windows/wsl/use-custom-distro)。通过 `wsl --import` 导入的 rootfs 通常不会自动创建普通用户和完整的首次启动体验；如果想做成可双击安装、可分发的 `.wsl` 文件, 需要参考官方 [Build a Custom Linux Distro for WSL](https://learn.microsoft.com/windows/wsl/build-custom-distro), 补齐 `/etc/wsl-distribution.conf` 等元数据。
 
 
+---
+
+
 ## 8. 常用技巧与进阶
 >本小节, 记录一些实用技巧。
 ### 8.1. 修改默认登录用户
@@ -665,3 +669,9 @@ sudo visudo -cf "/etc/sudoers.d/$USER" && sudo -l
 > 免密 sudo 会降低误操作门槛, 适合个人本机开发环境。
 
 > 以上就是对 WSL 从安装、备份、迁移、网络到常见技巧的整理。若还需更自动化的批量部署和离线管理, 可参考我的另一篇 [WSL 自动化管理脚本](/zh/p/wsl-automng/) ，希望对你有所帮助！
+
+> 本文github地址：https://github.com/swawai/swaw.com/blob/943065cd15f3d24a578373c8c51a8a8e5914325f/content/d/ssh-reverse-port-forward-proxy/index.zh.md  
+>
+> 微信交流群：
+> {{< asset src="site/brand/wecom-ex-group-ai-cockpit.gif" alt="WeCom External Group: AI-Cockpit QR code" >}}
+
