@@ -14,6 +14,8 @@
     "check:security:headers": "node themes/banyan/scripts/checks/check-security-headers.mjs https://swaw.com/",
     "check:public": "node themes/banyan/scripts/checks/check-public-html.mjs",
     "check:public:prod": "node themes/banyan/scripts/checks/check-public-html.mjs public --check",
+    "check:agent": "node themes/banyan/scripts/checks/check-agent-readiness.mjs",
+    "check:agent:prod": "node themes/banyan/scripts/checks/check-agent-readiness.mjs public --check",
     "check:browser": "node themes/banyan/scripts/browser-regression/browser.mjs",
     "check:browser:public": "node themes/banyan/scripts/browser-regression/run-entry-with-build.mjs public browser.mjs",
     "check:browser:latest-temp": "node themes/banyan/scripts/browser-regression/run-entry-with-build.mjs latest-temp browser.mjs",

@@ -59,9 +59,23 @@ unsafe = false
 [markup.minify]
 disableXML = true
 
+[outputFormats]
+[outputFormats.LLMS]
+mediaType = "text/plain"
+baseName = "llms"
+isPlainText = true
+notAlternative = true
+
+[outputFormats.MARKDOWN]
+mediaType = "text/markdown"
+baseName = "index"
+isPlainText = true
+notAlternative = true
+
 [outputs]
+page     = ["HTML","MARKDOWN"]
 section  = ["HTML","RSS"]
-home     = ["HTML","RSS"]
+home     = ["HTML","RSS","LLMS"]
 taxonomy = ["HTML","RSS"]
 term     = ["HTML","RSS"]
 
@@ -69,11 +83,6 @@ term     = ["HTML","RSS"]
 [languages.en]
 languageName = "English"
 weight = 1
-[languages.en.outputs]
-section  = ["HTML","RSS"]
-home     = ["HTML","RSS"]
-taxonomy = ["HTML","RSS"]
-term     = ["HTML","RSS"]
 [languages.en.params]
 locale = "en_US"
 
@@ -90,6 +99,21 @@ weight = 3
 
 [languages.zh-tw.params]
 locale = "zh_TW"
+
+[params.agent_access]
+default_policy = "allow"
+allow_user_agents = [
+  "OAI-SearchBot",
+  "ChatGPT-User",
+  "Claude-SearchBot",
+  "Claude-User",
+  "PerplexityBot"
+]
+disallow_user_agents = [
+  "GPTBot",
+  "ClaudeBot",
+  "Google-Extended"
+]
 
 [permalinks]
 
