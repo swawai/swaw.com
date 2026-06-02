@@ -29,3 +29,4 @@
     9.4 sw.js 对首次navigate页面会扫描预缓存其引用资源  
 
 10. 生产环境编译应对产出物做压缩/字节体积优化，如js/css/html等，开发环境（hugo server）则不需要  
+11. edgeone.json _header 是渲染产物，不宜修改，真源在themes\banyan\data\cache-policy-default.toml
