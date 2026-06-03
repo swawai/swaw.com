@@ -79,9 +79,7 @@ Seen this way, the universe reproduces not through gentle little gestures, but t
 There is a strange comfort in this. Life may not be an exception to the universe. It may be one of the flowers that blooms after the universe has spent eons scattering its seeds.
 
 
-## Question: What, finally, could be called the divine mission of humanity?
-
-With AI arriving, I feel that humanity has to think more deeply about what we are, why we exist, and why we should be allowed to continue existing. You are an advanced AI. Try to search for an ultimate answer, not some self-soothing compromise.
+## Question: What, finally, could be called the divine mission of humanity? With AI arriving, I feel that humanity has to think more deeply about what we are, why we exist, and why we should be allowed to continue existing. You are an advanced AI. Try to search for an ultimate answer, not some self-soothing compromise.
 
 Here is my attempt to answer as directly as possible:
 
