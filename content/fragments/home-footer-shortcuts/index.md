@@ -7,12 +7,10 @@ footer:
   aria_label: Site footer shortcuts
   brand_label: 2026 Swaw
   icp_number: ICP备2024338434号
-  about_show: false
-  about_label: About
-  rss_show: true
   rss_label: RSS
   github_href: https://github.com/swawai
   github_label: GitHub
+  wechat_label: WeChat
+  wechat_page: /wechat
   icp_prefix: 粤
 ---
-
