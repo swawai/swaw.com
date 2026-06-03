@@ -59,41 +59,8 @@ unsafe = false
 [markup.minify]
 disableXML = true
 
-[outputFormats]
-[outputFormats.LLMS]
-mediaType = "text/plain"
-baseName = "llms"
-isPlainText = true
-notAlternative = true
-
-# Default-language content lives at the site root because
-# defaultContentLanguageInSubdir=false. Keep /llms.txt as the global directory
-# and publish the English language-specific agent index at /en/llms.txt.
-[outputFormats.LLMS_LANG]
-mediaType = "text/plain"
-baseName = "llms"
-path = "en"
-isPlainText = true
-notAlternative = true
-
-# When a page opts into a Markdown mirror, keep HTML first in front matter:
-# outputs = ["HTML","AGENT_MARKDOWN"] or ["HTML","MARKDOWN"].
-# Hugo uses output order for the primary output; Markdown first can break
-# taxonomy/list entry links by making index.md the page's primary URL.
-[outputFormats.MARKDOWN]
-mediaType = "text/markdown"
-baseName = "index"
-weight = 20
-isPlainText = true
-notAlternative = true
-
-[outputFormats.AGENT_MARKDOWN]
-mediaType = "text/markdown"
-baseName = "index"
-weight = 21
-isPlainText = true
-notAlternative = true
-
+# Output format definitions live in themes/banyan/hugo.toml. Root [outputs]
+# entries still opt the site into each generated output.
 [outputs]
 page     = ["HTML"]
 section  = ["HTML","RSS"]
@@ -105,8 +72,6 @@ term     = ["HTML","RSS"]
 [languages.en]
 languageName = "English"
 weight = 1
-[languages.en.outputs]
-home = ["HTML","RSS","LLMS","LLMS_LANG"]
 [languages.en.params]
 locale = "en_US"
 
@@ -123,21 +88,6 @@ weight = 3
 
 [languages.zh-tw.params]
 locale = "zh_TW"
-
-[params.agent_access]
-default_policy = "allow"
-allow_user_agents = [
-  "OAI-SearchBot",
-  "ChatGPT-User",
-  "Claude-SearchBot",
-  "Claude-User",
-  "PerplexityBot"
-]
-disallow_user_agents = [
-  "GPTBot",
-  "ClaudeBot",
-  "Google-Extended"
-]
 
 [permalinks]
 
