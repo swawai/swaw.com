@@ -1,9 +1,6 @@
 ---
 title: WeChat Ecosystem
 description: QR-code entry points for Swaw on WeChat and WeCom.
-outputs:
- - HTML
- - AGENT_MARKDOWN
 slug: wechat
 type: page
 layout: article-page

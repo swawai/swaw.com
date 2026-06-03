@@ -1,9 +1,6 @@
 ---
 title: 微信生态页面
 description: Swaw 微信公众号与企业微信入口二维码。
-outputs:
- - HTML
- - AGENT_MARKDOWN
 slug: wechat
 type: page
 layout: article-page

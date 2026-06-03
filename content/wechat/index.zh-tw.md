@@ -1,9 +1,6 @@
 ---
 title: 微信生態頁面
 description: Swaw 微信公眾號與企業微信入口 QR Code。
-outputs:
- - HTML
- - AGENT_MARKDOWN
 slug: wechat
 type: page
 layout: article-page
