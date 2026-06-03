@@ -16,6 +16,8 @@ tags:
 
 # In the Age of AI, What Still Justifies Human Existence?
 
+**What if even the stars needed pollination...**
+
 > Author's note: This is an edited dialogue with AI. It began with a question about plants and insect pollination, but gradually moved toward something larger: when AI begins to replace more and more human abilities, what still gives human beings the right to believe we should continue to exist? I have kept the dialogue form because the important thing is not any single answer, but the way one question leads the mind deeper.
 
 ![In the Age of AI, What Still Justifies Human Existence?](ai-era-human-existence.png)
