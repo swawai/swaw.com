@@ -4,6 +4,9 @@ draft: false
 title: "Xvenv"
 slug: "xvenv"
 description: "Xvenv 是一个 BAT 单文件脚本，用免安装方式拉起项目级 Python、Node、Rust、Go、Git、MSVC 等开发环境。"
+outputs:
+ - HTML
+ - AGENT_MARKDOWN
 nav_primary: products
 type: "page"
 intent:
