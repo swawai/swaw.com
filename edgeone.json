@@ -145,6 +145,19 @@
           "value": "default-src 'none'; style-src 'unsafe-inline'; img-src data:; object-src 'none'; base-uri 'none'; frame-ancestors 'self'"
         }
       ]
+    },
+    {
+      "source": "/*.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
     }
   ],
   "installCommand": "git submodule sync --recursive && git submodule update --init --recursive --force && npm ci",
