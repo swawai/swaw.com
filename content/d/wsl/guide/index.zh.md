@@ -673,8 +673,6 @@ sudo visudo -cf "/etc/sudoers.d/$USER" && sudo -l
 
 > 以上就是对 WSL 从安装、备份、迁移、网络到常见技巧的整理。若还需更自动化的批量部署和离线管理, 可参考我的另一篇 [WSL 自动化管理脚本](/zh/p/wsl-automng/) ，希望对你有所帮助！
 
-> 本文github地址：https://github.com/swawai/swaw.com/blob/b13df63837668f2b6224ee4d2d31e6492f7c6b18/content/d/wsl/guide/index.zh.md  
->
 > 微信交流群：
 > {{< asset src="site/brand/wecom-ex-group-ai-cockpit.gif" alt="WeCom External Group: AI-Cockpit QR code" >}}
 
