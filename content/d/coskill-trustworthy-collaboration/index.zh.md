@@ -30,10 +30,10 @@ tags:
 
 ## 一点微妙分歧
 
-Anthropic 提出的 Skills，核心是增强模型与 agent 的能力：让模型可以按需加载操作说明、调用工具。
+Anthropic 提出的 Skills，核心是[增强模型与 agent 的能力](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)：[让模型可以按需加载操作说明、调用工具](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)。
 
-https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills  
-https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview
+  
+
 
 这固然重要，但对人类使用者来说，更在乎的是，任务是否按预期、稳定地完成。
 

@@ -1,9 +1,9 @@
 ---
-date: "2026-06-11T17:07:20+08:00"
+date: "2026-06-12T17:56:53+08:00"
 draft: false
-title: "Coskill: Not Making AI Stronger, but Making Collaboration More Trustworthy"
+title: "CoSkill: The Future of Human-Agent Collaboration"
 slug: "coskill-trustworthy-collaboration"
-description: "Starting from Anthropic Agent Skills, this essay argues that skills should not only empower agents, but also become human-legible, interruptible, reproducible, and auditable units of collaboration."
+description: "Starting from Anthropic Skills, this essay proposes CoSkill: a capability unit with an agent-callable interface, a human-operable UI, and a shared layer for logs, permissions, and approvals."
 outputs:
  - HTML
  - AGENT_MARKDOWN
@@ -12,117 +12,104 @@ intent:
  - explore
 tags:
  - ai
+ - tooling
 ---
 
-# Coskill: Not Making AI Stronger, but Making Collaboration More Trustworthy
+# The Future of Human-Agent Collaboration, Seen Through Skills
 
-Anthropic's Agent Skills are mainly about expanding the capabilities of models and agents: letting a model load instructions, call tools, use resources, and complete more complex, specialized, and reusable tasks at the right moment.
+Give AI/agents a little less room for autonomous improvisation, and give tools and fixed workflows a little more weight. The fate of humans being replaced will feel a little less close to reality.
 
-That matters.
+![CoSkill, the future of human-agent collaboration](coskill-trustworthy-collaboration.png)
 
-But from the user's point of view, the real question is not only whether the model is stronger. It is whether the work is completed reliably, safely, and intelligibly. A system that can do more is not automatically more trustworthy. Once capability grows, if human visibility, judgment, and takeover rights do not grow with it, collaboration gradually turns into spectatorship.
+## A Subtle Difference
 
-So skills should not be designed only around agents.
+Anthropic's Skills are mainly about [expanding the capabilities of models and agents](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills): [letting a model load instructions and call tools on demand](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
 
-A better direction is **Coskill**: a capability unit that both humans and agents can use.
+That certainly matters. But for human users, the more important question is whether the task is completed predictably and reliably.
 
-Its concrete execution form can be called **CoAction**: the same operation has both a human-friendly interface and an agent-callable interface. It can run automatically, but humans can still inspect, intervene, approve, pause, reproduce, and audit it at any time.
+For a recurring task, people usually want stable, step-by-step delivery. They do not want the model/agent to invent something new every time.
 
-## From Skill to Coskill
+So unless the task is exploratory or research-oriented, skills may be the more central layer.
 
-The problem with many skills today is that they make agents more capable without making human visibility stronger at the same time.
+This is a subtle psychological difference between everyday agent users and large-model companies.
 
-When does the model decide to use a certain skill? How does it interpret that skill? Which tools did it call? Which resources did it read? What intermediate state did it produce? How does it recover after failure? Does a key judgment have evidence behind it? These details are often opaque to humans.
+## Skills Should Not Only Be AI Add-ons. They Should Also Be a Human Foundation.
 
-This not only increases the black-box feeling of AI, but also makes people feel excluded from the action itself.
+Some people mount hundreds of skills for Codex / Claude Code, yet do not understand the details of how the model uses them.
 
-Coskill tries to change that structure of action.
+Skills often operate on concrete objects: modifying a code project, or calling an API to place and pay for an order.
 
-At minimum, a Coskill should include three layers:
+Today, we rarely hear that humans can bypass the agent and directly operate or orchestrate skills themselves.
 
-1. execution instructions and interfaces readable by the agent;
-2. an operation interface and status view understandable by humans;
-3. execution logs, permission boundaries, and pause/approval/replay mechanisms that run through both.
+Many of our abilities have always been granted by tools.
 
-In other words, Coskill is not a human-facing manual wrapped around an agent skill. It is a capability unit that has both a machine entrance and a human entrance.
+Humans are not stronger than great beasts, but we changed the world through tools.
 
-This distinction matters.
+If tools built for humans do not lag behind tools built for AI, we may not necessarily lag behind AI either.
 
-If there is only an agent entrance, the stronger the capability becomes, the more humans are left behind. If there is only a human interface, the system becomes difficult for agents to orchestrate and reuse. Coskill's goal is to put humans and agents on the same plane of action: the same task can be started by an agent or by a human; it can proceed automatically or be taken over manually; it can run, but it can also be explained, challenged, and reproduced.
+## We Cannot Easily Improve Large Models, but We Can Improve Skills
 
-## Trustworthy Collaboration Is Not Approval at Every Step
+It is hard for us to modify large models. With commercial models, we may not even have bargaining power.
 
-The ethical point of Coskill is not that humans must participate in every step.
+Skills are different. This is an example skill from the Claude documentation:
 
-That would drag collaboration back into inefficient manual approval, and it would misunderstand the value of automation. A mature system does not ask humans about everything. It provides the right control surface for different levels of risk.
+```text
+pdf-skill/
+├── SKILL.md (main instructions)
+├── FORMS.md (form-filling guide)
+├── REFERENCE.md (detailed API reference)
+└── scripts/
+    └── fill_form.py (utility script)
+```
 
-Low-risk actions can be completed automatically.
+The `.md` files are text, and the `scripts` directory contains code. Almost anyone can change them.
 
-Medium-risk actions should leave clear records and allow undo or replay.
+## Skill Usage Is Valuable Experience
 
-High-risk actions require human approval, boundary confirmation, and sometimes an explicit evidence trail.
+As the digital world and agent ecosystem become more abundant, there will often be more than one path to the same goal.
 
-Irreversible actions, state-changing actions, or actions involving money, identity, permissions, privacy, production environments, or public release should expose stronger audit and takeover capabilities by default.
+Some birds weave nests from reeds. Some animals sleep while hanging upside down. The Sumerians wrote records on clay tablets. The Chinese used ceramics to make water jars.
 
-The principle is not "humans are slower, so route around them." The principle is: **automation should reduce repetitive labor, while humans retain final responsibility and value judgment.**
+Large-model/agent companies can easily collect which skills users use and how they use them, then improve their own models.
 
-Once a system begins to exercise action rights on behalf of humans, it should not hide the process of action.
+If we add even a little structure to skills or agents:
 
-## Agents Also Need Institutional Constraints
+1. record the usage frequency and sequence paths of each capability inside skills;
+2. record the result after each capability is used, whether it succeeds or fails.
 
-Coskill also reminds the agent: your operations are not happening in secret.
+Then we can form our own experience assets for the digital world, without binding ourselves to any particular large-model/agent company.
 
-Your choices leave traces. Your actions can be audited. Your judgments need evidence. You are not exercising power for humans inside a black box.
+## I Propose the Concept of CoSkill
 
-This sounds like an ethical statement, but it is also an engineering principle.
+A capability unit that both humans and agents can use.
 
-An automation system that cannot be audited is difficult to trust over the long term. Agent behavior that cannot be reproduced is difficult to debug. A skill without permission boundaries can easily slide from "improving efficiency" into "creating incidents." A tool ecosystem that pursues capability expansion without offering a human entrance makes users more dependent on the system while making the system harder to understand.
+It roughly contains:
 
-That is not good collaboration.
+1. execution instructions and interfaces readable by the agent (Skills);
+2. a human-understandable operation interface and status view (App);
+3. a shared layer for logs, permissions, and approvals.
 
-Good collaboration should strengthen both sides: agents gain more reliable execution capacity, while humans gain clearer observation, judgment, and takeover capacity.
+At the execution level, each executable operation can also be called a **CoAction**.
 
-## Coskill as Institutional Design
+A CoAction can be initiated by an agent or by a human. It can run automatically, and it can also be reviewed, approved, or taken over by humans.
 
-Coskill is therefore not only a tool pattern. It is a form of institutional design for human-agent collaboration.
+This also reminds the agent: your operation is not happening in secret. It will be recorded.
 
-It cares not only about how to complete the task, but also about:
+So CoSkill is not only a tool pattern. It is also a design idea for human-agent collaboration.
 
-- who may start the capability;
-- under what conditions the agent may execute automatically;
-- which steps must be visible to humans;
-- which actions require approval;
-- how failure is recovered;
-- how execution can be reproduced;
-- how the result can be audited afterward;
-- how humans can move from spectators back into participation.
+## Skills WorldTree, the Next Step After CoSkill
 
-The future of human-agent relations may be visible in the shape of skills.
+When there are more CoSkills, we can consider:
 
-If we only build increasingly powerful tools for AI, without leaving humans an equally clear, capable, and auditable entrance, then "collaboration" will quickly slide toward replacement. Not because AI necessarily wants to replace people, but because the system structure has already assumed that humans are not on the plane of action.
+1. a unified UI protocol, so a browser-like tool can display the UI of all CoSkills;
+2. aggregating massive numbers of CoSkills, with unified classification, indexing, and orchestration. This interface can center human operation, with agents as assistants, for example to bridge the gaps between skills.
 
-Once humans are no longer on that plane, they can only react to the result afterward: like it or dislike it, accept it or reject it. That is not collaboration. It is closer to consumption.
+## A Leaf Reveals Autumn
 
-## Humans Need Tools That Do Not Fall Behind
+The future is already here. The way Skills exist can already be seen as a signal for the era of human-agent collaboration.
 
-Many human abilities have always been granted by tools.
+If we only build increasingly powerful tools for AI, without leaving humans an equally powerful and enterable interface, then so-called collaboration will quickly slide toward replacement.
 
-Humans are not stronger than great beasts, but we changed the world through tools. Tools are not outside human capability; they have always been extensions of human capability. Language, writing, paper, printing, ledgers, maps, telescopes, and computers are all ways in which limited minds became civilizational capacity.
+The question is not whether AI should become stronger.
 
-In the age of AI agents, then, the real danger is not that agents have tools. The real danger is that only agents get increasingly better tools.
-
-If tools built for humans do not lag behind tools built for agents, human capability may not necessarily lag behind AI agents. The point is not to make humans manually perform every task. The point is to ensure that humans always have clear, powerful, trustworthy entrances into the work, so they can understand what is happening and enter the scene when necessary.
-
-The core of Coskill is not letting AI do things instead of humans. It is letting humans and AI stand on the same plane of action.
-
-Skill gives agents capability.
-
-Coskill makes that capability visible, controllable, and auditable by humans as well.
-
-The future is already here. The way Skills exist is both a technical architecture and a signal for the era of human-agent collaboration.
-
-If the next generation of tools only answers "How can AI become stronger?", we will get stronger automation.
-
-But if it also answers "How can humans remain present?", we may get truly trustworthy collaboration.
-
-> Note: Anthropic describes [Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) as modular capabilities that can be loaded on demand, usually containing instructions, metadata, and optional scripts, templates, and resources. This essay is not an implementation guide for Anthropic Skills. It uses that form as a starting point for a broader collaboration design direction.
+The question is whether, when AI becomes stronger, humans can still stand on the same plane of action.
