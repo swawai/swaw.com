@@ -3,7 +3,7 @@ date: "2026-06-12T17:56:53+08:00"
 draft: false
 title: "CoSkill：人機協作的未來"
 slug: "coskill-trustworthy-collaboration"
-description: "從 Anthropic Skills 出發，提出 CoSkill：讓同一能力單元同時擁有 agent 可呼叫接口、人類可操作介面，以及日誌、權限、審批層。"
+description: "從 Anthropic Skills 出發，提出 CoSkill：一種人類和 agent 都能使用的能力單元。"
 outputs:
  - HTML
  - AGENT_MARKDOWN
@@ -29,17 +29,17 @@ Anthropic 提出的 Skills，核心是[增強模型與 agent 的能力](https://
 
 一個經常性任務，人們更希望它穩定、按部就班地完成交付，並不想模型/agent 每次都搞出新東西。
 
-所以，除非是探索、研究型任務，否則 skills 才是更核心的。
+所以，除非是探索、研究型任務，否則 Skills 才是更核心的。
 
 這是 agent 日常使用者和大型模型公司之間一點微妙的心理分歧。
 
 ## Skills 不該只是 AI 的外掛，也該是人類的底座
 
-有人為 Codex / Claude Code 掛載上百個 skills，但並不了解模型使用它們的具體細節。
+有人為 Codex / Claude Code 掛載上百個 Skills，但並不了解模型使用它們的具體細節。
 
-skills 往往是操作具體對象，例如改動一個程式碼專案，或呼叫某個接口進行付款下單。
+Skills 往往是操作具體對象，例如改動一個程式碼專案，或呼叫某個接口進行付款下單。
 
-今天，很少聽說人類可以越過 agent，直接自己操作或編排 skills。
+今天，很少聽說人類可以越過 agent，直接自己操作或編排 Skills。
 
 我們的很多能力，本來就是工具賦予的。
 
@@ -47,11 +47,11 @@ skills 往往是操作具體對象，例如改動一個程式碼專案，或呼�
 
 如果面向人類的工具不落後於面向 AI 的工具，我們也未必會落後於 AI。
 
-## 我們不能參與改進大型模型，但可以參與改進 skills
+## 我們不能參與改進大型模型，但可以參與改進 Skills
 
 我們很難修改大型模型；至於商用模型，可能連議價權都沒有。
 
-skills 不同。這是 Claude 文件裡的示例 skill：
+Skills 不同。這是 Claude 文件裡的示例 Skill：
 
 ```text
 pdf-skill/
@@ -64,17 +64,17 @@ pdf-skill/
 
 其中 `.md` 文件裡都是文本，`scripts` 中是程式碼，幾乎人人都可以改。
 
-## 對 skills 的使用，是一種有價值的經驗
+## 對 Skills 的使用，是一種有價值的經驗
 
 隨著數位世界和 agent 生態繁榮，達成一個目標的路徑，往往會變得不只一條。
 
 有的鳥類用蘆葦織巢，有的獸類倒掛著睡覺，蘇美人把記錄寫在泥板上，中國人用陶瓷做水缸……
 
-大型模型/agent 公司，很容易收集使用者用了什麼 skills、如何使用，然後改進自家模型的能力。
+大型模型/agent 公司，很容易收集使用者用了什麼 Skills、如何使用，然後改進自家模型的能力。
 
-如果對 skills 或 agent 做一點點規範：
+如果對 Skills 或 agent 做一點點規範：
 
-1. 記錄 skills 中各個能力的使用頻率、順序路徑；
+1. 記錄 Skills 中各個能力的使用頻率、順序路徑；
 2. 記錄各個能力被使用後的效果，是成功，還是失敗。
 
 我們完全可以形成自己的數位世界經驗資產，而不必與某家特定的大型模型/agent 綁定。
@@ -102,7 +102,7 @@ pdf-skill/
 CoSkill 變多後，可以考慮：
 
 1. 統一 UI 協議，使一個類似「瀏覽器」的工具可以展示所有 CoSkill 的 UI；
-2. 聚合海量 CoSkill，統一分類、索引與編排；這個介面可以以人類操作為中心，agent 作為輔助，例如彌合 skills 之間的「間隙」。
+2. 聚合海量 CoSkill，統一分類、索引與編排；這個介面可以以人類操作為中心，agent 作為輔助，例如彌合 Skills 之間的「間隙」。
 
 ## 一葉知秋
 
