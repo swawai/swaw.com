@@ -9,8 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Created a centralized `CHANGELOG.md` to track project evolution and technical decisions.
+- Added `docs/site-content-inventory.md` to track root-site content ownership,
+  readiness, and cleanup decisions.
 
 ### Changed
+- Removed the root `content/d/test/` page so test/demo copy no longer lives in
+  production content.
 - **SEO Defense System (High Priority)**: Implemented robust Canonical Links and custom Sitemap generation to protect the multi-dimensional static sorting system from SEO penalties.
   - *Context*: The use of multiple `[outputFormats]` (like `byname`, `bycount`) created an exponential explosion of duplicate list pages.
   - *Sitemap Optimization*: A custom `layouts/sitemap.xml` was added to the `banyan` theme. It actively filters out all custom sorting outputs, ensuring only the pure, default `bydate` paths are submitted to search engines.
