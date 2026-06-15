@@ -84,7 +84,7 @@ D:\2026.3\win-run-toolbox>vps2 --help
 
 
 
-## 这些命令是否安全、谨慎？
+## 一、这些命令是否安全、谨慎？
 
 以 key.fix 这个命令为例，看似只修改远端 sshd 配置中的 PubkeyAuthentication 选项(是否允许key方式登录)，很简单？但实际会这样做：
 
@@ -113,7 +113,7 @@ D:\2026.3\win-run-toolbox>vps2 --help
 
 
 
-## 放进 PATH，才真的顺手
+## 二、放进 PATH，才真的顺手
 
 
 上述命令，如果希望在 `Win + R` 或任意终端窗口里直接执行：
@@ -129,7 +129,7 @@ vps2 key.add.fix
 pathhereadd.cmd
 ```
 
-它会把当前 `win-run-toolbox` 目录加入当前用户的 `PATH`。
+它会把当前自身所在的 `win-run-toolbox` 目录加入当前用户的 `PATH`。
 
 ![在 Windows 运行窗口输入 vps2 后打开对应远程主机的 SSH 登录终端](windows-run-vps2-ssh-login.png)
 
@@ -147,7 +147,7 @@ pathhereremove.cmd
 
 
 
-## AI 来临前，我用此方法日常管理上百台机器
+## 三、AI 来临前，我用此方法日常管理上百台机器
 
 方法很简单，给每台机器对应的脚本，使用分区式的命名就行了：
 
