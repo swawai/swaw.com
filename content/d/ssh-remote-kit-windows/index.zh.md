@@ -1,9 +1,9 @@
 ---
 date: "2026-06-15T05:00:00+08:00"
 draft: false
-title: "Windows 没有 ssh-copy-id？我干脆把一台台 VPS 变成本地命令"
+title: "把一台台 VPS 变成本地命令"
 slug: "ssh-remote-kit-windows"
-description: "Windows 上管理 Linux 服务器时，ssh-copy-id、远程命令、传文件、打开远程目录和脚本执行都很零散。我把这些高频操作收进一个 vps1 命令，让人和 agent 都能稳定调用。"
+description: "Windows 上，我把一台台 VPS 映射成一个个本地命令，用来设置免密 key、执行远程命令、传文件和打开远程开发环境，也方便把服务器变成 Agent 可调用的稳定上下文。"
 outputs:
  - HTML
  - AGENT_MARKDOWN
@@ -14,15 +14,15 @@ tags:
  - tooling/devtools/windows
 ---
 
-# Windows 没有 ssh-copy-id？我干脆把一台台 VPS 变成本地命令
+# Windows 没有 ssh-copy-id？我干脆把一台台 VPS 变成本地命令，人和 Agent 都方便
 
-![SSH Remote Kit 文章封面](cover-placeholder.png)
+![Windows 上把一台台 VPS 变成本地命令的 SSH Remote Kit 封面图](ssh-remote-kit-vps-local-command-cover.png)
 
 现在的 Windows 10/11，直接执行 `ssh` 已经不是问题，但没有 `ssh-copy-id` 命令。
 
-我为此甚至经常切换到 WSL 中，就为了使用 ssh-copy-id 快速为远程服务器添加 SSH 公钥，以免密登录。
+要为远程机添加 SSH 公钥，以免密登录，有点麻烦，我为此经常切换到 WSL 中...
 
-不胜其烦。
+一两次还好，次数多了会不胜其烦。
 
 后面为此写了一套脚本，我自己已用了好几年，功能不断扩充。脚本已上传到 GitHub，只需克隆此仓库到你本机：
 
@@ -31,7 +31,7 @@ git clone https://github.com/swawai/win-run-toolbox
 cd win-run-toolbox
 copy .\vps1.cmd .\vps2.cmd
 ```
-
+![vps1配置模板文件内容](content-of-the-template-vps1.png)
 
 然后修改 `vps2.cmd` 里定义的主机信息（地址、端口、用户名、私钥路径），执行：
 ```powershell
@@ -40,7 +40,7 @@ copy .\vps1.cmd .\vps2.cmd
 
 就可以看到，针对你的 vps2 已有的所有可用命令：
 ```
-PS D:\2026.3\swaw_ssh> ./vps2 --help
+D:\2026.3\win-run-toolbox>vps2 --help
 
 # 基本用法:
   vps2    运行 vps2 (远程登录其文件中配置的 SSH 主机)
@@ -84,8 +84,7 @@ PS D:\2026.3\swaw_ssh> ./vps2 --help
 
 
 
-
-## 是否安全、谨慎？
+## 这些命令是否安全、谨慎？
 
 以 key.fix 这个命令为例，看似只修改远端 sshd 配置中的 PubkeyAuthentication 选项，很简单？
 但实际会这样做：
@@ -107,7 +106,6 @@ PS D:\2026.3\swaw_ssh> ./vps2 --help
 14. 同时检查 AuthorizedKeysFile 是否包含 .ssh/authorized_keys；若 sshd 不读这个文件，会明确 warning。
 ```
 
-![key.fix 检查 SSH key 登录配置](screenshot-keyfix-placeholder.png)
 
 
 
@@ -126,9 +124,6 @@ vps2 -- uptime
 vps2 key.add.fix
 ```
 
-
-
-
 只需要双击仓库里的：
 
 ```text
@@ -136,6 +131,9 @@ pathhereadd.cmd
 ```
 
 它会把当前 `win-run-toolbox` 目录加入当前用户的 `PATH`。
+
+![在 Windows 运行窗口输入 vps2 后打开对应远程主机的 SSH 登录终端](windows-run-vps2-ssh-login.png)
+
 
 如果你后悔了，也不用手动改环境变量，执行：
 
@@ -162,7 +160,7 @@ z1.v3.cmd
 z10.v10.cmd
 ```
 
-也可以用子目录，给它们做分组，以后使用先cd 到具体的组目录：
+也可以用子目录，给它们做分组，以后使用先 cd 到具体的组目录：
 ```
 group1/zone1.vps1.cmd
 g2/z1.v1.cmd
@@ -178,22 +176,23 @@ dev.vm1.LiSi.cmd
 ops.vm2.WangWu.cmd
 ```
 
-设置好免密后，它们也会是 Agent 充当运维的绝佳上下文空间，脚本名既把“机器”固化成了对应的命令，这对人类 和 Agent 都同样舒服。
+设置好免密后，它们也会是 Agent 充当运维的绝佳上下文空间，脚本名既把“机器”固化成了对应的命令，这对 人类 和 Agent 都同样舒服。
 
 后面，你只需和 Codex 说 “Hi，帮我看看 LiSi 的内存使用量，ops.vm2.WangWu 的磁盘剩余”
 
-此外，让 Agent 现场写脚本来批量编排、操作这些机器，也不是不可以。
 
-以及，基于系统原生的 Windows Terminal 管理海量机器，也不是不可能。
+此外，让 Agent 现场写脚本来批量编排、操作这些机器，也不是不可能。
 
-![远程命令输出](screenshot-command-placeholder.png)
-
+以及，基于系统原生的 Windows Terminal 管理海量机器，也不是不可以。
 
 
 
+![vps2 执行 free -h 和 df -h 查看远程 VPS 的内存与磁盘使用情况](vps2-remote-memory-disk-output.png)
 
 
 
+> 此套脚本我自己长期使用，会持续维护，即便你不直接使用，其中关于 ssh 参数等实战中的细节处理，也值得借鉴(比如你的 ssh 远程命令可能遇到卡死/不回显)……总之欢迎 Star、PR.
 
 
-> 脚本仓库：[swawai/win-run-toolbox](https://github.com/swawai/win-run-toolbox)
+
+> 仓库：[https://github.com/swawai/win-run-toolbox](https://github.com/swawai/win-run-toolbox)
