@@ -3,7 +3,7 @@ date: "2026-06-15T05:00:00+08:00"
 draft: false
 title: "把一台台 VPS 变成本地命令"
 slug: "ssh-remote-kit-windows"
-description: "Windows 上，我把一台台 VPS 映射成一个个本地命令，用来设置免密 key、执行远程命令、传文件和打开远程开发环境，也方便把服务器变成 Agent 可调用的稳定上下文。"
+description: "Windows 上，把一台台 VPS 变成本地命令，用来设置免密 key、执行远程命令、打开远程开发环境非常方便...，同时也构建了 Agent 充当运维的极佳上下文环境。"
 outputs:
  - HTML
  - AGENT_MARKDOWN
@@ -86,8 +86,7 @@ D:\2026.3\win-run-toolbox>vps2 --help
 
 ## 这些命令是否安全、谨慎？
 
-以 key.fix 这个命令为例，看似只修改远端 sshd 配置中的 PubkeyAuthentication 选项，很简单？
-但实际会这样做：
+以 key.fix 这个命令为例，看似只修改远端 sshd 配置中的 PubkeyAuthentication 选项(是否允许key方式登录)，很简单？但实际会这样做：
 
 ```text
 1. 先用当前配置的 key 测试 OpenSSH 登录；若 key 登录不可用，才回退走 PuTTY + 提示输入密码的路径。
@@ -195,4 +194,4 @@ ops.vm2.WangWu.cmd
 
 
 
-> 仓库：[https://github.com/swawai/win-run-toolbox](https://github.com/swawai/win-run-toolbox)
+> 关联仓库：[https://github.com/swawai/win-run-toolbox](https://github.com/swawai/win-run-toolbox)
