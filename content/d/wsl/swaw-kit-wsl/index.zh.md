@@ -18,6 +18,8 @@ tags:
 
 ![SWAW Kit WSL 主封面](swaw-kit-wsl-cover-master.png)
 
+> 关联文章： [WSL 实战指南](/zh/p/wsl-practical/)
+
 WSL 是 Windows 上最容易获得的 Linux 环境之一。它与 Windows 文件系统、终端以及 VS Code、Cursor 等编辑器集成良好，也很适合创建、删除和重建临时开发环境。
 
 但当 WSL 实例逐渐增多，问题就不再是“怎样启动 Linux”，而是：
@@ -64,7 +66,20 @@ agent-lab .backup
 
 > **RaC：Resource as Command，资源即命令。**
 
+
+>本文目录：  
+>一、四步开始使用  
+>二、一个入口覆盖哪些工作？  
+>三、放进 PATH  
+>四、四、资源即命令：命令名不只是别名  
+>五、管理命令与原生命令透传  
+>六、为什么这种入口特别适合 Agent？  
+>七、先了解几个操作边界  
+>八、运行示例  
+>结语
 ---
+
+
 
 ## 一、四步开始使用
 
@@ -84,12 +99,6 @@ cd win-run-toolbox
 ### 第二步：为实例复制一个入口
 
 `wsl01.cmd` 可以作为入口模板。请复制成一个尚未存在、容易识别的名字：
-
-```powershell
-Copy-Item .\wsl01.cmd .\agent-lab.cmd
-```
-
-在传统 CMD 中也可以使用：
 
 ```cmd
 copy wsl01.cmd agent-lab.cmd
@@ -817,7 +826,7 @@ wsl02 .install D:\backup\Backup_wsl02_20260617083000.tar --yes
 
 ![使用归档还原 wsl02 实例](wsl02-restore-from-backup-archive.png)
 
-备份格式由入口文件（例如 `wsl02.cmd`、`agent-lab.cmd`）中的 `WSL_export_format` 决定，可选 tar, tar.gz, tar.xz, vhd。
+备份格式由入口文件（例如 `wsl02.cmd`、`agent-lab.cmd`）中的 `WSL_export_format` 决定，可选 tar, tar.gz, tar.xz, vhd, vhdx。
 
 ---
 
