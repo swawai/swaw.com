@@ -22,14 +22,16 @@ tags:
 
 > 本文是 [WSL 自动化管理脚本](/zh/p/wsl-automng/) 的姐妹篇, 聚焦 WSL 手动安装、备份/还原、迁移及常用场景的使用技巧。
 
-> WSL(Windows Subsystem for Linux) 可以让我们在 Windows 10/11 上直接运行 Linux 环境。它带来的好处包括:  
-1 **文件互操作**: 使用 Linux 软件处理 Windows 文件, 或反之。例如, 用 awk 编辑 Windows 的日志文件, 或者在 VS Code/Cursor 上调试 Linux 环境下的项目。  
-2 **后台 systemd 服务**: 开启 systemd, 几乎可以像传统 Linux 一样运行后台服务。  
-3 **显示 GUI 程序**: 直接在 Windows 上运行 Linux GUI (WSLg)。  
-4 **运行 Linux 容器**: Windows 上的 Docker 也基于 WSL2；可轻松管理各种容器。  
-5 **多个 Linux 系统并存**: 同时拥有 Ubuntu、Debian、Arch 等发行版。  
-6 **支持 GPU**: 如 [NVIDIA CUDA](https://learn.microsoft.com/windows/ai/directml/gpu-cuda-in-wsl) 等硬件加速。  
-7 **代码已开源**: WSL 已在 [microsoft/WSL](https://github.com/microsoft/WSL) 开源。  
+> WSL(Windows Subsystem for Linux) 可以让我们在 Windows 10/11 上直接运行 Linux 环境。它带来的好处包括:
+>
+> 1. **文件互操作**: 使用 Linux 软件处理 Windows 文件, 或反之。例如, 用 awk 编辑 Windows 的日志文件, 或者在 VS Code/Cursor 上调试 Linux 环境下的项目。
+> 2. **systemd 服务管理**: 开启 systemd 后, WSL 实例运行期间可以像传统 Linux 一样管理服务；但 systemd 服务本身不等于实例保活。
+> 3. **显示 GUI 程序**: 直接在 Windows 上运行 Linux GUI (WSLg)。
+> 4. **运行 Linux 容器**: Windows 上的 Docker 也基于 WSL2；可轻松管理各种容器。
+> 5. **多个 Linux 系统并存**: 同时拥有 Ubuntu、Debian、Arch 等发行版。
+> 6. **支持 GPU**: 如 [NVIDIA CUDA](https://learn.microsoft.com/windows/ai/directml/gpu-cuda-in-wsl) 等硬件加速。
+> 7. **代码已开源**: WSL 已在 [microsoft/WSL](https://github.com/microsoft/WSL) 开源。
+
 以下整理了从安装到进阶使用的一系列技巧, 让你充分发挥 WSL 的威力。
 
 
@@ -528,32 +530,43 @@ wsl --shutdown
 重新进入实例后, 用 `systemctl status` 确认。systemd [需 WSL 0.67.6+](https://learn.microsoft.com/windows/wsl/systemd)；若 `wsl --version` 不可用或版本过旧, 先执行 `wsl --update`。
 
 ### 8.3. 保持后台运行
-先区分两种需求:
+先把生命周期分清楚: **systemd 管服务, 不管保活**。`systemctl enable --now ssh` 只是让 SSH 在 WSL 实例启动后由 systemd 拉起；关闭所有 WSL 终端后, 即使 `ssh.service` 仍显示 active, 发行版实例也可能很快被 WSL 判定为空闲并变成 `Stopped`。所以不要为了保活去暴露 SSH、Docker、数据库等服务。
 
-- **延长空闲回收时间**: WSL2 底层虚拟机在没有前台窗口、没有后台进程、没有 systemd 服务时, 会在空闲一段时间后自动关闭。若只是希望它空闲后晚一点退出, 可在 Windows 宿主机的 `%UserProfile%\.wslconfig` 中配置:
+- **优先控制发行版实例的空闲回收**: WSL 2.5.4+ 新增了 `general.instanceIdleTimeout`, 用来控制发行版实例空闲后多久被终止。若目标是“关闭终端后 WSL 实例仍留在后台”, 优先在 Windows 宿主机的 `%UserProfile%\.wslconfig` 中配置:
 
 ```ini
+[general]
+# 单位是毫秒。-1 表示不因实例空闲而自动终止
+instanceIdleTimeout=-1
+
 [wsl2]
-# 单位是毫秒。下面示例为 1 小时
-vmIdleTimeout=3600000
+# 控制所有 WSL2 实例退出后, 底层 WSL2 VM 保留多久
+vmIdleTimeout=-1
 ```
 修改后执行:
 ```powershell
+wsl --version
 wsl --shutdown
 ```
 
-- **让真实服务常驻**: 如果你本来就需要 SSH、Docker、数据库等后台服务, 更清晰的做法是启用 systemd, 然后对具体服务执行 `sudo systemctl enable --now <服务名>`。例如:
+> `instanceIdleTimeout` 控制“发行版实例”何时停止；`vmIdleTimeout` 控制“承载 WSL2 的底层 VM”何时停止。只改 `vmIdleTimeout` 可能让 VM 还在, 但具体发行版已经 `Stopped`。`instanceIdleTimeout` 是 `.wslconfig` 中的全局配置, 对当前 Windows 用户下的 WSL2 实例生效；目前没有按某个实例单独设置的官方写法。如果只想让某一个实例保活, 只能针对该实例使用启动脚本、任务计划或下文的旧版兼容保活方案。如果不想永久保留, 可把 `-1` 改成明确的大毫秒值, 如 `86400000`(24 小时)。该实例级配置来自 [WSL 2.5.4 发布说明](https://github.com/microsoft/WSL/releases/tag/2.5.4)；如果 `wsl --version` 低于 2.5.4, 先 `wsl --update`。
+
+- **让真实服务随实例启动**: 如果你本来就需要 SSH、Docker、数据库等后台服务, 仍然应该启用 systemd, 然后对具体服务执行 `sudo systemctl enable --now <服务名>`。例如:
 
 ```bash
 sudo systemctl enable --now ssh
 ```
 
-> `systemctl enable --now ssh` 的本质是“让 SSH 服务随 WSL 启动并立即运行”, 不是专门的通用保活开关；如果你不需要 SSH, 不要为了保活而额外暴露 SSH 服务。官方文档只说明 `vmIdleTimeout` 接受毫秒数, 默认值是 `60000`, 没有明确的“无穷大”写法；需要长时间保持可用时, 建议写一个明确的大值, 如 `86400000`(24 小时), 而不是依赖未文档化的特殊值。
->
-> 老版本有人会把 `dbus-launch` 之类的“假进程保活”写入 `~/.bashrc`, 这种做法不建议作为主路径：
-> ```
-> pgrep -u "$(whoami)" -x "dbus-daemon" >/dev/null || dbus-launch true &>/dev/null
-> ```
+> 这一步解决的是“实例启动后服务自动起来”, 不是“实例永远不被回收”。保活的事实源仍然应该是 `.wslconfig` 中的 `instanceIdleTimeout`。
+
+- **旧版兼容保活**: 如果当前 WSL 版本低于 2.5.4, 或 `instanceIdleTimeout` 在你的环境中暂时不可用, 再考虑旧版文章里的 `dbus-launch` 方案:
+
+```bash
+sudo apt install -y dbus-x11
+pgrep -u "$(whoami)" -x dbus-daemon >/dev/null || dbus-launch true >/dev/null 2>&1
+```
+
+> 这是 workaround, 不是清晰主路径。它的删除条件也要明确: 升级到支持 `instanceIdleTimeout` 的 WSL 版本并验证 `wsl -l -v` 不再自动变 `Stopped` 后, 就应删除这类“假进程保活”脚本, 避免以后忘记它为什么存在。
 
 
 ### 8.4. 开机自启某 WSL 实例
@@ -561,13 +574,13 @@ sudo systemctl enable --now ssh
 ```bash
 sudo systemctl enable --now ssh
 ```
-如果还希望 Windows 用户登录时主动拉起某个 WSL 实例, 可将下列内容存为 `start_wsl_ubuntu.cmd`, 放入 `%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` 目录:
+如果还希望 Windows 用户登录时主动拉起某个 WSL 实例, 先按 [8.3. 保持后台运行](#83-保持后台运行) 配好 `instanceIdleTimeout`, 再将下列内容存为 `start_wsl_ubuntu.cmd`, 放入 `%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` 目录:
 ```batch
 @echo off
 timeout /t 20 /nobreak >nul
 wsl.exe -d Ubuntu-24.04 --cd ~ --exec /bin/bash -lc "systemctl is-system-running --wait >/dev/null 2>&1 || true"
 ```
-> 这会在当前 Windows 用户登录后启动, 不等同于系统开机服务。若要无人登录也启动, 应使用 Windows 任务计划程序或专门的服务管理方案；个人开发机不要为了“保活”引入太重的后台服务复杂度。
+> 这只负责“登录后拉起实例”。如果没有配置 `instanceIdleTimeout`, 该命令执行结束后实例仍可能很快空闲退出。它也不等同于系统开机服务；若要无人登录也启动, 应使用 Windows 任务计划程序或专门的服务管理方案。个人开发机不要为了“保活”引入太重的后台服务复杂度。
 
 
 ### 8.5. 开启与设置ssh服务
