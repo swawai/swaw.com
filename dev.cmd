@@ -7,6 +7,10 @@ set "ROOT_DIR=%~dp0"
 powershell -NoProfile -ExecutionPolicy Bypass -Command ^
   "$ErrorActionPreference = 'Stop';" ^
   "$root = (Resolve-Path -LiteralPath $env:ROOT_DIR).Path;" ^
+  "$xvenv = Join-Path $root '.xvenv\env.ps1';" ^
+  "if (-not (Test-Path -LiteralPath $xvenv)) { throw ('Missing xvenv environment: ' + $xvenv); }" ^
+  ". $xvenv;" ^
+  "if (-not (Get-Command bun -ErrorAction SilentlyContinue)) { throw 'bun was not found after loading .xvenv\env.ps1'; }" ^
   "$bind = $env:BANYAN_DEV_BIND;" ^
   "if ([string]::IsNullOrWhiteSpace($bind)) {" ^
   "  $bind = Get-NetIPAddress -AddressFamily IPv4 -ErrorAction SilentlyContinue |" ^
@@ -25,6 +29,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command ^
   "Set-Location -LiteralPath $root;" ^
   "$env:BANYAN_DEV_BIND = $bind;" ^
   "Write-Host ('Starting swaw.com dev server on {0}:{1}' -f $env:BANYAN_DEV_BIND, $env:BANYAN_DEV_PORT);" ^
-  "& npm run dev;" ^
+  "& bun run dev;" ^
   "exit $LASTEXITCODE"
 exit /b %errorlevel%

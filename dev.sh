@@ -27,4 +27,4 @@ cd "$ROOT_DIR"
 export BANYAN_DEV_BIND
 export BANYAN_DEV_PORT
 echo "Starting swaw.com dev server on $BANYAN_DEV_BIND:$BANYAN_DEV_PORT"
-npm run dev
+bun run dev

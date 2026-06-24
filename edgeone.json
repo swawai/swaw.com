@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "bun run build",
   "headers": [
     {
       "source": "/*",
@@ -160,7 +160,7 @@
       ]
     }
   ],
-  "installCommand": "git submodule sync --recursive && git submodule update --init --recursive --force && npm ci",
+  "installCommand": "git submodule sync --recursive && git submodule update --init --recursive --force && bun install --frozen-lockfile",
   "nodeVersion": "22.11.0",
   "outputDirectory": "public"
 }
