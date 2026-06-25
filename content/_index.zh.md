@@ -1,6 +1,7 @@
-﻿---
+---
 title: Swaw
 description: 一人工作室的 AI 驾驶舱
+share_image: swaw-share.jpg
 nav_primary: home
 type: frameworks
 layout: home-brand

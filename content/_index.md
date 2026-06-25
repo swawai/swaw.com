@@ -1,6 +1,7 @@
-﻿---
+---
 title: Swaw
 description: The AI cockpit for one-person studios.
+share_image: swaw-share.jpg
 nav_primary: home
 type: frameworks
 layout: home-brand

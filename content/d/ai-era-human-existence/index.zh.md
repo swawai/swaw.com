@@ -4,7 +4,6 @@ draft: false
 title: "AI 时代，人类还凭什么存在？"
 slug: "ai-era-human-existence"
 description: "如果宇宙星体之间也需要“授粉”：一段从植物、昆虫授粉出发，走向 AI 时代人类使命与存在理由的对话整理。"
-share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

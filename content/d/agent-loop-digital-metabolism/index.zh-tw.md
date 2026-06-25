@@ -4,7 +4,6 @@ draft: false
 title: "Loop Engineering，前台妹子的邀請，數字生命的開端"
 slug: "loop-engineering-digital-life-origin"
 description: "繁體中文版暫未完成，請先閱讀簡體中文版。"
-share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

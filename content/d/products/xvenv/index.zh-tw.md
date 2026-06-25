@@ -4,7 +4,6 @@ draft: false
 title: "Xvenv"
 slug: "xvenv"
 description: "Xvenv 目前只有簡體中文文件。"
-share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

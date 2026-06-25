@@ -4,7 +4,6 @@ draft: false
 title: "Loop Engineering, a Front Desk Request, and the Beginning of Digital Life"
 slug: "loop-engineering-digital-life-origin"
 description: "The full English translation is not available yet. Please read the Simplified Chinese version first."
-share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

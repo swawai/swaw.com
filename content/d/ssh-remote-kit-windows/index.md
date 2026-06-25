@@ -4,7 +4,6 @@ draft: false
 title: "Windows Has No ssh-copy-id?"
 slug: "ssh-remote-kit-windows"
 description: "The English translation is being prepared. Please read the Simplified Chinese version for now."
-share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

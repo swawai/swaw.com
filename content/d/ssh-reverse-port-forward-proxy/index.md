@@ -4,7 +4,6 @@ draft: false
 title: "ssh -R: a temporary proxy bridge for dependency downloads"
 slug: "ssh-reverse-port-forward-proxy"
 description: "This article is currently available in Simplified Chinese. It explains how to use SSH remote port forwarding to let a server temporarily borrow your local HTTP proxy for dependency downloads."
-share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

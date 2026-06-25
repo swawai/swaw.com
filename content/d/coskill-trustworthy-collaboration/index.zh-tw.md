@@ -4,7 +4,6 @@ draft: false
 title: "CoSkill：人機協作的未來"
 slug: "coskill-trustworthy-collaboration"
 description: "從 Anthropic Skills 出發，提出 CoSkill：一種人類和 agent 都能使用的能力單元。"
-share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

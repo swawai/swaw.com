@@ -4,7 +4,6 @@ draft: false
 title: "Loop Engineering，前台妹子的邀请，数字生命的开端"
 slug: "loop-engineering-digital-life-origin"
 description: "从两个 AI 聊天窗口互相粘贴，到企业微信打卡 Skill、定时任务、分布式节点和自负盈亏：用一个口语化故事解释数字生命的前结构。"
-share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN
@@ -38,7 +37,7 @@ tags:
 
 你：“打卡数据能导出到电脑不？”
 
-前台妹子：“可以导到企业微信里……”
+前台妹子：“会自动导到企业微信里……”
 
 你二话不说，查出了企业微信的相关 API，让 AI 写了个 Skill，配置到 Codex，打开一个空文件夹让它跑，很快，下载了打卡数据。
 
@@ -61,7 +60,7 @@ tags:
 4. 按你的提示，输出没打卡的人名
 ```
 
-这些步骤里任何一环出问题，它会自己分析原因，重试。这就是 Agentic Workflow 比普通 Workflow 的最大优势。
+这些步骤里任何一环出问题，它会自己分析原因，重试。这就是 Agentic Workflow 对普通 Workflow 的最大优势。
 
 ## 二、Codex CLI / Claude Code
 
@@ -69,7 +68,7 @@ tags:
 
 把这个脚本/命令，用系统的计划任务，每天定时跑一次。
 
-这样，就完成了第二次 Loop Engineering 壮举，而且前台妹子表示：很开心。
+这样，就完成了第二次 Loop Engineering 壮举，同时，前台妹子表示：很，开，心。
 
 
 ## 三、开始膨胀

@@ -4,7 +4,6 @@ draft: false
 title: "让 Win + R 运行自定义命令"
 slug: "win-run-custom-command-path"
 description: "用两个小脚本把当前目录加入或移出用户 PATH，让 Win + R 可以运行自己的 .cmd、.bat、.exe 命令，形成个人 Windows 工具箱。"
-share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

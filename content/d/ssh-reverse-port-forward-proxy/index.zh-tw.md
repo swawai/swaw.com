@@ -4,7 +4,6 @@ draft: false
 title: "ssh -R 一劍開天門"
 slug: "ssh-reverse-port-forward-proxy"
 description: "本文目前提供簡體中文正文，內容說明如何透過 SSH 反向連接埠轉發，讓伺服器臨時借用本機 HTTP 代理拉取海外依賴。"
-share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

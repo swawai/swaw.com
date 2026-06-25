@@ -4,7 +4,6 @@ draft: false
 title: "CoSkill: The Future of Human-Agent Collaboration"
 slug: "coskill-trustworthy-collaboration"
 description: "Starting from Anthropic Skills, this essay proposes CoSkill: a capability unit that both humans and agents can use."
-share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN
