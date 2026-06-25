@@ -1,6 +1,7 @@
 ---
 title: 關於Swaw
 description: 一人工作室的 AI 駕駛艙
+share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

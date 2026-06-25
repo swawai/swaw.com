@@ -1,6 +1,7 @@
 ---
 title: About Swaw
 description: The AI cockpit for one-person studios.
+share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

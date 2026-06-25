@@ -4,6 +4,7 @@ draft: false
 title: "WSL 工具：一键管理后台保活、备份还原、SSH、systemd 和端口暴露，Agent 也少走弯路"
 slug: "swaw-kit-wsl-release"
 description: "一个命令脚本绑定一个 WSL 实例，一键管理后台保活、备份/还原/迁移、SSH、systemd 和端口暴露，人和 Agent 都能直接调用，减少摩擦。"
+share_image: swaw-kit-wsl-cover.jpg
 outputs:
  - HTML
  - AGENT_MARKDOWN
@@ -269,5 +270,4 @@ pathhereadd.cmd
 
 
 > 源码仓库（欢迎提交 Issue、PR）：[https://github.com/swawai/win-run-toolbox](https://github.com/swawai/win-run-toolbox)
-
 

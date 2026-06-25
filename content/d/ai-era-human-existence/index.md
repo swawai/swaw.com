@@ -4,6 +4,7 @@ draft: false
 title: "In the Age of AI, What Still Justifies Human Existence?"
 slug: "ai-era-human-existence"
 description: "What if celestial bodies, too, needed to be pollinated? A dialogue that begins with plants and insect pollination, then opens into the question of human purpose in the age of AI."
+share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

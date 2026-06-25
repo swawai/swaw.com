@@ -4,6 +4,7 @@ draft: false
 title: "Let Win + R Run Custom Commands"
 slug: "win-run-custom-command-path"
 description: "The English translation is being prepared. Please read the Simplified Chinese version for now."
+share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

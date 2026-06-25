@@ -4,6 +4,7 @@ draft: false
 title: "WSL management script"
 slug: "wsl-automng"
 description: "This article is currently available in Simplified Chinese. It introduces a WSL automation script for installing, removing, backing up, restoring, migrating, and configuring WSL instances."
+share_image: featured.png
 outputs:
  - HTML
  - AGENT_MARKDOWN

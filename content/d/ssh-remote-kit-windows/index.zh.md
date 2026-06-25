@@ -4,6 +4,7 @@ draft: false
 title: "把一台台 VPS 变成本地命令"
 slug: "ssh-remote-kit-windows"
 description: "Windows 上，把一台台 VPS 变成本地命令，用来设置免密 key、执行远程命令、打开远程开发环境非常方便...，同时也构建了 Agent 充当运维的极佳上下文环境。"
+share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN

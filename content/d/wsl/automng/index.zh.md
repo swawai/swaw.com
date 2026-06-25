@@ -4,6 +4,7 @@ draft: false
 title: "WSL管理脚本"
 slug: "wsl-automng"
 description: "介绍 hapitool 的 WSL 自动化管理脚本，用于 WSL 实例安装、卸载、备份、还原、迁移、默认用户设置和高级配置。"
+share_image: featured.png
 outputs:
  - HTML
  - AGENT_MARKDOWN

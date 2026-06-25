@@ -4,6 +4,7 @@ draft: false
 title: "讓 Win + R 執行自訂命令"
 slug: "win-run-custom-command-path"
 description: "繁體中文（台灣）版本正在準備中，目前請先閱讀簡體中文版。"
+share_image: false
 outputs:
  - HTML
  - AGENT_MARKDOWN
