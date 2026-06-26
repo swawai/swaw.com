@@ -3,7 +3,7 @@ date: "2026-06-24T22:55:52+08:00"
 draft: false
 title: "Loop Engineering，前台妹子的一句邀请，数字生命的开局"
 slug: "loop-engineering-digital-life-origin"
-description: "从两个 AI 聊天窗口互相粘贴，到企业微信打卡 Skill、定时任务、分布式节点和自负盈亏：用一个口语化故事解释数字生命的前结构。"
+description: "一则寓言：数字生命也许不是从意识，而是从 Loop Engineering 开始；以互联网为原始汤，会计上能活下去的某种「僵尸网络」。"
 share_image: loop-engineering-digital-life-cover.png
 outputs:
  - HTML
