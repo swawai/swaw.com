@@ -4,7 +4,7 @@ draft: false
 title: "把每個 WSL 實例變成一條命令"
 slug: "swaw-kit-wsl-release"
 description: "繁體中文（台灣）版本正在準備中，目前請先閱讀簡體中文版。"
-share_image: swaw-kit-wsl-cover.jpg
+share_image: swaw-kit-wsl-cover.png
 outputs:
  - HTML
  - AGENT_MARKDOWN

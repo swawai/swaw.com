@@ -4,7 +4,7 @@ draft: false
 title: "WSL 工具：一键管理后台保活、备份还原、SSH、systemd 和端口暴露，Agent 也少走弯路"
 slug: "swaw-kit-wsl-release"
 description: "一个命令脚本绑定一个 WSL 实例，一键管理后台保活、备份/还原/迁移、SSH、systemd 和端口暴露，人和 Agent 都能直接调用，减少摩擦。"
-share_image: swaw-kit-wsl-cover.jpg
+share_image: swaw-kit-wsl-cover.png
 outputs:
  - HTML
  - AGENT_MARKDOWN
@@ -19,8 +19,6 @@ tags:
 
 # WSL 工具：一键管理后台保活、备份还原、SSH、systemd 和端口暴露，Agent 也少走弯路
 
-> 本文适合：Windows + WSL 2 日常开发 / 本地 Linux 服务 / Agent sandbox / 多 WSL 实例，等方面的关注者；  
-> 不适合：​ 只用 WSL 1 或非 Windows 系统用户。
 
 ![SWAW Kit WSL 一键管理工具文章封面](swaw-kit-wsl-cover.png)
 
@@ -34,7 +32,7 @@ Windows 上，WSL 越来越成熟。但把它当日常 Linux，你大概率也�
 5. 实例一多，这些操作还会反复出现
 
 
-现在，我是这么搞了：
+现在，我是这么搞了，例如：
 
 ```cmd
 wsl02 .alive
@@ -47,7 +45,7 @@ wsl02 .port expose 2228 2228 --uac
 ```
 ✅ WSL 空闲也不停机
 ✅ SSH 服务 + systemd 一键就绪（必要时重启一次 WSL 虚拟机，后面有具体说）
-✅ 端口已映射、防火墙已放行（局域网可访问，注意安全）
+✅ 端口已映射、防火墙已放行（局域网方向可访问）
 ```
 
 备份/还原，也只需：
@@ -57,7 +55,7 @@ wsl02 .backup
 wsl02 .install D:\backup\xxx.tar --yes
 ```
 
-觉得还可以？下面具体说。
+还可以？
 
 
 ## 一、工具已开源、三步即用
@@ -74,7 +72,7 @@ git clone https://github.com/swawai/win-run-toolbox
 cd win-run-toolbox
 copy .\wsl01.cmd .\wsl02.cmd
 ```
-复制后，改其中实例名、用户名、安装镜像源。
+复制后，用文本编辑器打开 wsl02.cmd，改好其中定义的实例名、用户名、安装镜像源（如 Ubuntu、Debian）。
 
 3. 安装
 
@@ -82,7 +80,7 @@ copy .\wsl01.cmd .\wsl02.cmd
 wsl02 .install
 ```
 
-如安装遇到问题，可执行诊断，也可拿了结果问 AI：
+如安装遇到问题，可执行诊断，结果可拿去问 AI：
 
 ```cmd
 wsl02 .doctor
@@ -94,7 +92,7 @@ wsl02 .doctor
 
 4. 没了
 
-到此，各种‘一键’功能，也就向你放开了！例如，开后台保活：
+到此，各种‘一键’功能，也就向你放开了！如，后台保活：
 
 ```cmd
 :: 保活3600秒：
@@ -103,7 +101,7 @@ wsl02 .alive 3600
 wsl02 .alive off
 ```
 
-一键管理备份/还原/迁移/重装（相关位置在 wsl02.cmd 里，自己定义）：
+一键管理备份/还原/迁移/重装（相关位置在 wsl02.cmd 里有定义）：
 
 ```cmd
 :: 备份
@@ -126,7 +124,7 @@ wsl02 .vm -s
 wsl02 .systemd disable
 ```
 
-一键管 SSH 服务、一键管端口暴露、及未提及的功能...不一一赘述。
+一键管 SSH 服务、端口暴露，和未提及的功能...不一一赘述。
 
 只需记住/执行 `--help`，关于 WSL 的一封情书将为你展开：
 
@@ -134,21 +132,12 @@ wsl02 .systemd disable
 wsl02 --help
 ```
 
-输出会根据系统语言自动选择中文/英文，并按模块分组：保活 / SSH / 端口 / 备份...排版一目了然。
-
+输出内容会按模块分组，排版一目了然。
 
 
 
 ## 二、效果截图
 
-
-查看状态：
-
-```cmd
-wsl02 .status
-```
-
-![wsl02 .status 输出实例配置、运行状态、端口和备份信息](wsl02-status-overview.png)
 
 
 备份：
@@ -229,7 +218,7 @@ research-box.cmd
 sandbox.cmd
 ```
 
-可以说，WSL 越多，本工具这种“一个实例一个命令脚本”的方式，会越有优势：
+可以说，WSL 越多，本工具这种“一个实例一个命令脚本”的方式，会越有优势。对 Agent 来说，这种固定入口也有额外好处：
 
 ```text
 - 命令名即目标实例，边界清晰
@@ -240,9 +229,9 @@ sandbox.cmd
 - .status 和 .doctor 支持 JSON 输出
 ```
 
-对 Agent 来说，这种固定入口也额外友好。
 
-我让 Codex 试用，它的反馈【**显著提升 Agent 操作可靠性...轻量节省命令输入 token，中等到显著节省诊断/探索 token**】，这是截图，其中给的小建议和滥用问题，我已做修补：
+
+我让 Codex 试用，它反馈【**显著提升 Agent 操作可靠性...轻量节省命令输入 token，中等到显著节省诊断/探索 token**】，这是截图，其中给的小建议和滥用问题，我已做修补：
 
 ![Codex 对 SWAW Kit WSL 一实例一入口设计的 Agent 友好性评价](codex-agent-feedback-swaw-kit-wsl.png)
 
@@ -251,7 +240,7 @@ sandbox.cmd
 
 ## 四、附：放进 PATH
 
-想要让 `wsl02` `wsl03` 这些命令，在任意终端，及 `Win + R` 里直接跑？双击仓库里的：
+想要让 `wsl02` `wsl03` 这些命令，在任意终端及 `Win + R` 里直接能跑？双击仓库里的：
 
 ```cmd
 pathhereadd.cmd

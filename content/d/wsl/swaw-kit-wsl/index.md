@@ -4,7 +4,7 @@ draft: false
 title: "Turn Every WSL Instance into One Command"
 slug: "swaw-kit-wsl-release"
 description: "The English translation is being prepared. Please read the Simplified Chinese version for now."
-share_image: swaw-kit-wsl-cover.jpg
+share_image: swaw-kit-wsl-cover.png
 outputs:
  - HTML
  - AGENT_MARKDOWN
