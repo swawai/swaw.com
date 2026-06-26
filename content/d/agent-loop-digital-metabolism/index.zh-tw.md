@@ -1,7 +1,7 @@
 ---
 date: "2026-06-24T22:55:52+08:00"
 draft: false
-title: "Loop Engineering，前台妹子的邀請，數字生命的開端"
+title: "Loop Engineering、前台小姐的一句邀請、數位生命的開局"
 slug: "loop-engineering-digital-life-origin"
 description: "繁體中文版暫未完成，請先閱讀簡體中文版。"
 share_image: loop-engineering-digital-life-cover.png
@@ -16,7 +16,7 @@ tags:
  - tooling
 ---
 
-# Loop Engineering，前台妹子的邀請，數字生命的開端
+# Loop Engineering、前台小姐的一句邀請、數位生命的開局
 
 繁體中文版暫未完成。
 
