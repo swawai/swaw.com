@@ -18,7 +18,7 @@
 
 ---
 
-5. 此为基于hugo编译的MPA静态web项目并接入nodejs / package.json  
+5. 此为基于hugo编译的MPA静态web项目并接入nodejs / package.json，node 为项目内置 执行 .xvenv\env.ps1 设置 PATH
 6. 站点模板/ui/新功能等相关修订都应该针对主题themes/banyan/进行，而业务内容/定制化（主题已支持）的才是在根目录中实现,而 themes\banyan\exampleSite 请直接忽略，勿要做任何修订，后续会统一处理！但不是现在！！测试请只有用根目录内容，不要用exampleSite的内容！  
 7. temp_workspace 可以用作临时工作空间, 避免使用系统%temp%目录，（.gitignore 已添加 /temp_workspace\*/）  
 8. hugo默认生成 public/，测试可编译到 temp_workspace/public/yymmddhhmm-{notes}/  
@@ -30,3 +30,5 @@
 
 10. 生产环境编译应对产出物做压缩/字节体积优化，如js/css/html等，开发环境（hugo server）则不需要  
 11. edgeone.json _header 是渲染产物，不宜修改，真源在themes\banyan\data\cache-policy-default.toml
+
+
