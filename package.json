@@ -15,6 +15,7 @@
     "check:security:headers": "node themes/banyan/scripts/checks/check-security-headers.mjs https://swaw.com/",
     "check:public": "node themes/banyan/scripts/checks/check-public-html.mjs",
     "check:public:prod": "node themes/banyan/scripts/checks/check-public-html.mjs public --check",
+    "check:images": "node themes/banyan/scripts/checks/check-image-delivery.mjs",
     "check:navigation": "node themes/banyan/scripts/checks/check-navigation-state.mjs",
     "check:agent": "node themes/banyan/scripts/checks/check-agent-readiness.mjs",
     "check:agent:prod": "node themes/banyan/scripts/checks/check-agent-readiness.mjs public --check",
