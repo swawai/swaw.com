@@ -3,7 +3,7 @@ date: "2026-07-22T16:41:59+08:00"
 draft: false
 title: "「工具」Git 多账号管理，如何像铁一样清晰"
 slug: "swaw-kit-git"
-description: "Windows 上同时使用多个 GitHub/GitLab 账号，commit 署名和 push 身份的管理会是个麻烦。Swaw Kit Git 用「一个命令一套身份」的心智，将其大为简化，同时也能用于 VS Code/Cursor，或 AI Agent。"
+description: "对于同时使用多个 GitHub/GitLab 账号，commit 署名和 push 身份的管理会是个麻烦。Swaw Kit Git 用「一个命令一套身份」的心智，将其大为简化，同时也能用于 VS Code、Cursor 或 AI Agent。"
 share_image: swaw-kit-git-share.png
 outputs:
  - HTML
@@ -391,7 +391,7 @@ pathhereadd.cmd
 
 ## 十二、小结
 
-Git 多账户管理真正麻烦的，不是账户多，而是能重写身份的地方很多：全局配置、仓库配置、凭据管理器、SSH key，乃至VS Code 等编辑器。  
+Git 多账户管理真正麻烦的，不是账户多，而是能重写身份的地方很多：全局配置、仓库配置、凭据管理器、SSH key，乃至VS Code 之类编辑器。  
 Git 的原生配置完全能解决问题；但仓库和身份继续变多后，你会开始怀疑：这个仓库我配过了吗？现在的身份信息是来自哪？
 
 **Swaw Kit Git** 把这些隐藏状态收束成一个个专用的、可命名的入口命令：  
@@ -403,7 +403,5 @@ Git 的原生配置完全能解决问题；但仓库和身份继续变多后，�
 > 对人，入口命令是可记忆的操作界面；对 Agent，它是参数明确、失败可判断的执行接口。双方走的是同一条主路径，不需要维护两套身份规则。
 
 > 关联仓库：https://github.com/swawai/win-run-toolbox
-
-> 给 AI 阅读：https://swaw.com/zh/p/swaw-kit-git
 
 在调试 **Swaw Kit Git** 过程，发现 VS Code 有泄露环境变量的隐密问题，下一篇文章我打算说一下这个，及其应对方法。
