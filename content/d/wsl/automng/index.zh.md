@@ -1,7 +1,8 @@
 ---
 date: "2025-04-02T22:05:00+08:00"
 draft: false
-title: "WSL管理脚本"
+title: "WSL 自动化管理脚本：安装、备份、还原与迁移"
+linkTitle: "WSL管理脚本"
 slug: "wsl-automng"
 description: "介绍 hapitool 的 WSL 自动化管理脚本，用于 WSL 实例安装、卸载、备份、还原、迁移、默认用户设置和高级配置。"
 share_image: featured.png
@@ -15,7 +16,6 @@ tags:
  - tooling/devtools/windows/wsl
 ---
 
-# WSL 自动化管理脚本：安装、备份、还原与迁移
 
 WSL 是 Windows Subsystem for Linux 的简称。
 本工具可以显著提高开发者和系统管理员，在维护和使用多个 WSL 实例时的效率。

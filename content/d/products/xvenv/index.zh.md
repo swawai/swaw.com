@@ -1,7 +1,8 @@
 ---
 date: "2025-10-12T20:11:44+08:00"
 draft: false
-title: "Xvenv"
+title: "彻底告别环境污染！Xvenv：一个 BAT 脚本极速拉起免安装全栈开发环境"
+linkTitle: "Xvenv"
 slug: "xvenv"
 description: "Xvenv 是一个 BAT 单文件脚本，用免安装方式拉起项目级 Python、Node、Rust、Go、Git、MSVC 等开发环境。"
 outputs:
@@ -20,7 +21,6 @@ product:
     currency: $
   value: "免安装拉起全栈开发环境"
 ---
-# 彻底告别环境污染！Xvenv：一个 BAT 脚本极速拉起免安装全栈开发环境
 
 在日常开发中，我们几乎都经历过以下“噩梦”时刻：
 

@@ -2,6 +2,7 @@
 date: "2026-06-23T08:30:00+08:00"
 draft: false
 title: "WSL 工具：一键管理后台保活、备份还原、SSH、systemd 和端口暴露，Agent 也少走弯路"
+linkTitle: "WSL 一键管理工具"
 slug: "swaw-kit-wsl-release"
 description: "一个命令脚本绑定一个 WSL 实例，一键管理后台保活、备份/还原/迁移、SSH、systemd 和端口暴露，人和 Agent 都能直接调用，减少摩擦。"
 share_image: swaw-kit-wsl-cover.png
@@ -17,7 +18,6 @@ tags:
 
 
 
-# WSL 工具：一键管理后台保活、备份还原、SSH、systemd 和端口暴露，Agent 也少走弯路
 
 
 ![SWAW Kit WSL 一键管理工具文章封面](swaw-kit-wsl-cover.png)

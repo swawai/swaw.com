@@ -1,7 +1,8 @@
 ---
 date: "2026-05-28T00:37:56+08:00"
 draft: false
-title: "ssh -R 一剑开天门"
+title: "ssh -R 一剑开天门：让国内服务器借用本机代理拉海外依赖"
+linkTitle: "ssh -R 一剑开天门"
 slug: "ssh-reverse-port-forward-proxy"
 description: "通过 SSH 反向端口转发，把服务器上的 127.0.0.1:17890 临时映射到本机 HTTP 代理，救急处理 npm、pip、GitHub 等依赖下载卡住的问题。"
 outputs:
@@ -14,7 +15,6 @@ tags:
  - tooling
 ---
 
-# ssh -R 一剑开天门：让国内服务器借用本机代理拉海外依赖
 
 **目录**
 

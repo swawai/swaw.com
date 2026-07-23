@@ -2,6 +2,7 @@
 date: "2026-06-24T22:55:52+08:00"
 draft: false
 title: "Loop Engineering, One Invitation from the Receptionist, The Opening of Digital Life"
+linkTitle: "Loop Engineering: Digital Life"
 slug: "loop-engineering-digital-life-origin"
 description: "The full English translation is not available yet. Please read the Simplified Chinese version first."
 share_image: loop-engineering-digital-life-cover.png
@@ -16,7 +17,6 @@ tags:
  - tooling
 ---
 
-# Loop Engineering, One Invitation from the Receptionist, The Opening of Digital Life
 
 The full English version is not available yet.
 

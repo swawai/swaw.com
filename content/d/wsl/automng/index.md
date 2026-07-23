@@ -1,7 +1,8 @@
 ---
 date: "2025-04-02T22:05:00+08:00"
 draft: false
-title: "WSL management script"
+title: "WSL automation management script"
+linkTitle: "WSL management script"
 slug: "wsl-automng"
 description: "This article is currently available in Simplified Chinese. It introduces a WSL automation script for installing, removing, backing up, restoring, migrating, and configuring WSL instances."
 share_image: featured.png
@@ -14,7 +15,6 @@ build:
   publishResources: false
 ---
 
-# WSL automation management script
 
 This article is currently available in Simplified Chinese.
 

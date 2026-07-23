@@ -1,7 +1,8 @@
 ---
 date: "2026-06-12T17:56:53+08:00"
 draft: false
-title: "CoSkill: The Future of Human-Agent Collaboration"
+title: "The Future of Human-Agent Collaboration, Seen Through Skills"
+linkTitle: "CoSkill Collaboration"
 slug: "coskill-trustworthy-collaboration"
 description: "Starting from Anthropic Skills, this essay proposes CoSkill: a capability unit that both humans and agents can use."
 outputs:
@@ -15,7 +16,6 @@ tags:
  - tooling
 ---
 
-# The Future of Human-Agent Collaboration, Seen Through Skills
 
 Give AI/agents a little less room for autonomous improvisation, and give tools and fixed workflows a little more weight. The fate of humans being replaced will feel a little less close to reality.
 

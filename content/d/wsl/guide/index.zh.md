@@ -2,7 +2,8 @@
 date: "2025-04-02T22:04:00+08:00"
 lastmod: "2026-06-01T00:07:12+08:00"
 draft: false
-title: "WSL 实战指南"
+title: "WSL 实战指南：安装、迁移、备份与常用配置"
+linkTitle: "WSL 实战指南"
 slug: "wsl-guide"
 aliases:
  - /zh/p/wsl-practical/
@@ -19,7 +20,6 @@ tags:
 ---
 
 
-# WSL 实战指南：安装、迁移、备份与常用配置
 
 > 本文是 [WSL 自动化管理脚本](/zh/p/wsl-automng/) 的姐妹篇, 聚焦 WSL 手动安装、备份/还原、迁移及常用场景的使用技巧。
 

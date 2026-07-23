@@ -1,7 +1,8 @@
 ---
 date: "2026-06-10T11:42:11+08:00"
 draft: false
-title: "让 Win + R 运行自定义命令"
+title: "让 Win + R 运行自定义命令：一个“加入 PATH”的小脚本"
+linkTitle: "让 Win + R 运行自定义命令"
 slug: "win-run-custom-command-path"
 description: "用两个小脚本把当前目录加入或移出用户 PATH，让 Win + R 可以运行自己的 .cmd、.bat、.exe 命令，形成个人 Windows 工具箱。"
 outputs:
@@ -14,7 +15,6 @@ tags:
  - tooling/devtools/windows
 ---
 
-# 让 Win + R 运行自定义命令：一个“加入 PATH”的小脚本
 
 
 ![让 Win + R 运行自定义命令博客封面图](win-run-custom-command-cover.jpg)

@@ -16,7 +16,6 @@ build:
   list: never
 ---
 
-# About Swaw
 
 Swaw stands for **S**ee **W**hat **A**ctually **W**orks.
 

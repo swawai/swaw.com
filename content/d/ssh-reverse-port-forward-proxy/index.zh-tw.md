@@ -1,7 +1,8 @@
 ---
 date: "2026-05-28T00:37:56+08:00"
 draft: false
-title: "ssh -R 一劍開天門"
+title: "ssh -R 一劍開天門：讓國內伺服器借用本機代理拉海外依賴"
+linkTitle: "ssh -R 一劍開天門"
 slug: "ssh-reverse-port-forward-proxy"
 description: "本文目前提供簡體中文正文，內容說明如何透過 SSH 反向連接埠轉發，讓伺服器臨時借用本機 HTTP 代理拉取海外依賴。"
 outputs:
@@ -13,7 +14,6 @@ build:
   publishResources: false
 ---
 
-# ssh -R 一劍開天門：讓國內伺服器借用本機代理拉海外依賴
 
 本文目前提供簡體中文正文。
 

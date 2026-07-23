@@ -2,6 +2,7 @@
 date: "2026-06-03T23:54:34+08:00"
 draft: false
 title: "AI 时代，人类还凭什么存在？"
+linkTitle: "AI 时代的人类价值"
 slug: "ai-era-human-existence"
 description: "如果宇宙星体之间也需要“授粉”：一段从植物、昆虫授粉出发，走向 AI 时代人类使命与存在理由的对话整理。"
 outputs:
@@ -14,7 +15,6 @@ tags:
  - ai
 ---
 
-# AI 时代，人类还凭什么存在？
 
 **如果宇宙星体之间也需要“授粉”……**
 

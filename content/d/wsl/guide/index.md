@@ -17,7 +17,6 @@ build:
   publishResources: false
 ---
 
-# WSL Practical Guide
 
 This article is currently available in Simplified Chinese.
 

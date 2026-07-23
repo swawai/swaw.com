@@ -24,7 +24,6 @@ build:
   publishResources: false
 ---
 
-# Xvenv
 
 Xvenv currently has Chinese documentation only.
 

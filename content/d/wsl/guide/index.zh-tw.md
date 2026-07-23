@@ -2,7 +2,8 @@
 date: "2025-04-02T22:04:00+08:00"
 lastmod: "2026-06-01T00:07:12+08:00"
 draft: false
-title: "WSL 實戰指南"
+title: "WSL 實戰指南：安裝、遷移、備份與常用設定"
+linkTitle: "WSL 實戰指南"
 slug: "wsl-guide"
 aliases:
  - /zh-tw/p/wsl-practical/
@@ -17,7 +18,6 @@ build:
   publishResources: false
 ---
 
-# WSL 實戰指南：安裝、遷移、備份與常用設定
 
 本文目前提供簡體中文正文。
 

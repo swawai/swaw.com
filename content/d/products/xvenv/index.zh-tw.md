@@ -24,7 +24,6 @@ build:
   publishResources: false
 ---
 
-# Xvenv
 
 Xvenv 目前只有簡體中文文件。
 

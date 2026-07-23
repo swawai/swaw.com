@@ -17,7 +17,6 @@ build:
   publishResources: false
 ---
 
-# 讓 Win + R 執行自訂命令
 
 繁體中文（台灣）版本正在準備中。
 

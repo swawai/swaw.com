@@ -1,7 +1,8 @@
 ---
 date: "2026-06-12T17:56:53+08:00"
 draft: false
-title: "CoSkill：人机协作的未来"
+title: "人机协作的未来，Skills 一叶知秋"
+linkTitle: "CoSkill：人机协作的未来"
 slug: "coskill-trustworthy-collaboration"
 description: "从 Anthropic Skills 出发，提出 CoSkill：一种人类和 agent 都能使用的能力单元。"
 outputs:
@@ -18,7 +19,6 @@ tags:
 
 
 
-# 人机协作的未来，Skills 一叶知秋
 
 
 让 AI/agent 自主发挥的空间小一点，工具化和固化的流程多一点，人类被替代的命运就会离现实更远一点。

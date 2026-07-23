@@ -2,6 +2,7 @@
 date: "2026-06-15T05:00:00+08:00"
 draft: false
 title: "Windows Has No ssh-copy-id?"
+linkTitle: "Windows ssh-copy-id"
 slug: "ssh-remote-kit-windows"
 description: "The English translation is being prepared. Please read the Simplified Chinese version for now."
 outputs:
@@ -17,7 +18,6 @@ build:
   publishResources: false
 ---
 
-# Windows Has No ssh-copy-id?
 
 The English translation is being prepared.
 

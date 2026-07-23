@@ -16,7 +16,6 @@ build:
   list: never
 ---
 
-# 关于Swaw
 
 Swaw 取意于 **S**ee **W**hat **A**ctually **W**orks：看清什么真正有效。
 
