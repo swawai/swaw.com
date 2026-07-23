@@ -6,9 +6,6 @@ linkTitle: "WSL 一键管理工具"
 slug: "swaw-kit-wsl-release"
 description: "一个命令脚本绑定一个 WSL 实例，一键管理后台保活、备份/还原/迁移、SSH、systemd 和端口暴露，人和 Agent 都能直接调用，减少摩擦。"
 share_image: swaw-kit-wsl-cover.png
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 intent:
  - explore

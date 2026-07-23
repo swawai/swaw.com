@@ -4,9 +4,6 @@ draft: false
 title: "Xvenv"
 slug: "xvenv"
 description: "Xvenv 目前只有簡體中文文件。"
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: products
 type: "page"
 intent:

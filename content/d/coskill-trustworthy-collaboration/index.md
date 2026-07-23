@@ -5,9 +5,6 @@ title: "The Future of Human-Agent Collaboration, Seen Through Skills"
 linkTitle: "CoSkill Collaboration"
 slug: "coskill-trustworthy-collaboration"
 description: "Starting from Anthropic Skills, this essay proposes CoSkill: a capability unit that both humans and agents can use."
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 intent:
  - explore

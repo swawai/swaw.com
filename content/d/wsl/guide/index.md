@@ -8,9 +8,6 @@ aliases:
  - /p/wsl-practical/
 description: "This article is currently available in Simplified Chinese. It covers WSL installation, version management, backup, restore, migration, mirrored networking, offline installation, and common configuration tips."
 share_image: featured.png
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 build:
   list: never

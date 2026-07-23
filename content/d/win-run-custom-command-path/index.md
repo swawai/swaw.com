@@ -5,9 +5,6 @@ title: "Let Win + R Run Custom Commands"
 linkTitle: "Win + R Commands"
 slug: "win-run-custom-command-path"
 description: "The English translation is being prepared. Please read the Simplified Chinese version for now."
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 intent:
  - explore

@@ -6,9 +6,6 @@ linkTitle: "Loop Engineering: Digital Life"
 slug: "loop-engineering-digital-life-origin"
 description: "The full English translation is not available yet. Please read the Simplified Chinese version first."
 share_image: loop-engineering-digital-life-cover.png
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 intent:
  - explore

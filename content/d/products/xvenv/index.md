@@ -4,9 +4,6 @@ draft: false
 title: "Xvenv"
 slug: "xvenv"
 description: "Xvenv currently has Chinese documentation only."
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: products
 type: "page"
 intent:

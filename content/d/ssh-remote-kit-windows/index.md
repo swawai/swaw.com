@@ -5,9 +5,6 @@ title: "Windows Has No ssh-copy-id?"
 linkTitle: "Windows ssh-copy-id"
 slug: "ssh-remote-kit-windows"
 description: "The English translation is being prepared. Please read the Simplified Chinese version for now."
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 intent:
  - explore

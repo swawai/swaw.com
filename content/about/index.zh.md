@@ -1,9 +1,6 @@
 ---
 title: 关于Swaw
 description: 一人工作室的 AI 驾驶舱
-outputs:
- - HTML
- - AGENT_MARKDOWN
 slug: about
 nav_primary: about
 type: page

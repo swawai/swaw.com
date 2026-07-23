@@ -5,9 +5,6 @@ title: "人机协作的未来，Skills 一叶知秋"
 linkTitle: "CoSkill：人机协作的未来"
 slug: "coskill-trustworthy-collaboration"
 description: "从 Anthropic Skills 出发，提出 CoSkill：一种人类和 agent 都能使用的能力单元。"
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 intent:
  - explore

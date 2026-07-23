@@ -6,9 +6,6 @@ linkTitle: "Git 多帳號管理"
 slug: "swaw-kit-git"
 description: "繁體中文（台灣）版本正在準備中，目前請先閱讀簡體中文版。"
 share_image: false
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 intent:
  - explore

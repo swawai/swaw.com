@@ -6,9 +6,6 @@ linkTitle: "Git Multi-Account Toolkit"
 slug: "swaw-kit-git"
 description: "The English translation is being prepared. Please read the Simplified Chinese version for now."
 share_image: false
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 intent:
  - explore

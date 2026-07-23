@@ -6,9 +6,6 @@ linkTitle: "Loop Engineering：数字生命"
 slug: "loop-engineering-digital-life-origin"
 description: "一则寓言：数字生命也许不是从意识，而是从 Loop Engineering 开始；以互联网为原始汤，会计上能活下去的某种「僵尸网络」。"
 share_image: loop-engineering-digital-life-cover.png
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 intent:
  - explore

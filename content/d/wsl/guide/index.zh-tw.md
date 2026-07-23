@@ -9,9 +9,6 @@ aliases:
  - /zh-tw/p/wsl-practical/
 description: "本文目前提供簡體中文正文，內容整理 WSL 在 Windows 10/11 上的安裝、版本切換、實例管理、備份還原、遷移、鏡像網路、離線安裝與常用設定。"
 share_image: featured.png
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 build:
   list: never

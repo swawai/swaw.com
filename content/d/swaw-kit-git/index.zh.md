@@ -6,9 +6,6 @@ linkTitle: "Git 多账号管理"
 slug: "swaw-kit-git"
 description: "对于同时使用多个 GitHub/GitLab 账号，commit 署名和 push 身份的管理会是个麻烦。Swaw Kit Git 用「一个命令一套身份」的心智，将其大为简化，同时也能用于 VS Code、Cursor 或 AI Agent。"
 share_image: swaw-kit-git-share.png
-outputs:
- - HTML
- - AGENT_MARKDOWN
 nav_primary: signals
 intent:
  - explore
