@@ -15,7 +15,7 @@ nav:
       text: Products
     - page: /all
       key: signals
-      text: Signals
+      text: Library
     - page: /about
       key: about
       text: About

@@ -15,7 +15,7 @@ nav:
       text: 产品
     - page: /all
       key: signals
-      text: 信号
+      text: 文库
     - page: /about
       key: about
       text: 关于

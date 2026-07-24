@@ -15,7 +15,7 @@ nav:
       text: 產品
     - page: /all
       key: signals
-      text: 信號
+      text: 文庫
     - page: /about
       key: about
       text: 關於
