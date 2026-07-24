@@ -1,5 +1,5 @@
 ﻿---
-title: Intent
+title: Reading Goals
 nav_primary: signals
 layout: article-list
 slots:

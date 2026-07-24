@@ -1,5 +1,5 @@
 ﻿---
-title: 意圖
+title: 閱讀目的
 nav_primary: signals
 layout: article-list
 slots:
