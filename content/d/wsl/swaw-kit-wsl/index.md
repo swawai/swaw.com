@@ -6,7 +6,7 @@ title: "Turn Every WSL Instance into One Command"
 linkTitle: "WSL One-Command Toolkit"
 slug: "swaw-kit-wsl-release"
 description: "The English translation is being prepared. Please read the Simplified Chinese version for now."
-share_image: swaw-kit-wsl-cover.png
+share_image: swaw-kit-wsl-release-share.png
 nav_primary: signals
 intent:
  - explore

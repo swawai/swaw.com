@@ -1,5 +1,6 @@
 ---
 title: Swaw
+browser_title: "Swaw — The AI Cockpit for One-Person Studios"
 description: The AI cockpit for one-person studios.
 share_image: swaw-share.jpg
 nav_primary: home

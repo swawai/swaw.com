@@ -1,5 +1,7 @@
 ﻿---
 title: 閱讀目的
+browser_title: "閱讀目的：探索與決策"
+description: "按閱讀目的瀏覽文章：探索想法、評估方案並輔助決策。"
 nav_primary: signals
 layout: article-list
 slots:

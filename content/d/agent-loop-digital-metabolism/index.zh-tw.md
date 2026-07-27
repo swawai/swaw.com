@@ -6,7 +6,7 @@ title: "Loop Engineering、前台小姐的一句邀請、數位生命的開局"
 linkTitle: "Loop Engineering：數位生命"
 slug: "loop-engineering-digital-life-origin"
 description: "繁體中文版暫未完成，請先閱讀簡體中文版。"
-share_image: loop-engineering-digital-life-cover.png
+share_image: loop-engineering-digital-life-origin-share.png
 nav_primary: signals
 intent:
  - explore

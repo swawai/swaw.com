@@ -1,5 +1,7 @@
 ﻿---
 title: Tags
+browser_title: "Topics and Tags"
+description: "Browse articles by topic, from AI and developer tooling to Windows and WSL."
 nav_primary: signals
 layout: article-list
 slots:

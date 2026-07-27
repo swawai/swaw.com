@@ -5,7 +5,7 @@ title: "Loop Engineering，前台妹子的一句邀请，数字生命的开局"
 linkTitle: "Loop Engineering：数字生命"
 slug: "loop-engineering-digital-life-origin"
 description: "一则寓言：数字生命也许不是从意识，而是从 Loop Engineering 开始；以互联网为原始汤，会计上能活下去的某种「僵尸网络」。"
-share_image: loop-engineering-digital-life-cover.png
+share_image: loop-engineering-digital-life-origin-share.png
 published_links:
   - label: 公众号
     url: https://mp.weixin.qq.com/s/YTB6FR95SOEmir_vObXZBA

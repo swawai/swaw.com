@@ -1,5 +1,6 @@
 ---
 title: Swaw
+browser_title: "Swaw — 一人工作室的 AI 驾驶舱"
 description: 一人工作室的 AI 驾驶舱
 share_image: swaw-share.jpg
 nav_primary: home

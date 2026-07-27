@@ -5,7 +5,7 @@ title: "WSL 自动化管理脚本：安装、备份、还原与迁移"
 linkTitle: "WSL管理脚本"
 slug: "wsl-automng"
 description: "介绍 hapitool 的 WSL 自动化管理脚本，用于 WSL 实例安装、卸载、备份、还原、迁移、默认用户设置和高级配置。"
-share_image: featured.png
+share_image: wsl-automng-share.png
 nav_primary: signals
 intent:
  - decide
@@ -44,4 +44,3 @@ https://github.com/RenBuGong/hapitool
 {{< asset src="./wsl.automng.v2504.zip" text="wsl.automng.v2504.zip" download="true" >}}  
 下载后，解压，双击目录中的 **start.vbs**  
 ![开始使用](featured.png)
-

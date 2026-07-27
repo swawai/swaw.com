@@ -1,5 +1,7 @@
 ﻿---
 title: 标签
+browser_title: "文章主题与标签"
+description: "按主题浏览文章，涵盖 AI、开发工具、Windows 与 WSL。"
 nav_primary: signals
 layout: article-list
 slots:

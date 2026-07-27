@@ -6,7 +6,7 @@ title: "Loop Engineering, One Invitation from the Receptionist, The Opening of D
 linkTitle: "Loop Engineering: Digital Life"
 slug: "loop-engineering-digital-life-origin"
 description: "The full English translation is not available yet. Please read the Simplified Chinese version first."
-share_image: loop-engineering-digital-life-cover.png
+share_image: loop-engineering-digital-life-origin-share.png
 nav_primary: signals
 intent:
  - explore

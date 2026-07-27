@@ -1,6 +1,6 @@
 ---
 title: About Swaw
-description: The AI cockpit for one-person studios.
+description: "Learn how Swaw builds maintainable AI workflows, developer tools, and practical guides for one-person studios."
 slug: about
 nav_primary: about
 type: page

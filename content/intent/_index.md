@@ -1,5 +1,7 @@
 ﻿---
 title: Reading Goals
+browser_title: "Reading Goals: Explore and Decide"
+description: "Browse articles by reading goal: explore ideas, evaluate options, and make decisions."
 nav_primary: signals
 layout: article-list
 slots:

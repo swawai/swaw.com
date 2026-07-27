@@ -1,6 +1,6 @@
 ---
 title: 關於Swaw
-description: 一人工作室的 AI 駕駛艙
+description: "了解 Swaw 如何為一人工作室構建可維護的 AI 工作流程、開發工具與實踐指南。"
 slug: about
 nav_primary: about
 type: page

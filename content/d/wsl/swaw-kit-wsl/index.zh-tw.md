@@ -6,7 +6,7 @@ title: "把每個 WSL 實例變成一條命令"
 linkTitle: "WSL 一鍵管理工具"
 slug: "swaw-kit-wsl-release"
 description: "繁體中文（台灣）版本正在準備中，目前請先閱讀簡體中文版。"
-share_image: swaw-kit-wsl-cover.png
+share_image: swaw-kit-wsl-release-share.png
 nav_primary: signals
 intent:
  - explore
