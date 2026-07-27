@@ -1,6 +1,7 @@
 ---
 date: "2026-07-10T17:41:33+08:00"
 draft: false
+translation_placeholder: true
 title: "One Git Identity, One Script Command"
 linkTitle: "Git Multi-Account Toolkit"
 slug: "swaw-kit-git"

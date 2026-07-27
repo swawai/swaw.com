@@ -1,6 +1,7 @@
 ---
 date: "2026-05-28T00:37:56+08:00"
 draft: false
+translation_placeholder: true
 title: "ssh -R: let a server temporarily borrow your local proxy for dependency downloads"
 linkTitle: "ssh -R Proxy Bridge"
 slug: "ssh-reverse-port-forward-proxy"

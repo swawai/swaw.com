@@ -1,6 +1,7 @@
 ---
 date: "2025-04-02T22:05:00+08:00"
 draft: false
+translation_placeholder: true
 title: "WSL automation management script"
 linkTitle: "WSL management script"
 slug: "wsl-automng"

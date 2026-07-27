@@ -1,6 +1,7 @@
 ---
 date: "2026-06-15T05:00:00+08:00"
 draft: false
+translation_placeholder: true
 title: "Windows 沒有 ssh-copy-id？"
 linkTitle: "Windows ssh-copy-id"
 slug: "ssh-remote-kit-windows"

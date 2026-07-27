@@ -1,6 +1,7 @@
 ---
 date: "2025-10-12T20:11:44+08:00"
 draft: false
+translation_placeholder: true
 title: "Xvenv"
 slug: "xvenv"
 description: "Xvenv currently has Chinese documentation only."

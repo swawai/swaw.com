@@ -1,6 +1,7 @@
 ---
 date: "2026-06-10T11:42:11+08:00"
 draft: false
+translation_placeholder: true
 title: "Let Win + R Run Custom Commands"
 linkTitle: "Win + R Commands"
 slug: "win-run-custom-command-path"

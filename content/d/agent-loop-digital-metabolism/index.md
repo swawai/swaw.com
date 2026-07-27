@@ -1,6 +1,7 @@
 ---
 date: "2026-06-24T22:55:52+08:00"
 draft: false
+translation_placeholder: true
 title: "Loop Engineering, One Invitation from the Receptionist, The Opening of Digital Life"
 linkTitle: "Loop Engineering: Digital Life"
 slug: "loop-engineering-digital-life-origin"
@@ -12,6 +13,9 @@ intent:
 tags:
  - ai
  - tooling
+build:
+  list: never
+  publishResources: false
 ---
 
 

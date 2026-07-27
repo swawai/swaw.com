@@ -1,6 +1,7 @@
 ---
 date: "2025-04-02T22:05:00+08:00"
 draft: false
+translation_placeholder: true
 title: "WSL 自動化管理腳本：安裝、備份、還原與遷移"
 linkTitle: "WSL管理腳本"
 slug: "wsl-automng"

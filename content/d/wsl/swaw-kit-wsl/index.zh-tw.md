@@ -1,6 +1,7 @@
 ---
 date: "2026-06-17T08:30:00+08:00"
 draft: false
+translation_placeholder: true
 title: "把每個 WSL 實例變成一條命令"
 linkTitle: "WSL 一鍵管理工具"
 slug: "swaw-kit-wsl-release"

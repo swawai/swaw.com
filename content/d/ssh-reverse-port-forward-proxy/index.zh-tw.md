@@ -1,6 +1,7 @@
 ---
 date: "2026-05-28T00:37:56+08:00"
 draft: false
+translation_placeholder: true
 title: "ssh -R 一劍開天門：讓國內伺服器借用本機代理拉海外依賴"
 linkTitle: "ssh -R 一劍開天門"
 slug: "ssh-reverse-port-forward-proxy"

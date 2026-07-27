@@ -1,6 +1,7 @@
 ---
 date: "2026-07-26T13:47:31+08:00"
 draft: false
+translation_placeholder: true
 title: "VS Code Windows Quietly Share Your Environment Variables"
 linkTitle: "VS Code Window Environment Variables"
 slug: "vscode-shared-env"

@@ -1,6 +1,7 @@
 ---
 date: "2026-06-17T08:30:00+08:00"
 draft: false
+translation_placeholder: true
 title: "Turn Every WSL Instance into One Command"
 linkTitle: "WSL One-Command Toolkit"
 slug: "swaw-kit-wsl-release"

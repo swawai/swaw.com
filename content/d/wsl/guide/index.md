@@ -2,6 +2,7 @@
 date: "2025-04-02T22:04:00+08:00"
 lastmod: "2026-06-01T00:07:12+08:00"
 draft: false
+translation_placeholder: true
 title: "WSL Practical Guide"
 slug: "wsl-guide"
 aliases:

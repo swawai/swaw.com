@@ -20,6 +20,11 @@ const steps = [
     {
         label: 'Sync EdgeOne config',
         script: 'themes/banyan/scripts/adapters/edgeone/sync-config.mjs'
+    },
+    {
+        label: 'Verify agent publishing contract',
+        script: 'themes/banyan/scripts/checks/check-agent-readiness.mjs',
+        args: ['public', '--check']
     }
 ];
 

@@ -1,6 +1,7 @@
 ---
 date: "2026-07-10T17:41:33+08:00"
 draft: true
+translation_placeholder: true
 title: "一個 Git 身分，一條腳本命令：帳號不再串線"
 linkTitle: "Git 多帳號管理"
 slug: "swaw-kit-git"

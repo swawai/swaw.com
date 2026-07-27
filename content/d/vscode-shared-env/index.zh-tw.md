@@ -1,6 +1,7 @@
 ---
 date: "2026-07-26T13:47:31+08:00"
 draft: true
+translation_placeholder: true
 title: "VS Code 多視窗，正悄悄共享你的環境變數"
 linkTitle: "VS Code 新視窗的環境變數"
 slug: "vscode-shared-env"
