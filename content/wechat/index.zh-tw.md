@@ -1,6 +1,6 @@
 ---
-title: 微信生態頁面
-description: Swaw 微信公眾號與企業微信入口 QR Code。
+title: Swaw 微信公眾號「何與生」與「AI 駕駛艙」技術交流群
+description: Swaw 微信公眾號「何與生」與「AI 駕駛艙」技術交流群入口 QR Code。
 slug: wechat
 type: page
 layout: article-page
@@ -12,10 +12,10 @@ build:
   list: never
 ---
 
-## 微信公眾號「何與生」：
+## Swaw 微信公眾號「何與生」
 
-{{< asset src="site/brand/wechat-official-account.gif" alt="人不工微信公眾號 QR Code" width="240" >}}
+{{< asset src="site/brand/wechat-official-account.gif" alt="Swaw 微信公眾號「何與生」QR Code" width="240" >}}
 
-## 「AI 駕駛艙」技術交流微信群：
+## 「AI 駕駛艙」技術交流群
 
-{{< asset src="site/brand/wecom-ex-group-ai-cockpit.gif" alt="AI 駕駛艙企業微信外部群 QR Code" width="240" >}}
+{{< asset src="site/brand/wecom-ex-group-ai-cockpit.gif" alt="「AI 駕駛艙」技術交流群 QR Code" width="240" >}}

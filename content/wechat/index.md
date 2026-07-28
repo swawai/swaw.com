@@ -1,6 +1,6 @@
 ---
-title: WeChat Ecosystem
-description: QR-code entry points for Swaw on WeChat and WeCom.
+title: "Swaw on WeChat: 何与生 and the AI Cockpit Technical Group"
+description: "Follow the Swaw WeChat official account \"何与生\" or join the \"AI Cockpit\" technical exchange group."
 slug: wechat
 type: page
 layout: article-page
@@ -12,10 +12,10 @@ build:
   list: never
 ---
 
-## WeChat Official Account "何与生":
+## Swaw WeChat Official Account "何与生"
 
-{{< asset src="site/brand/wechat-official-account.gif" alt="Renbugong WeChat Official Account QR code" width="240" >}}
+{{< asset src="site/brand/wechat-official-account.gif" alt="Swaw WeChat Official Account 何与生 QR code" width="240" >}}
 
-## "AI Cockpit" Technical Exchange WeChat Group:
+## "AI Cockpit" Technical Exchange Group
 
-{{< asset src="site/brand/wecom-ex-group-ai-cockpit.gif" alt="WeCom AI cockpit external group QR code" width="240" >}}
+{{< asset src="site/brand/wecom-ex-group-ai-cockpit.gif" alt="AI Cockpit technical exchange group QR code" width="240" >}}
