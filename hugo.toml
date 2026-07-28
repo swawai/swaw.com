@@ -9,7 +9,7 @@ defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 timeZone = "Asia/Shanghai"
 
-enableGitInfo = false
+enableGitInfo = true
 panicOnWarning = true
 
 [build]
@@ -30,8 +30,11 @@ mode = "enable"
 [params.service_worker]
 mode = "enable"
 
+[params.sitemap]
+include_pages = ["/about", "/changelog", "/wechat"]
+
 [frontmatter]
-lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+lastmod = ["lastmod", ":git", ":default"]
 
 [pagination]
 pagerSize = 30

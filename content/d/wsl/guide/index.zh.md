@@ -6,7 +6,7 @@ title: "WSL 实战指南：安装、迁移、备份与常用配置"
 linkTitle: "WSL 实战指南"
 slug: "wsl-guide"
 aliases:
- - /zh/p/wsl-practical/
+ - /p/wsl-practical/
 description: "整理 WSL 在 Windows 10/11 上的安装、版本切换、实例管理、备份还原、迁移、镜像网络、离线安装与常用配置。"
 share_image: wsl-guide-share.png
 published_links:
