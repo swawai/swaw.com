@@ -63,14 +63,14 @@ wsl02 .install D:\backup\xxx.tar --yes
 1. 克隆
 
 ```cmd
-git clone https://github.com/swawai/win-run-toolbox
+git clone https://github.com/swawai/swaw-kit
 ```
 
 2. copy
 
 ```
-cd win-run-toolbox
-copy .\wsl01.cmd .\wsl02.cmd
+cd swaw-kit
+copy .\Favorites\template.wsl01.cmd .\wsl02.cmd
 ```
 复制后，用文本编辑器打开 wsl02.cmd，改好其中定义的实例名、用户名、安装镜像源（如 Ubuntu、Debian）。
 
@@ -243,7 +243,7 @@ sandbox.cmd
 想要让 `wsl02` `wsl03` 这些命令，在任意终端及 `Win + R` 里直接能跑？双击仓库里的：
 
 ```cmd
-pathhereadd.cmd
+PathHereAdd.cmd
 ```
 
 就行了。
@@ -258,4 +258,4 @@ pathhereadd.cmd
 
 
 
-> 源码仓库（欢迎提交 Issue、PR）：[https://github.com/swawai/win-run-toolbox](https://github.com/swawai/win-run-toolbox)
+> 源码仓库（欢迎提交 Issue、PR）：[https://github.com/swawai/swaw-kit](https://github.com/swawai/swaw-kit)
