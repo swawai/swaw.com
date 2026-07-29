@@ -4,7 +4,7 @@ draft: false
 title: "Windows 没有 ssh-copy-id？我干脆把一台台 VPS 变成本地命令，人和 Agent 都方便"
 linkTitle: "把一台台 VPS 变成本地命令"
 slug: "ssh-remote-kit-windows"
-description: "Windows 上，把一台台 VPS 变成本地命令，用来设置免密 key、执行远程命令、打开远程开发环境非常方便...，同时也构建了 Agent 充当运维的极佳上下文环境。"
+description: "Windows 上，把一台台 VPS 变成本地命令，用来配置 SSH 公钥、执行远程命令、传输文件和打开远程开发环境，也为 Agent 提供清晰稳定的运维入口。"
 published_links:
   - label: 公众号
     url: https://mp.weixin.qq.com/s/Folmy8rGuvkPPylauOG1cQ
@@ -27,11 +27,10 @@ tags:
 后面为此写了一套脚本，我自己已用了好几年，功能不断扩充。脚本已上传到 GitHub，只需克隆此仓库到你本机：
 
 ```powershell
-git clone https://github.com/swawai/win-run-toolbox
-cd win-run-toolbox
-copy .\vps1.cmd .\vps2.cmd
+git clone https://github.com/swawai/swaw-kit
+cd swaw-kit
+copy .\Favorites\template.vps1.cmd .\vps2.cmd
 ```
-![vps1配置模板文件内容](content-of-the-template-vps1.png)
 
 然后修改 `vps2.cmd` 里定义的主机信息（地址、端口、用户名、私钥路径），执行：
 ```powershell
@@ -40,7 +39,7 @@ copy .\vps1.cmd .\vps2.cmd
 
 就可以看到，针对你的 vps2 已有的所有可用命令：
 ```
-D:\2026.3\win-run-toolbox>vps2 --help
+C:\swaw-kit>vps2 --help
 
 # 基本用法:
   vps2    运行 vps2 (远程登录其文件中配置的 SSH 主机)
@@ -71,12 +70,17 @@ D:\2026.3\win-run-toolbox>vps2 --help
   vps2  cursor app/       # 用 Cursor 打开远程 $HOME/app/.
 
 
+# SSH config:
+  vps2  config.install  将本入口的 Host 配置安装到当前用户 ~/.ssh/config，供 ssh/Remote-SSH 直接使用.
+  vps2  config.remove   移除本入口安装到当前用户 ~/.ssh/config 的托管 Include，并删除生成的 data/ssh_config 文件.
+
+
 # 密钥管理（会修改远端 ~/.ssh/authorized_keys, key.fix/key.add.fix 还可能修改 sshd 配置）:
   vps2  key.add       将配置的私钥对应的 .pub 公钥添加到远端的 ~/.ssh/authorized_keys（幂等，不会重复添加）
   vps2  key.remove    从远端的 ~/.ssh/authorized_keys 移除该公钥（幂等,若有重复项会一并移除）。
   vps2  key.fix       检查/修复远端 sshd 配置中的 PubkeyAuthentication 为 yes (否则会拒绝key方式登录)
   vps2  key.add.fix   添加公钥，并检查/修复 PubkeyAuthentication
-  # 若配置的私钥和同名 .pub 都不存在，key.add/key.add.fix/key.fix 会用 ssh-keygen 默认参数就地生成一对 key
+  # 若配置的私钥和同名 .pub 都不存在，key.add/key.fix 会用 ssh-keygen 默认参数就地生成一对 key
   # 若远端机 /etc/ssh/sshd_config.d/*.conf 为空, key.fix 会优先改 /etc/ssh/sshd_config；改前会先就地备份既有文件.
 
 ```
@@ -126,10 +130,10 @@ vps2 key.add.fix
 只需要双击仓库里的：
 
 ```text
-pathhereadd.cmd
+PathHereAdd.cmd
 ```
 
-它会把当前自身所在的 `win-run-toolbox` 目录加入当前用户的 `PATH`。
+它会把自身所在的 `swaw-kit` 目录加入当前用户的 `PATH`。
 
 ![在 Windows 运行窗口输入 vps2 后打开对应远程主机的 SSH 登录终端](windows-run-vps2-ssh-login.png)
 
@@ -137,7 +141,7 @@ pathhereadd.cmd
 如果你后悔了，也不用手动改环境变量，执行：
 
 ```text
-pathhereremove.cmd
+PathHereRemove.cmd
 ```
 
 即可反向移除。
@@ -194,4 +198,4 @@ ops.vm2.WangWu.cmd
 
 
 
-> 关联仓库：[https://github.com/swawai/win-run-toolbox](https://github.com/swawai/win-run-toolbox)
+> 关联仓库：[https://github.com/swawai/swaw-kit](https://github.com/swawai/swaw-kit)
