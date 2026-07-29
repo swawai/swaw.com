@@ -249,7 +249,7 @@ PathHereAdd.cmd
 
 就可以了。
 
-按兩下後要怎麼復原？修改 PATH 是否安全、是否需要謹慎？可以閱讀：[讓 Win + R 執行自訂命令](/zh/p/win-run-custom-command-path/)。該文章的繁中翻譯仍在準備中，因此目前會開啟簡體中文版。
+按兩下後要怎麼復原？修改 PATH 是否安全、是否需要謹慎？可以閱讀：[讓 Win + R 執行自訂命令](/zh-tw/p/win-run-custom-command-path/)。
 
 
 

@@ -383,7 +383,7 @@ gitme2 --help
 PathHereAdd.cmd
 ```
 
-它会把当前工作目录（即此时打开的仓库目录）加入用户 PATH。要回退，执行：`PathHereRemove.cmd`
+它会把脚本自身所在目录（即仓库根目录）加入用户 PATH。要回退，执行：`PathHereRemove.cmd`
 
 脚本修改用户 PATH 是否安全可靠？参考：[让 Win + R 运行自定义命令](/zh/p/win-run-custom-command-path/)
 

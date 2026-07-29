@@ -250,7 +250,7 @@ PathHereAdd.cmd
 
 That is all.
 
-How do you undo it afterward? Is modifying PATH safe? See [Run Custom Commands from Win + R](/zh/p/win-run-custom-command-path/). The linked translation is still in progress, so this link currently opens the Simplified Chinese article.
+How do you undo it afterward? Is modifying PATH safe? See [Run Custom Commands from Win + R](/p/win-run-custom-command-path/).
 
 
 

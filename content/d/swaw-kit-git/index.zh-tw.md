@@ -380,9 +380,9 @@ gitme2 --help
 PathHereAdd.cmd
 ```
 
-它會把目前工作目錄，也就是儲存庫根目錄，加入使用者 `PATH`。要復原，請執行 `PathHereRemove.cmd`。
+它會把指令碼自身所在的目錄，也就是儲存庫根目錄，加入使用者 `PATH`。要復原，請執行 `PathHereRemove.cmd`。
 
-這個指令碼修改使用者 `PATH` 是否安全可靠？請參考[讓 Win + R 執行自訂命令](/zh/p/win-run-custom-command-path/)。
+這個指令碼修改使用者 `PATH` 是否安全可靠？請參考：[讓 Win + R 執行自訂命令](/zh-tw/p/win-run-custom-command-path/)。
 
 
 

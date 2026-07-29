@@ -380,9 +380,9 @@ To run `gitme`, `gitme2`, and other entries directly from any terminal or from `
 PathHereAdd.cmd
 ```
 
-It adds the current working directory—the repository root—to your user `PATH`. To undo the change, run `PathHereRemove.cmd`.
+It adds the directory containing the script—the repository root—to your user `PATH`. To undo the change, run `PathHereRemove.cmd`.
 
-Is modifying the user `PATH` this way safe? See [Run Custom Commands from Win + R](/zh/p/win-run-custom-command-path/).
+Is modifying the user `PATH` this way safe? See [Run Custom Commands from Win + R](/p/win-run-custom-command-path/).
 
 
 
