@@ -4,7 +4,7 @@ draft: false
 title: "让 Win + R 运行自定义命令：一个“加入 PATH”的小脚本"
 linkTitle: "让 Win + R 运行自定义命令"
 slug: "win-run-custom-command-path"
-description: "用两个小脚本把当前目录加入或移出用户 PATH，让 Win + R 可以运行自己的 .cmd、.bat、.exe 命令，形成个人 Windows 工具箱。"
+description: "用两个小脚本把脚本所在目录加入或移出用户 PATH，让 Win + R 可以运行自己的 .cmd、.bat、.exe 命令，形成个人 Windows 工具箱。"
 nav_primary: signals
 intent:
  - explore
@@ -55,23 +55,23 @@ Autoruns.exe   Sysinternals 启动项排查
 ## 一、我做了两个小脚本
 
 ```text
-pathhereadd.cmd       加入用户 PATH
-pathhereremove.cmd    从用户 PATH 移除
+PathHereAdd.cmd       加入用户 PATH
+PathHereRemove.cmd    从用户 PATH 移除
 ```
 
-默认作用于当前工作目录；在资源管理器里双击时，通常就是这两个脚本所在的目录。也可以传入参数，明确指定其他目录。
+两个脚本只作用于自身所在目录，并且明确拒绝参数，避免“当前工作目录”和目标目录不一致。
 
 > 脚本已上传 GitHub，仓库地址见文末。
 
 使用方法：
-1. 把两个脚本下载、放入某个目录，例如 `C:\win-run-toolbox`
-2. 双击 `pathhereadd.cmd`
+1. 克隆 `swaw-kit` 仓库，例如放在 `C:\swaw-kit`
+2. 双击 `PathHereAdd.cmd`
 
 这时脚本会检查这个工具箱目录，是否已经在当前用户的 `PATH`，不存在就追加进去。
 
 之后，打开新终端，或者重新调起 `Win + R`，就会生效了。
 
-要撤销，只需双击同目录中的 `pathhereremove.cmd`，它会执行 `pathhereadd.cmd` 的反向操作。
+要撤销，只需双击同目录中的 `PathHereRemove.cmd`，它会执行 `PathHereAdd.cmd` 的反向操作。
 
 
 ## 二、会不会改坏 PATH？
@@ -86,7 +86,7 @@ pathhereremove.cmd    从用户 PATH 移除
 5. 支持空格、中文、&、%、!、括号等路径字符
 6. 删除时把 `PATH` 按分号拆成一个个目录项，再做完整项匹配；所以删除如 `C:\Tools` 时，不会误伤 `C:\ToolsExtra`。
 7. 如果同一个目录重复出现，删除脚本会把所有匹配项都清掉。
-8. 脚本同目录的 `pathhere.backup.log`，里面有每次操作前备份的原始用户 `PATH`，可做最后保障。
+8. `data/PathHere.backup.log` 中保存每次操作前备份的原始用户 `PATH`，可做最后保障。
 ```
 
 > `PATH` 本身用分号分隔目录项，所以工具箱目录名不要包含分号。
@@ -96,7 +96,7 @@ pathhereremove.cmd    从用户 PATH 移除
 这个脚本很小，真正有用的是它带来的工作方式变化。比如我就维护了一个工具箱目录：
 
 ```text
-C:\win-run-toolbox
+C:\swaw-kit
 ```
 
 把常用命令、自己写的 `.cmd` 快捷脚本都放进去。这样 `Win + R` 后，敲入它们的文件名，回车，就启动了。
@@ -117,4 +117,4 @@ C:\win-run-toolbox
 
 对我来说，这不是在折腾 `PATH`，而是在给 Windows 补一个自己的操作层。
 
-> 脚本仓库地址：[swawai/win-run-toolbox](https://github.com/swawai/win-run-toolbox)
+> 脚本仓库地址：[swawai/swaw-kit](https://github.com/swawai/swaw-kit)
