@@ -5,6 +5,7 @@ title: "Windows 没有 ssh-copy-id？我干脆把一台台 VPS 变成本地命�
 linkTitle: "把一台台 VPS 变成本地命令"
 slug: "ssh-remote-kit-windows"
 description: "Windows 上，把一台台 VPS 变成本地命令，用来配置 SSH 公钥、执行远程命令、传输文件和打开远程开发环境，也为 Agent 提供清晰稳定的运维入口。"
+share_image: ssh-remote-kit-windows-zh-share.png
 published_links:
   - label: 公众号
     url: https://mp.weixin.qq.com/s/Folmy8rGuvkPPylauOG1cQ
