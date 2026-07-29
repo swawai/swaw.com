@@ -21,7 +21,7 @@ tags:
 
 
 
-> 本文是 [WSL 自动化管理脚本](/zh/p/wsl-automng/) 的姐妹篇, 聚焦 WSL 手动安装、备份/还原、迁移及常用场景的使用技巧。
+> 本文聚焦 WSL 的手动安装、备份/还原、迁移及常用场景。如果希望用一个命令管理一个实例，可参考 [SWAW Kit WSL 一键管理工具](/zh/p/swaw-kit-wsl-release/)。
 
 > WSL(Windows Subsystem for Linux) 可以让我们在 Windows 10/11 上直接运行 Linux 环境。它带来的好处包括:
 >
@@ -38,7 +38,7 @@ tags:
 
 
 ---
-![alt text](wsl-guide-cover.png)
+![WSL 实战指南：安装、迁移、备份与常用配置](wsl-guide-cover.png)
 
 
 
@@ -97,7 +97,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 > 判断原则: Linux 实例自己的行为放 `/etc/wsl.conf`；WSL2 底层虚拟机或所有实例共享的行为放 `.wslconfig`。
 > 新版 WSL 也提供图形配置入口: 在开始菜单搜索 `WSL Settings`。它适合修改部分 WSL 全局设置；实例内部配置仍以 `/etc/wsl.conf` 为准：
-> ![alt text](image.png)
+> ![Windows 中的 WSL Settings 设置界面](image.png)
 
 ---
 
@@ -685,8 +685,8 @@ sudo visudo -cf "/etc/sudoers.d/$USER" && sudo -l
 ```
 > 免密 sudo 会降低误操作门槛, 适合个人本机开发环境。
 
-> 以上就是对 WSL 从安装、备份、迁移、网络到常见技巧的整理。若还需更自动化的批量部署和离线管理, 可参考我的另一篇 [WSL 自动化管理脚本](/zh/p/wsl-automng/) ，希望对你有所帮助！
+> 以上就是对 WSL 从安装、备份、迁移、网络到常见技巧的整理。若希望把后台保活、备份/还原、迁移、SSH、systemd 和端口暴露收进一个实例命令，可参考 [SWAW Kit WSL 一键管理工具](/zh/p/swaw-kit-wsl-release/)。
 
 > 微信交流群：
-> {{< asset src="site/brand/wecom-ex-group-ai-cockpit.gif" alt="WeCom External Group: AI-Cockpit QR code" >}}
+> {{< asset src="site/brand/wecom-ex-group-ai-cockpit.gif" alt="企业微信外部群「AI 驾驶舱」二维码" >}}
 
