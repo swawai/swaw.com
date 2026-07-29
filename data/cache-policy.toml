@@ -1,0 +1,33 @@
+[edgeone]
+
+# EdgeOne exact-path redirects. Keep both path forms because the current site
+# serves legacy article URLs with and without a trailing slash.
+[[edgeone.redirects]]
+source = "/p/wsl-automng"
+destination = "/p/swaw-kit-wsl-release/"
+statusCode = 301
+
+[[edgeone.redirects]]
+source = "/p/wsl-automng/"
+destination = "/p/swaw-kit-wsl-release/"
+statusCode = 301
+
+[[edgeone.redirects]]
+source = "/zh/p/wsl-automng"
+destination = "/zh/p/swaw-kit-wsl-release/"
+statusCode = 301
+
+[[edgeone.redirects]]
+source = "/zh/p/wsl-automng/"
+destination = "/zh/p/swaw-kit-wsl-release/"
+statusCode = 301
+
+[[edgeone.redirects]]
+source = "/zh-tw/p/wsl-automng"
+destination = "/zh-tw/p/swaw-kit-wsl-release/"
+statusCode = 301
+
+[[edgeone.redirects]]
+source = "/zh-tw/p/wsl-automng/"
+destination = "/zh-tw/p/swaw-kit-wsl-release/"
+statusCode = 301

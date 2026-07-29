@@ -149,5 +149,37 @@
   ],
   "installCommand": "git submodule sync --recursive && git submodule update --init --recursive --force && bun install --frozen-lockfile",
   "nodeVersion": "22.11.0",
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "redirects": [
+    {
+      "destination": "/p/swaw-kit-wsl-release/",
+      "source": "/p/wsl-automng",
+      "statusCode": 301
+    },
+    {
+      "destination": "/p/swaw-kit-wsl-release/",
+      "source": "/p/wsl-automng/",
+      "statusCode": 301
+    },
+    {
+      "destination": "/zh/p/swaw-kit-wsl-release/",
+      "source": "/zh/p/wsl-automng",
+      "statusCode": 301
+    },
+    {
+      "destination": "/zh/p/swaw-kit-wsl-release/",
+      "source": "/zh/p/wsl-automng/",
+      "statusCode": 301
+    },
+    {
+      "destination": "/zh-tw/p/swaw-kit-wsl-release/",
+      "source": "/zh-tw/p/wsl-automng",
+      "statusCode": 301
+    },
+    {
+      "destination": "/zh-tw/p/swaw-kit-wsl-release/",
+      "source": "/zh-tw/p/wsl-automng/",
+      "statusCode": 301
+    }
+  ]
 }
