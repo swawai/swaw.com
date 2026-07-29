@@ -106,7 +106,7 @@ After the main process starts:
 Both approaches rely on the same idea: make sure the main process has already started somewhere else. I use the script in my daily workflow and solve the problem once. If you only encounter this occasionally, opening a blank window first is enough. There is no need to make it more complicated.
 
 
-Reference implementation: https://github.com/swawai/win-run-toolbox/tree/main/_lib/editor_kit
+Reference implementation: https://github.com/swawai/swaw-kit/tree/main/_lib/editor_kit
 
 > The idea is the same on macOS and Linux; only the script syntax changes. Feel free to share your implementation in the comments.
 

@@ -106,7 +106,7 @@ code ~/project2 --user-data-dir ~/vscode-data-project2
 两套方法，逻辑是一样的：确保主进程已在“别处”启动了。我个人日常用的是脚本方案，一劳永逸；如果你只是偶尔遇到这个问题，记得先开一个空白窗口就够了，不用搞太复杂。
 
 
-参考代码：https://github.com/swawai/win-run-toolbox/tree/main/_lib/editor_kit
+参考代码：https://github.com/swawai/swaw-kit/tree/main/_lib/editor_kit
 
 > macOS/Linux 下的思路一致，区别是脚本的写法，欢迎在评论区交流你的实现。
 

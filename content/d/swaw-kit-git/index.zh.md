@@ -235,7 +235,7 @@ git config --global "includeIf.gitdir/i:D:/github-userB/.path" "D:/github-userB/
 
 ## 九、还是觉得麻烦，怎么办？
 
-我的解法是**Swaw Kit Git** (入口模板为`git1.cmd`)  
+我的解法是 **Swaw Kit Git**（入口模板为 `Favorites/template.git1.cmd`）。
 **把不同身份，包装为不同的 git 入口命令**：
 
 ```text
@@ -337,14 +337,14 @@ Git 本身（Git for Windows），你仍需自行安装。
 ### 1. 克隆仓库
 
 ```cmd
-git clone https://github.com/swawai/win-run-toolbox
-cd win-run-toolbox
+git clone https://github.com/swawai/swaw-kit
+cd swaw-kit
 ```
 
 ### 2. 创建身份专属入口命令（以 gitme2 为例）
 
 ```cmd
-copy .\git1.cmd .\gitme2.cmd
+copy .\Favorites\template.git1.cmd .\gitme2.cmd
 ```
 
 打开复制得到的 gitme2.cmd，修改三个必填项：
@@ -380,10 +380,10 @@ gitme2 --help
 要让gitme、gitme2……能在任意终端及`Win + R`中直接运行，双击仓库目录里的：
 
 ```cmd
-pathhereadd.cmd
+PathHereAdd.cmd
 ```
 
-它会把当前工作目录（即此时打开的仓库目录）加入用户 PATH。要回退，执行：`pathhereremove.cmd`
+它会把当前工作目录（即此时打开的仓库目录）加入用户 PATH。要回退，执行：`PathHereRemove.cmd`
 
 脚本修改用户 PATH 是否安全可靠？参考：[让 Win + R 运行自定义命令](/zh/p/win-run-custom-command-path/)
 
@@ -403,6 +403,6 @@ Git 的原生配置完全能解决问题；但仓库和身份继续变多后，�
 
 > 对人，入口命令是可记忆的操作界面；对 Agent，它是参数明确、失败可判断的执行接口。双方走的是同一条主路径，不需要维护两套身份规则。
 
-> 关联仓库：https://github.com/swawai/win-run-toolbox
+> 关联仓库：https://github.com/swawai/swaw-kit
 
 在调试 **Swaw Kit Git** 过程，发现 VS Code 有泄露环境变量的隐密问题，下一篇文章我打算说一下这个，及其应对方法。

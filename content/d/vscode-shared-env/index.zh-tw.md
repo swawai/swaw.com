@@ -106,7 +106,7 @@ code ~/project2 --user-data-dir ~/vscode-data-project2
 兩種方法的邏輯完全相同：確保主處理程序已經在「別處」啟動。我日常使用的是指令碼方案，一次處理、長期省事；如果你只是偶爾遇到這個問題，記得先開一個空白視窗就夠了，不必弄得太複雜。
 
 
-參考程式碼：https://github.com/swawai/win-run-toolbox/tree/main/_lib/editor_kit
+參考程式碼：https://github.com/swawai/swaw-kit/tree/main/_lib/editor_kit
 
 > macOS/Linux 的思路相同，差別只在指令碼寫法。歡迎在留言區分享你的實作。
 
