@@ -1,7 +1,7 @@
 ---
 date: "2026-05-28T00:37:56+08:00"
 draft: false
-title: "ssh -R Opens a Path: Let a Server Borrow Your Local Proxy"
+title: "ssh -R Opens a Path: Let a Server in Mainland China Borrow Your Local Proxy"
 linkTitle: "ssh -R Proxy Bridge"
 slug: "ssh-reverse-port-forward-proxy"
 description: "Use SSH remote port forwarding to map a server-local 127.0.0.1:17890 endpoint to your workstation's HTTP proxy—a temporary fix when npm, pip, GitHub, or other dependency downloads stall."
@@ -27,16 +27,16 @@ tags:
 
 ![Use ssh -R to let a server temporarily borrow your local proxy](ssh-reverse-port-forward-proxy-en-cover.png)
 
-On servers in mainland China, repository clones and service deployments can suddenly go sideways: network timeouts, TLS handshake failures, or a dependency download that never finishes.
+This article addresses a specific scenario: deploying servers in mainland China, where internet censorship can make access to overseas developer infrastructure unreliable. Repository clones and service deployments may suddenly go sideways: network timeouts, TLS handshake failures, or a dependency download that never finishes.
 
-You may have switched npm, PyPI, Go, apt/dnf, and other tools to domestic mirrors, only to find that mirrors do not solve every case:
+You may have switched npm, PyPI, Go, apt/dnf, and other tools to mirrors in mainland China, only to find that mirrors do not solve every case:
 
 ```text
 - npm may fetch a GitHub Release
 - a pip package may download an external binary
 - a Docker image may come from Docker Hub, GHCR, or Quay
 - the Go, Rust, Node, and Python ecosystems regularly span multiple sources
-- a domestic mirror may lag behind, omit a package, go offline, or rate-limit requests
+- a mirror in mainland China may lag behind, omit a package, go offline, or rate-limit requests
 ```
 
 Another intuitive answer is to install a VPN or proxy directly on the server. That takes more work, may require cleanup afterward, and a mistake can even disrupt the server's connectivity.
@@ -49,10 +49,10 @@ The following method lets the server **temporarily use the proxy on your worksta
 ssh -R  # remote port forwarding
 ```
 
-End the current `ssh -R` connection and the forwarding disappears. It does not modify the server's routes, default gateway, or firewall, so under normal conditions it does not affect anyone else's login session.
+End the current `ssh -R` connection and everything reverts immediately. The command itself cannot make the server unreachable or affect anyone else logged in at the same time.
 
 
-> Follow the laws in your location, your service provider's terms, and your organization's network-security policy. Enterprises may also obtain the necessary connectivity through compliant dedicated lines or SD-WAN. This article covers only the SSH port-forwarding technique.
+> In mainland China, this kind of network proxy software can be used in compliant setups. Enterprises can legally procure dedicated Internet access, and SD-WAN offerings from regional telecom carriers may cost RMB 300–2,000 per Mbps. Because dedicated bandwidth is expensive, the proxy can still be used to split traffic and reduce the bandwidth required from the dedicated line.
 
 
 
@@ -354,7 +354,7 @@ With `ssh -R`, the direction is reversed:
 The server uses the proxy on my workstation
 ```
 
-When a server deployment stalls on npm, PyPI, GitHub, Docker, or another overseas dependency:
+When a cloud server deployment in mainland China stalls on downloads from npm, PyPI, GitHub, Docker, or other overseas sources:
 
 ```bash
 ssh -N -R 127.0.0.1:17890:127.0.0.1:7890 user@server
