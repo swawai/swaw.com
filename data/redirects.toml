@@ -1,33 +1,33 @@
-[edgeone]
-
-# EdgeOne exact-path redirects. Keep both path forms because the current site
-# serves legacy article URLs with and without a trailing slash.
-[[edgeone.redirects]]
+# Permanent site URL migrations. Deployment adapters translate these rules
+# into provider-specific configuration.
+# Keep both path forms because the legacy URLs were served with and without
+# a trailing slash.
+[[rules]]
 source = "/p/wsl-automng"
 destination = "/p/swaw-kit-wsl-release/"
-statusCode = 301
+status = 301
 
-[[edgeone.redirects]]
+[[rules]]
 source = "/p/wsl-automng/"
 destination = "/p/swaw-kit-wsl-release/"
-statusCode = 301
+status = 301
 
-[[edgeone.redirects]]
+[[rules]]
 source = "/zh/p/wsl-automng"
 destination = "/zh/p/swaw-kit-wsl-release/"
-statusCode = 301
+status = 301
 
-[[edgeone.redirects]]
+[[rules]]
 source = "/zh/p/wsl-automng/"
 destination = "/zh/p/swaw-kit-wsl-release/"
-statusCode = 301
+status = 301
 
-[[edgeone.redirects]]
+[[rules]]
 source = "/zh-tw/p/wsl-automng"
 destination = "/zh-tw/p/swaw-kit-wsl-release/"
-statusCode = 301
+status = 301
 
-[[edgeone.redirects]]
+[[rules]]
 source = "/zh-tw/p/wsl-automng/"
 destination = "/zh-tw/p/swaw-kit-wsl-release/"
-statusCode = 301
+status = 301
